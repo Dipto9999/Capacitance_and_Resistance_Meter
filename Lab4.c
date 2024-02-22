@@ -301,11 +301,11 @@ void main(void) {
 
 		waitms(500); // Wait for 500ms
 		/* Print Frequency and Capacitance to Serial Port */
-		printf("\rF (kHz) = %f     ", freq_Hz * (10^3)); // Print F (kHz) to Serial Port
+		printf("\rF(kHz)=%f     ", freq_Hz * (10^3)); // Print F (kHz) to Serial Port
 		printf("\x1b[0K"); // ANSI: Clear from cursor to end of line.
 
 		waitms(500); // Wait for 500ms
-		printf("\rC (pF) = %f     ", capacitance_pF); // Print C (pF) to Serial Port
+		printf("\rC(pF)=%f     ", capacitance_pF); // Print C (pF) to Serial Port
 		printf("\x1b[0K"); // ANSI: Clear from cursor to end of line.
 
 		// display_rx(rx_buff, sizeof(rx_buff)); // Display User Input on LCD

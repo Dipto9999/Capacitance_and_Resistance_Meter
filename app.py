@@ -69,9 +69,10 @@ class StripChart :
 
         self.data_df = pd.DataFrame(columns = ['Datetime', 'Capacitance (pF)'])
 
-        self.canvas = FigureCanvasTkAgg(self.fig, master=self.master)
+        self.canvas = FigureCanvasTkAgg(self.fig, master = self.master)
         self.canvas_widget = self.canvas.get_tk_widget()
-        self.canvas_widget.grid(row = 0, column = 0)
+        # self.canvas_widget.grid(row = 0, column = 0, sticky = 'nsew')
+        self.canvas_widget.pack(fill = tk.BOTH, expand = True)
 
     def read_serial(self) :
         if (self.conn is not None) :
@@ -148,15 +149,17 @@ class StripChart :
             display(csv_df.head(2))
 
 class App :
-    def config_serial_frame(self, window) :
+    def _config_serial_frame(self, window) :
         self.serial_frame = tk.Frame(window, bg = 'lightgrey')
 
         # Create Serial Frame Widgets
         self.port_label = tk.Label(self.serial_frame, text = "Serial Line : ", bg = 'lightgrey')
         self.port_entry = tk.Entry(self.serial_frame, bg = 'lightblue')
+        self.port_entry.insert(0, 'COM3')
 
         self.baudrate_label = tk.Label(self.serial_frame, text = "Speed : ", bg = 'lightgrey')
         self.baudrate_entry = tk.Entry(self.serial_frame, bg = 'lightblue')
+        self.baudrate_entry.insert(0, '115200')
 
         self.parity_label = tk.Label(
             self.serial_frame, text = "Parity : ", bg = 'lightgrey'
@@ -208,7 +211,7 @@ class App :
         self.port_entry.grid(
             row = 0, column = 1,
             rowspan = 1, columnspan = 1,
-            padx = 10, pady = 10
+            padx = 10, pady = 10, sticky = 'e'
         )
 
         self.baudrate_label.grid(
@@ -219,7 +222,7 @@ class App :
         self.baudrate_entry.grid(
             row = 1, column = 1,
             rowspan = 1, columnspan = 1,
-            padx = 10, pady = 10
+            padx = 10, pady = 10, sticky = 'e'
         )
 
         self.parity_label.grid(
@@ -230,7 +233,7 @@ class App :
         self.parity_combobox.grid(
             row = 2, column = 1,
             rowspan = 1, columnspan = 1,
-            padx = 10, pady = 10
+            padx = 10, pady = 10, sticky = 'e'
         )
 
         self.stopbits_label.grid(
@@ -241,7 +244,7 @@ class App :
         self.stopbits_combobox.grid(
             row = 3, column = 1,
             rowspan = 1, columnspan = 1,
-            padx = 10, pady = 10
+            padx = 10, pady = 10, sticky = 'e'
         )
 
         self.bytesize_label.grid(
@@ -252,7 +255,7 @@ class App :
         self.bytesize_combobox.grid(
             row = 4, column = 1,
             rowspan = 1, columnspan = 1,
-            padx = 10, pady = 10
+            padx = 10, pady = 10, sticky = 'e'
         )
 
         self.open_button.grid(
@@ -269,27 +272,92 @@ class App :
 
         window.add(self.serial_frame)
 
-    def config_reference_frame(self, window) :
+    def _config_reference_frame(self, window) :
         self.reference_frame = tk.Frame(self.left_window, bg = 'lightgrey')
-        self.expected_label = tk.Label(
-            self.reference_frame,
+        self.design_frame = tk.Frame(self.reference_frame, bg = 'lightgrey')
+        self.estimations_frame = tk.Frame(self.reference_frame, bg = 'lightgrey')
+
+        # Create Design Frame Widgets
+        self.capacitance_label = tk.Label(self.design_frame, text = f"Capacitance (μF) : ", bg = 'lightgrey')
+        self.capacitance_entry = tk.Entry(self.design_frame, bg = 'lightblue')
+        self.capacitance_entry.insert(0, self.capacitance / (10**(-6)))
+
+        self.resistance_A_label = tk.Label(self.design_frame, text = f"Resistance A (Ω) : ", bg = 'lightgrey')
+        self.resistance_A_entry = tk.Entry(self.design_frame, bg = 'lightblue')
+        self.resistance_A_entry.insert(0, self.R_A)
+
+        self.resistance_B_label = tk.Label(self.design_frame, text = f"Resistance B (Ω) : ", bg = 'lightgrey')
+        self.resistance_B_entry = tk.Entry(self.design_frame, bg = 'lightblue')
+        self.resistance_B_entry.insert(0, self.R_B)
+
+        self.estimate_freq_button = tk.Button(
+            self.design_frame, text = "Estimate Frequency", command = self.reestimate_freq, bg = 'lightblue'
+        )
+        # Position Design Frame Widgets
+        self.capacitance_label.grid(
+            row = 0, column = 0,
+            rowspan = 1, columnspan = 1,
+            padx = 10, pady = 10, sticky = 'w'
+        )
+        self.capacitance_entry.grid(
+            row = 0, column = 1,
+            rowspan = 1, columnspan = 1,
+            padx = 10, pady = 10, sticky = 'e'
+        )
+
+        self.resistance_A_label.grid(
+            row = 1, column = 0,
+            rowspan = 1, columnspan = 1,
+            padx = 10, pady = 10, sticky = 'w'
+        )
+        self.resistance_A_entry.grid(
+            row = 1, column = 1,
+            rowspan = 1, columnspan = 1,
+            padx = 10, pady = 10, sticky = 'e'
+        )
+
+        self.resistance_B_label.grid(
+            row = 2, column = 0,
+            rowspan = 1, columnspan = 1,
+            padx = 10, pady = 10, sticky = 'w'
+        )
+        self.resistance_B_entry.grid(
+            row = 2, column = 1,
+            rowspan = 1, columnspan = 1,
+            padx = 10, pady = 10, sticky = 'e'
+        )
+
+        self.estimate_freq_button.grid(
+            row = 3, column = 1,
+            rowspan = 1, columnspan = 1,
+            padx = 10, pady = 10, sticky = 'e'
+        )
+
+        # Create Estimations Frame Widgets
+        self.estimation_title_label = tk.Label(
+            self.estimations_frame,
             text = f"\nExpected Values",
             bg = 'lightgrey',
             font = tk.font.Font(family = "Helvetica", size = 25, weight = "bold")
         )
-        self.estimations_label = tk.Label(
-            self.reference_frame,
+        self.estimation_values_label = tk.Label(
+            self.estimations_frame,
             text = f"C: {round(self.capacitance / (10**(-6)), 2)} μF\n"\
                 + f"Freq: {round(self.expected_freq / (10**(3)), 2)} kHz\n",
             bg = 'lightgrey',
             font = tk.font.Font(family = "Helvetica", size = 20)
         )
-        self.expected_label.pack(padx = 10, pady = 10)
-        self.estimations_label.pack(padx = 10, pady = 10)
+
+        # Position Estimation Frame Widgets
+        self.estimation_title_label.pack(padx = 10, pady = 10)
+        self.estimation_values_label.pack(padx = 10, pady = 10)
+
+        self.design_frame.pack(padx = 10, pady = 10)
+        self.estimations_frame.pack(padx = 10, pady = 10)
 
         window.add(self.reference_frame)
 
-    def config_stripchart_frame(self, window) :
+    def _config_stripchart_frame(self, window) :
         self.capacitance_chart_frame = tk.Frame(self.right_window, bg = 'grey')
 
         # Initialize StripChart in the StripChart frame
@@ -321,6 +389,7 @@ class App :
             background = 'black',
             padx = 10, pady = 10
         )
+        self.root.geometry("1200x755")
         self.root.resizable(False, False)
         self.root.title("Capacitance Strip-Chart")
         # Bind Close Function to Window Close Event
@@ -328,9 +397,7 @@ class App :
 
         self.conn = None  # # Initialize Serial Connection to None
 
-        self.R_A, self.R_B = R_A, R_B
-        self.capacitance = capacitance
-        self.expected_freq = (1.44 / (self.capacitance * (self.R_A + 2 * self.R_B)))
+        self.estimate_freq(capacitance, R_A, R_B)
 
         self.main_window = ttk.PanedWindow(self.root, orient = tk.HORIZONTAL)
         self.main_window.pack(fill = tk.BOTH, expand = True)
@@ -341,9 +408,9 @@ class App :
         self.left_window.pack(fill = tk.BOTH, expand = True)
         self.right_window.pack(fill = tk.BOTH, expand = True)
 
-        self.config_serial_frame(self.left_window)
-        self.config_reference_frame(self.left_window)
-        self.config_stripchart_frame(self.right_window)
+        self._config_serial_frame(self.left_window)
+        self._config_reference_frame(self.left_window)
+        self._config_stripchart_frame(self.right_window)
 
         self.main_window.add(self.left_window)
         self.main_window.add(self.right_window)
@@ -356,6 +423,30 @@ class App :
             self.conn.close()
         self.root.destroy()
         sys.exit()
+
+    def estimate_freq(self, capacitance, R_A, R_B) :
+        self.capacitance = capacitance
+        self.R_A, self.R_B = R_A, R_B
+
+        self.expected_freq = (1.44 / (self.capacitance * (self.R_A + 2 * self.R_B)))
+
+        print(f"Design Values: C: {self.capacitance} F, R_A: {self.R_A} Ω, R_B: {self.R_B} Ω")
+        print(f"Expected Frequency: {self.expected_freq} Hz")
+
+    def reestimate_freq(self) :
+        try :
+            new_capacitance = float(self.capacitance_entry.get()) * (10**(-6))
+            new_R_A = float(self.resistance_A_entry.get())
+            new_R_B = float(self.resistance_B_entry.get())
+
+            self.estimate_freq(new_capacitance, new_R_A, new_R_B)
+        except ValueError as e :
+            print(f"Error Estimating Frequency\n {e}")
+        finally :
+            self.estimation_values_label.config(
+                text = f"C: {round(self.capacitance / (10**(-6)), 2)} μF\n"\
+                    + f"Freq: {round(self.expected_freq / (10**(3)), 2)} kHz\n"
+            )
 
     def open_serial(self):
         if self.conn is None :  # Check if Serial Connection Already Established

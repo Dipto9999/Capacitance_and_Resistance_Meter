@@ -1,6 +1,6 @@
 /*
  * Lab4.c : EFM8 Period Measurement At Pin P0.1 using Timer 0
- * and Displaying the Period on an LCD.
+ * and Displaying the Frequency and 555 Timer Calculated Capacitance on LCD.
  */
 
 /* Include Headers */
@@ -224,15 +224,36 @@ void display_rx(char* buff, int len) {
 	LCDprint(buff, 1, 1);
 }
 
-void display_period(float period) {
+void display_freq_kHz(float freq_kHz) {
 	char buff[CHARS_PER_LINE];
-	sprintf(buff, "PERIOD: %i", (int)period); // Format the Period Value
+	sprintf(buff, "F: %i kHz", (int)(freq_kHz)); // Format the Frequency Value
 	LCDprint(buff, 2, 1); // Write to LCD
 }
 
+void display_capacitance_pF(float capacitance) {
+	char buff[CHARS_PER_LINE];
+	sprintf(buff, "C: %i pF", (int)(capacitance)); // Format the Period Value
+	LCDprint(buff, 2, 1); // Write to LCD
+}
+
+float calculate_period(int overflow_count, int TH0, int TL0) {
+	return (overflow_count * (2^16)  + TH0 * (2^8) + TL0) * (12.0 / SYSCLK);
+}
+
+float calculate_freq(int overflow_count, int TH0, int TL0) {
+	return 1.0 / calculate_period(overflow_count, TH0, TL0);
+}
+
+float calculate_capacitance(float freq_Hz) {
+	int R_A = 1.667 * (10^3); // ToDo : Update with Resistance in Ohms
+	int R_B = 1.667 * (10^3); // ToDo : Update with Resistance in Ohms
+
+	return (1.44 / (freq_Hz * (R_A + 2 * R_B))) * (10^12);
+}
+
 void main(void) {
-	float period;
-	char rx_buff[CHARS_PER_LINE];
+	float freq_Hz, capacitance_pF;
+	// char rx_buff[CHARS_PER_LINE];
 
 	TIMER0_Init(); // Initialize Timer 0
     Serial_Init(); // Initialize Serial Communication
@@ -274,12 +295,23 @@ void main(void) {
         }
 
 		TR0 = 0; // Stop Timer 0. The 24-bit number [overflow_count-TH0-TL0] has the period!
- 		period = (overflow_count * (2^16)  + TH0 * (2^8) + TL0) * (12.0 / SYSCLK);
 
-		waitms(1000); // Wait for 1 Second
-		// Send Period to Serial Port.
-		printf("\rT = %f ms    ", period * 1000.0); // Print Period to Serial Port
-		display_rx(rx_buff, sizeof(rx_buff)); // Display on LCD
-		display_period(period); // Display Period on LCD
+		freq_Hz = calculate_freq(overflow_count, TH0, TL0);
+		capacitance_pF = calculate_capacitance(freq_Hz);
+
+		waitms(500); // Wait for 500ms
+		/* Print Frequency and Capacitance to Serial Port */
+		printf("\rF (kHz) = %f     ", freq_Hz * (10^3)); // Print F (kHz) to Serial Port
+		printf("\x1b[0K"); // ANSI: Clear from cursor to end of line.
+
+		waitms(500); // Wait for 500ms
+		printf("\rC (pF) = %f     ", capacitance_pF); // Print C (pF) to Serial Port
+		printf("\x1b[0K"); // ANSI: Clear from cursor to end of line.
+
+		// display_rx(rx_buff, sizeof(rx_buff)); // Display User Input on LCD
+
+		/* Display Frequency/Capacitance on LCD */
+		display_freq_kHz(freq_Hz * (10^3)); // Display Frequency on LCD
+		// display_capacitance_pF(capacitance_pF); // Display Period on LCD
 	}
 }

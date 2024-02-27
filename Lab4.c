@@ -274,6 +274,7 @@ float calculate_capacitance_nF(float period_s) {
 
 void main(void) {
 	float period_s, freq_Hz, capacitance_nF;
+	int err_count = 0;
 	// char rx_buff[CHARS_PER_LINE];
 
 	TIMER0_Init(); // Initialize Timer 0
@@ -323,14 +324,29 @@ void main(void) {
 		 * Print Frequency & Capacitance to Serial Port. Display on LCD.
 		 */
 
-		waitms(250); // Wait for 250 ms
-		printf("\nF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
-		display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD
+		err_count += 1;
 
-		waitms(250); // Wait for 250 ms
-		printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
-		// printf("C(µF)=%f\r\n", (capacitance_nF / MEGA_MULTIPLIER)); // Print Capacitance in Microfarads
+		if ((freq_Hz <= 200) || (freq_Hz >= 4000000)) {
+			err_count += 1;
 
-		display_capacitance_nF(capacitance_nF);
+			if (err_count >= 10) {
+				err_count = 0;
+				if (freq_Hz >= 4000000) LCDprint("ERROR : LOW C", 1, 1);
+				else if (freq_Hz <= 200) LCDprint("ERROR : HIGH C", 1, 1);
+
+				LCDprint("                ", 2, 1);
+				waitms(250); // Wait for 250 ms
+			}
+		} else {
+			waitms(250); // Wait for 250 ms
+			printf("\nF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
+			display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD
+
+			waitms(250); // Wait for 250 ms
+			printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
+			// printf("C(µF)=%f\r\n", (capacitance_nF / MEGA_MULTIPLIER)); // Print Capacitance in Microfarads
+
+			display_capacitance_nF(capacitance_nF);
+		}
 	}
 }

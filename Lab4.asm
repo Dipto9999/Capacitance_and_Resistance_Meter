@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by C51
 ; Version 1.0.0 #1170 (Feb 16 2022) (MSVC)
-; This file was generated Mon Feb 26 19:14:55 2024
+; This file was generated Mon Feb 26 20:29:58 2024
 ;--------------------------------------------------------
 $name Lab4
 $optc51 --model-small
@@ -521,6 +521,10 @@ _calculate_period_s_PARM_2:
 	ds 2
 _calculate_period_s_PARM_3:
 	ds 2
+_main_period_s_1_67:
+	ds 4
+_main_capacitance_nF_1_67:
+	ds 4
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
 ;--------------------------------------------------------
@@ -1539,24 +1543,30 @@ _calculate_capacitance_nF:
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
-;period_s                  Allocated to registers r2 r3 r4 r5 
-;freq_Hz                   Allocated to registers r6 r7 r0 r1 
-;capacitance_nF            Allocated to registers r2 r3 r4 r5 
+;period_s                  Allocated with name '_main_period_s_1_67'
+;freq_Hz                   Allocated to registers r0 r1 r4 r5 
+;capacitance_nF            Allocated with name '_main_capacitance_nF_1_67'
+;err_count                 Allocated to registers r2 r3 
 ;------------------------------------------------------------
 ;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:275: void main(void) {
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:279: TIMER0_Init(); // Initialize Timer 0
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:277: int err_count = 0;
+	mov	r2,#0x00
+	mov	r3,#0x00
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:280: TIMER0_Init(); // Initialize Timer 0
+	push	ar2
+	push	ar3
 	lcall	_TIMER0_Init
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:280: Serial_Init(); // Initialize Serial Communication
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:281: Serial_Init(); // Initialize Serial Communication
 	lcall	_Serial_Init
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:281: LCD_4BIT();	// Configure the LCD
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:282: LCD_4BIT();	// Configure the LCD
 	lcall	_LCD_4BIT
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:288: );
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:287: __FILE__, __DATE__, __TIME__
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:286: "Compiled: %s, %s\n\r\n",
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:289: );
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:288: __FILE__, __DATE__, __TIME__
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:287: "Compiled: %s, %s\n\r\n",
 	mov	a,#__str_9
 	push	acc
 	mov	a,#(__str_9 >> 8)
@@ -1585,111 +1595,263 @@ _main:
 	mov	a,sp
 	add	a,#0xf4
 	mov	sp,a
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:290: while(1) {
-L021018?:
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:292: TL0 = 0;
+	pop	ar3
+	pop	ar2
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:291: while(1) {
+L021029?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:293: TL0 = 0;
 	mov	_TL0,#0x00
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:293: TH0 = 0;
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:294: TH0 = 0;
 	mov	_TH0,#0x00
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:294: TF0 = 0;
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:295: TF0 = 0;
 	clr	_TF0
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:295: overflow_count = 0;
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:296: overflow_count = 0;
 	mov	_overflow_count,#0x00
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:297: while (EFM8_SIGNAL != 0); // Wait for Signal == 0
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:298: while (EFM8_SIGNAL != 0); // Wait for Signal == 0
 L021001?:
 	jb	_P0_1,L021001?
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:298: while (EFM8_SIGNAL != 1); // Wait for Signal == 1
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:299: while (EFM8_SIGNAL != 1); // Wait for Signal == 1
 L021004?:
 	jnb	_P0_1,L021004?
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:300: TR0 = 1; // Start Timer
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:301: TR0 = 1; // Start Timer
 	setb	_TR0
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:302: while (EFM8_SIGNAL != 0) { // Wait for Signal == 0
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:303: while (EFM8_SIGNAL != 0) { // Wait for Signal == 0
 L021009?:
 	jnb	_P0_1,L021014?
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:303: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:304: TF0 = 0;
-	jbc	_TF0,L021035?
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:304: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:305: TF0 = 0;
+	jbc	_TF0,L021050?
 	sjmp	L021009?
-L021035?:
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:305: overflow_count++;
+L021050?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:306: overflow_count++;
 	inc	_overflow_count
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:308: while (EFM8_SIGNAL != 1) { // Wait for Signal == 1
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:309: while (EFM8_SIGNAL != 1) { // Wait for Signal == 1
 	sjmp	L021009?
 L021014?:
 	jb	_P0_1,L021016?
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:309: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:310: TF0 = 0;
-	jbc	_TF0,L021037?
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:310: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:311: TF0 = 0;
+	jbc	_TF0,L021052?
 	sjmp	L021014?
-L021037?:
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:311: overflow_count++;
+L021052?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:312: overflow_count++;
 	inc	_overflow_count
 	sjmp	L021014?
 L021016?:
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:315: TR0 = 0; // Stop Timer 0. The 24-bit number [overflow_count-TH0-TL0] has the period!
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:316: TR0 = 0; // Stop Timer 0. The 24-bit number [overflow_count-TH0-TL0] has the period!
 	clr	_TR0
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:316: period_s = calculate_period_s(overflow_count, TH0, TL0);
-	mov	r2,_overflow_count
-	mov	r3,#0x00
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:317: period_s = calculate_period_s(overflow_count, TH0, TL0);
+	mov	r4,_overflow_count
+	mov	r5,#0x00
 	mov	_calculate_period_s_PARM_2,_TH0
 	mov	(_calculate_period_s_PARM_2 + 1),#0x00
 	mov	_calculate_period_s_PARM_3,_TL0
 	mov	(_calculate_period_s_PARM_3 + 1),#0x00
-	mov	dpl,r2
-	mov	dph,r3
-	lcall	_calculate_period_s
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:317: freq_Hz = calculate_freq_Hz(period_s);
-	mov	r2,dpl
-	mov	r3,dph
-	mov	r4,b
-	mov	r5,a
+	mov	dpl,r4
+	mov	dph,r5
 	push	ar2
 	push	ar3
+	lcall	_calculate_period_s
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:318: freq_Hz = calculate_freq_Hz(period_s);
+	mov	_main_period_s_1_67,dpl
+	mov	(_main_period_s_1_67 + 1),dph
+	mov	(_main_period_s_1_67 + 2),b
+	mov	(_main_period_s_1_67 + 3),a
+	lcall	_calculate_freq_Hz
+	mov	r0,dpl
+	mov	r1,dph
+	mov	r4,b
+	mov	r5,a
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:319: capacitance_nF = calculate_capacitance_nF(period_s);
+	mov	dpl,_main_period_s_1_67
+	mov	dph,(_main_period_s_1_67 + 1)
+	mov	b,(_main_period_s_1_67 + 2)
+	mov	a,(_main_period_s_1_67 + 3)
 	push	ar4
 	push	ar5
-	lcall	_calculate_freq_Hz
-	mov	r6,dpl
-	mov	r7,dph
-	mov	r0,b
-	mov	r1,a
+	push	ar0
+	push	ar1
+	lcall	_calculate_capacitance_nF
+	mov	_main_capacitance_nF_1_67,dpl
+	mov	(_main_capacitance_nF_1_67 + 1),dph
+	mov	(_main_capacitance_nF_1_67 + 2),b
+	mov	(_main_capacitance_nF_1_67 + 3),a
+	pop	ar1
+	pop	ar0
 	pop	ar5
 	pop	ar4
 	pop	ar3
 	pop	ar2
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:318: capacitance_nF = calculate_capacitance_nF(period_s);
-	mov	dpl,r2
-	mov	dph,r3
-	mov	b,r4
-	mov	a,r5
-	push	ar6
-	push	ar7
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:327: err_count += 1;
+	inc	r2
+	cjne	r2,#0x00,L021053?
+	inc	r3
+L021053?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:329: if ((freq_Hz <= 215000) || (freq_Hz >= 4000000)) {
+	push	ar2
+	push	ar3
+	push	ar4
+	push	ar5
 	push	ar0
 	push	ar1
-	lcall	_calculate_capacitance_nF
-	mov	r2,dpl
-	mov	r3,dph
-	mov	r4,b
-	mov	r5,a
+	clr	a
+	push	acc
+	mov	a,#0xF6
+	push	acc
+	mov	a,#0x51
+	push	acc
+	mov	a,#0x48
+	push	acc
+	mov	dpl,r0
+	mov	dph,r1
+	mov	b,r4
+	mov	a,r5
+	lcall	___fsgt
+	mov	r6,dpl
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
 	pop	ar1
 	pop	ar0
-	pop	ar7
+	pop	ar5
+	pop	ar4
+	pop	ar3
+	pop	ar2
+	mov	a,r6
+	jz	L021024?
+	push	ar2
+	push	ar3
+	push	ar4
+	push	ar5
+	push	ar6
+	push	ar0
+	push	ar1
+	clr	a
+	push	acc
+	mov	a,#0x24
+	push	acc
+	mov	a,#0x74
+	push	acc
+	mov	a,#0x4A
+	push	acc
+	mov	dpl,r0
+	mov	dph,r1
+	mov	b,r4
+	mov	a,r5
+	lcall	___fslt
+	mov	r7,dpl
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	pop	ar1
+	pop	ar0
 	pop	ar6
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:326: waitms(250); // Wait for 250 ms
+	pop	ar5
+	pop	ar4
+	pop	ar3
+	pop	ar2
+	mov	a,r7
+	jz	L021055?
+	ljmp	L021025?
+L021055?:
+L021024?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:330: err_count += 1;
+	inc	r2
+	cjne	r2,#0x00,L021056?
+	inc	r3
+L021056?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:332: if (err_count >= 10) {
+	clr	c
+	mov	a,r2
+	subb	a,#0x0A
+	mov	a,r3
+	xrl	a,#0x80
+	subb	a,#0x80
+	jnc	L021057?
+	ljmp	L021029?
+L021057?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:333: err_count = 0;
+	mov	r2,#0x00
+	mov	r3,#0x00
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:334: if (freq_Hz >= 4000000) LCDprint("ERROR : LOW C", 1, 1);
+	push	ar2
+	push	ar3
+	push	ar6
+	clr	a
+	push	acc
+	mov	a,#0x24
+	push	acc
+	mov	a,#0x74
+	push	acc
+	mov	a,#0x4A
+	push	acc
+	mov	dpl,r0
+	mov	dph,r1
+	mov	b,r4
+	mov	a,r5
+	lcall	___fslt
+	mov	r7,dpl
+	mov	a,sp
+	add	a,#0xfc
+	mov	sp,a
+	pop	ar6
+	pop	ar3
+	pop	ar2
+	mov	a,r7
+	jnz	L021020?
+	mov	_LCDprint_PARM_2,#0x01
+	setb	_LCDprint_PARM_3
+	mov	dptr,#__str_10
+	mov	b,#0x80
+	push	ar2
+	push	ar3
+	lcall	_LCDprint
+	pop	ar3
+	pop	ar2
+	sjmp	L021021?
+L021020?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:335: else if (freq_Hz <= 215000) LCDprint("ERROR : HIGH C", 1, 1);
+	mov	a,r6
+	jnz	L021021?
+	mov	_LCDprint_PARM_2,#0x01
+	setb	_LCDprint_PARM_3
+	mov	dptr,#__str_11
+	mov	b,#0x80
+	push	ar2
+	push	ar3
+	lcall	_LCDprint
+	pop	ar3
+	pop	ar2
+L021021?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:337: LCDprint("                ", 2, 1);
+	mov	_LCDprint_PARM_2,#0x02
+	setb	_LCDprint_PARM_3
+	mov	dptr,#__str_12
+	mov	b,#0x80
+	push	ar2
+	push	ar3
+	lcall	_LCDprint
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:338: waitms(250); // Wait for 250 ms
+	mov	dptr,#0x00FA
+	lcall	_waitms
+	pop	ar3
+	pop	ar2
+	ljmp	L021029?
+L021025?:
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:341: waitms(250); // Wait for 250 ms
 	mov	dptr,#0x00FA
 	push	ar2
 	push	ar3
 	push	ar4
 	push	ar5
-	push	ar6
-	push	ar7
 	push	ar0
 	push	ar1
 	lcall	_waitms
 	pop	ar1
 	pop	ar0
-	pop	ar7
-	pop	ar6
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:327: printf("\nF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
+	pop	ar5
+	pop	ar4
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:342: printf("\nF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
 	clr	a
 	push	acc
 	push	acc
@@ -1697,29 +1859,29 @@ L021016?:
 	push	acc
 	mov	a,#0x44
 	push	acc
-	mov	dpl,r6
-	mov	dph,r7
-	mov	b,r0
-	mov	a,r1
+	mov	dpl,r0
+	mov	dph,r1
+	mov	b,r4
+	mov	a,r5
 	lcall	___fsdiv
-	mov	r6,dpl
-	mov	r7,dph
-	mov	r0,b
-	mov	r1,a
+	mov	r4,dpl
+	mov	r5,dph
+	mov	r6,b
+	mov	r7,a
 	mov	a,sp
 	add	a,#0xfc
 	mov	sp,a
+	push	ar4
+	push	ar5
 	push	ar6
 	push	ar7
-	push	ar0
-	push	ar1
+	push	ar4
+	push	ar5
 	push	ar6
 	push	ar7
-	push	ar0
-	push	ar1
-	mov	a,#__str_10
+	mov	a,#__str_13
 	push	acc
-	mov	a,#(__str_10 >> 8)
+	mov	a,#(__str_13 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -1727,35 +1889,27 @@ L021016?:
 	mov	a,sp
 	add	a,#0xf9
 	mov	sp,a
-	pop	ar1
-	pop	ar0
 	pop	ar7
 	pop	ar6
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:328: display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD
-	mov	dpl,r6
-	mov	dph,r7
-	mov	b,r0
-	mov	a,r1
-	lcall	_display_freq_kHz
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:330: waitms(250); // Wait for 250 ms
-	mov	dptr,#0x00FA
-	lcall	_waitms
 	pop	ar5
 	pop	ar4
-	pop	ar3
-	pop	ar2
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:331: printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
-	push	ar2
-	push	ar3
-	push	ar4
-	push	ar5
-	push	ar2
-	push	ar3
-	push	ar4
-	push	ar5
-	mov	a,#__str_11
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:343: display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD
+	mov	dpl,r4
+	mov	dph,r5
+	mov	b,r6
+	mov	a,r7
+	lcall	_display_freq_kHz
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:345: waitms(250); // Wait for 250 ms
+	mov	dptr,#0x00FA
+	lcall	_waitms
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:346: printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
+	push	_main_capacitance_nF_1_67
+	push	(_main_capacitance_nF_1_67 + 1)
+	push	(_main_capacitance_nF_1_67 + 2)
+	push	(_main_capacitance_nF_1_67 + 3)
+	mov	a,#__str_14
 	push	acc
-	mov	a,#(__str_11 >> 8)
+	mov	a,#(__str_14 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -1763,17 +1917,15 @@ L021016?:
 	mov	a,sp
 	add	a,#0xf9
 	mov	sp,a
-	pop	ar5
-	pop	ar4
+;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:349: display_capacitance_nF(capacitance_nF);
+	mov	dpl,_main_capacitance_nF_1_67
+	mov	dph,(_main_capacitance_nF_1_67 + 1)
+	mov	b,(_main_capacitance_nF_1_67 + 2)
+	mov	a,(_main_capacitance_nF_1_67 + 3)
+	lcall	_display_capacitance_nF
 	pop	ar3
 	pop	ar2
-;	C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:334: display_capacitance_nF(capacitance_nF);
-	mov	dpl,r2
-	mov	dph,r3
-	mov	b,r4
-	mov	a,r5
-	lcall	_display_capacitance_nF
-	ljmp	L021018?
+	ljmp	L021029?
 	rseg R_CSEG
 
 	rseg R_XINIT
@@ -1835,15 +1987,24 @@ __str_8:
 	db 'Feb 26 2024'
 	db 0x00
 __str_9:
-	db '19:14:55'
+	db '20:29:58'
 	db 0x00
 __str_10:
+	db 'ERROR : LOW C'
+	db 0x00
+__str_11:
+	db 'ERROR : HIGH C'
+	db 0x00
+__str_12:
+	db '                '
+	db 0x00
+__str_13:
 	db 0x0A
 	db 'F(kHz) = %f'
 	db 0x0D
 	db 0x0A
 	db 0x00
-__str_11:
+__str_14:
 	db 0x0D
 	db 'C(nF) = %f'
 	db 0x0D

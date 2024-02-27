@@ -10,6 +10,14 @@
 #define MAX_16_BIT 65536.0 // 16-Bit Maximum Value
 #define MAX_8_BIT 256.0 // 8-Bit Maximum Value
 
+#define MIN_FREQ_HZ 200.0 // Minimum Frequency in Hz
+#define MAX_FREQ_HZ 400000.0 // Maximum Frequency in Hz
+
+#define MIN_CAPACITANCE_NF 1.0 // Minimum Capacitance in Nanofarads
+#define MAX_CAPACITANCE_NF 1000.0 // Maximum Capacitance in Nanofarads
+
+#define SUCCESS_THRESHOLD 3 // Success Threshold
+
 /* Define Multipliers */
 #define KILO_MULTIPLIER 1000.0 // Kilo Multiplier
 #define MEGA_MULTIPLIER 1000000.0 // Mega Multiplier
@@ -21,7 +29,7 @@
 #define BAUDRATE    115200L // Baudrate of UART in BPS
 
 /* Define Pins */
-#define EFM8_SIGNAL P0_1 // Signal to Measure
+#define EFM8_SIGNAL P3_3 // Signal to Measure
 
 #define LCD_RS P1_7 // LCD Register Select
 #define LCD_E  P2_0 // LCD Enable
@@ -272,21 +280,27 @@ float calculate_capacitance_nF(float period_s) {
 	return (1.44 * period_s / (R_A + 2 * R_B)) * GIGA_MULTIPLIER; // Convert to Nanofarads
 }
 
+// int check_error(int err_count, float freq_Hz) {
+	// err_count += 1;
+	// if (err_count >= ERR_THRESHOLD) {
+	// 	err_count = 0;
+	// 	if (freq_Hz >= MAX_FREQ_HZ) LCDprint("ERROR : LOW C", 1, 1);
+	// 	else if (freq_Hz <= MIN_FREQ_HZ) LCDprint("ERROR : HIGH C", 1, 1);
+
+	// 	LCDprint("                ", 2, 1);
+	// 	waitms(250); // Wait for 250 ms
+	// }
+// 	return err_count;
+// }
+
 void main(void) {
 	float period_s, freq_Hz, capacitance_nF;
-	int err_count = 0;
+	int success_count = 0;
 	// char rx_buff[CHARS_PER_LINE];
 
 	TIMER0_Init(); // Initialize Timer 0
     Serial_Init(); // Initialize Serial Communication
 	LCD_4BIT();	// Configure the LCD
-
-	printf(
-        "\rEFM8 Period measurement at pin P0.1 using Timer 0.\n"
-	    "File: %s\n"
-	    "Compiled: %s, %s\n\r\n",
-	    __FILE__, __DATE__, __TIME__
-    );
 
     while(1) {
         // Reset Counter
@@ -324,20 +338,19 @@ void main(void) {
 		 * Print Frequency & Capacitance to Serial Port. Display on LCD.
 		 */
 
-		err_count += 1;
+		if ((freq_Hz <= MIN_FREQ_HZ) || (freq_Hz >= MAX_FREQ_HZ)) {
+			success_count = 0;
 
-		if ((freq_Hz <= 200) || (freq_Hz >= 4000000)) {
-			err_count += 1;
+			if (freq_Hz >= MAX_FREQ_HZ) LCDprint("ERROR : LOW C", 1, 1);
+			else if (freq_Hz <= MIN_FREQ_HZ) LCDprint("ERROR : HIGH C", 1, 1);
 
-			if (err_count >= 10) {
-				err_count = 0;
-				if (freq_Hz >= 4000000) LCDprint("ERROR : LOW C", 1, 1);
-				else if (freq_Hz <= 200) LCDprint("ERROR : HIGH C", 1, 1);
-
-				LCDprint("                ", 2, 1);
-				waitms(250); // Wait for 250 ms
-			}
+			LCDprint("                ", 2, 1);
+			waitms(250); // Wait for 250 ms
 		} else {
+			success_count += 1;
+		}
+
+		if (success_count >= SUCCESS_THRESHOLD) {
 			waitms(250); // Wait for 250 ms
 			printf("\nF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
 			display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD

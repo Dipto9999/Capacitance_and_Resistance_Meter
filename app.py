@@ -18,6 +18,15 @@ from tkinter import ttk
 import serial
 import sys
 
+#################
+### Constants ###
+#################
+
+NANO_MULTIPLIER = 10**(-9)
+MICRO_MULTIPLIER = 10**(-6)
+MILLI_MULTIPLIER = 10**(-3)
+KILO_MULTIPLIER = 10**(3)
+
 ###############
 ### Classes ###
 ###############
@@ -180,7 +189,7 @@ class App :
         # Create Serial Frame Widgets
         self.port_label = tk.Label(self.serial_frame, text = "Serial Line : ", bg = 'lightgrey')
         self.port_entry = tk.Entry(self.serial_frame, bg = 'lightblue')
-        self.port_entry.insert(0, 'COM3')
+        self.port_entry.insert(0, 'COM9')
 
         self.baudrate_label = tk.Label(self.serial_frame, text = "Speed : ", bg = 'lightgrey')
         self.baudrate_entry = tk.Entry(self.serial_frame, bg = 'lightblue')
@@ -303,9 +312,9 @@ class App :
         self.estimations_frame = tk.Frame(self.reference_frame, bg = 'lightgrey')
 
         # Create Design Frame Widgets
-        self.capacitance_label = tk.Label(self.design_frame, text = f"Capacitance (μF) : ", bg = 'lightgrey')
+        self.capacitance_label = tk.Label(self.design_frame, text = f"Capacitance (nF) : ", bg = 'lightgrey')
         self.capacitance_entry = tk.Entry(self.design_frame, bg = 'lightblue')
-        self.capacitance_entry.insert(0, self.capacitance / (10**(-6)))
+        self.capacitance_entry.insert(0, round(self.capacitance / NANO_MULTIPLIER, 2))
 
         self.resistance_A_label = tk.Label(self.design_frame, text = f"Resistance A (Ω) : ", bg = 'lightgrey')
         self.resistance_A_entry = tk.Entry(self.design_frame, bg = 'lightblue')
@@ -367,8 +376,8 @@ class App :
         )
         self.estimation_values_label = tk.Label(
             self.estimations_frame,
-            text = f"C: {round(self.capacitance / (10**(-6)), 2)} μF\n"\
-                + f"Freq: {round(self.expected_freq / (10**(3)), 2)} kHz\n",
+            text = f"C: {round(self.capacitance / NANO_MULTIPLIER, 2)} nF\n"\
+                + f"Freq: {round(self.expected_freq * MILLI_MULTIPLIER, 2)} kHz\n",
             bg = 'lightgrey',
             font = tk.font.Font(family = "Helvetica", size = 20)
         )
@@ -408,7 +417,7 @@ class App :
 
         window.add(self.test_chart_frame)
 
-    def __init__(self, capacitance = 0.1 * (10**(-6)), R_A = 2.5 * (10**3), R_B = 2.5 * (10**3)) :
+    def __init__(self, capacitance = 0.1 * MICRO_MULTIPLIER, R_A = 2.5 * KILO_MULTIPLIER, R_B = 2.5 * KILO_MULTIPLIER) :
         self.root = tk.Tk()
         self.root.configure(
             background = 'black',
@@ -460,7 +469,7 @@ class App :
 
     def reestimate_freq(self) :
         try :
-            new_capacitance = float(self.capacitance_entry.get()) * (10**(-6))
+            new_capacitance = float(self.capacitance_entry.get()) * NANO_MULTIPLIER
             new_R_A = float(self.resistance_A_entry.get())
             new_R_B = float(self.resistance_B_entry.get())
 
@@ -469,8 +478,8 @@ class App :
             print(f"Error Estimating Frequency\n {e}")
         finally :
             self.estimation_values_label.config(
-                text = f"C: {round(self.capacitance / (10**(-6)), 2)} μF\n"\
-                    + f"Freq: {round(self.expected_freq / (10**(3)), 2)} kHz\n"
+                text = f"C: {round(self.capacitance / NANO_MULTIPLIER, 2)} nF\n"\
+                    + f"Freq: {round(self.expected_freq * MILLI_MULTIPLIER, 2)} kHz\n"
             )
 
     def open_serial(self):
@@ -519,5 +528,6 @@ class App :
 
 if __name__ == "__main__":
     app = App(
-        capacitance = 0.1 * (10**(-6)), R_A = 1.667 * (10**3), R_B = 1.667 * (10**3)
+        capacitance = 0.1 * MICRO_MULTIPLIER,
+        R_A = 1.5 * KILO_MULTIPLIER, R_B = 1.5 * KILO_MULTIPLIER
     )

@@ -10,21 +10,26 @@
 #define MAX_16_BIT 65536.0 // 16-Bit Maximum Value
 #define MAX_8_BIT 256.0 // 8-Bit Maximum Value
 
+/* Define Multipliers */
 #define KILO_MULTIPLIER 1000.0 // Kilo Multiplier
 #define MEGA_MULTIPLIER 1000000.0 // Mega Multiplier
 #define GIGA_MULTIPLIER 1000000000.0 // Giga Multiplier
 #define TERA_MULTIPLIER 1000000000000.0 // Tera Multiplier
 
+/* Clock Frequency and Baud Rate */
 #define SYSCLK    72000000L // SYSCLK Frequency in Hz
 #define BAUDRATE    115200L // Baudrate of UART in BPS
 
+/* Define Pins */
 #define EFM8_SIGNAL P0_1 // Signal to Measure
-#define LCD_RS P2_6 // LCD Register Select
-#define LCD_E  P2_5 // LCD Enable
-#define LCD_D4 P2_4 // LCD Data 4
-#define LCD_D5 P2_3 // LCD Data 5
-#define LCD_D6 P2_2 // LCD Data 6
-#define LCD_D7 P2_1 // LCD Data 7
+
+#define LCD_RS P1_7 // LCD Register Select
+#define LCD_E  P2_0 // LCD Enable
+
+#define LCD_D4 P1_3 // LCD Data 4
+#define LCD_D5 P1_2 // LCD Data 5
+#define LCD_D6 P1_1 // LCD Data 6
+#define LCD_D7 P1_0 // LCD Data 7
 
 /* Define Constants for Resistances */
 #define R_A 1.5 * KILO_MULTIPLIER
@@ -238,52 +243,42 @@ void display_rx(char* buff, int len) {
 
 void display_period(float period) {
 	char buff[CHARS_PER_LINE];
-	sprintf(buff, "T: %f s", (float)(period)); // Format the Period Value
+	sprintf(buff, "T: %.3f s", period); // Format the Period Value
 	LCDprint(buff, 2, 1); // Write to LCD
 }
 
 void display_freq_kHz(float freq_kHz) {
 	char buff[CHARS_PER_LINE];
-	sprintf(buff, "F: %i kHz", (int)(freq_kHz)); // Format the Frequency Value
-	LCDprint(buff, 2, 1); // Write to LCD
+	sprintf(buff, "F: %.3f kHz", freq_kHz); // Format the Frequency Value
+	LCDprint(buff, 1, 1); // Write to LCD
 }
 
-void display_capacitance_microF(float capacitance_microF) {
+void display_capacitance_nF(float capacitance_nF) {
 	char buff[CHARS_PER_LINE];
 
-	sprintf(buff, "C: %i µF", (int)(capacitance_microF)); // Format the Capacitance Value
+	sprintf(buff, "C: %.3f nF", capacitance_nF); // Format the Capacitance Value
 	LCDprint(buff, 2, 1); // Write to LCD
 }
 
-// void display_capacitance_picoF(float capacitance_picoF) {
-// 	char buff[CHARS_PER_LINE];
-// 	sprintf(buff, "C: %i pF", (int)(capacitance_picoF)); // Format the Capacitance Value
-// 	LCDprint(buff, 2, 1); // Write to LCD
-// }
-
-float calculate_period(int overflow_count, int TH0, int TL0) {
+float calculate_period_s(int overflow_count, int TH0, int TL0) {
 	return ((overflow_count * MAX_16_BIT)  + (TH0 * MAX_8_BIT) + TL0) * (12.0 / SYSCLK);
 }
 
-float calculate_freq_kHz(int overflow_count, int TH0, int TL0) {
-	return 1.0 / calculate_period(overflow_count, TH0, TL0);
+float calculate_freq_Hz(float period_s) {
+	return (1.0 / period_s);
 }
 
-float calculate_capacitance(float period_s) {
-	return (1.44 * period_s / (R_A + 2 * R_B)) * TERA_MULTIPLIER;
+float calculate_capacitance_nF(float period_s) {
+	return (1.44 * period_s / (R_A + 2 * R_B)) * GIGA_MULTIPLIER; // Convert to Nanofarads
 }
 
 void main(void) {
-	float period_s, capacitance_pF;
-	// float freq_Hz;
+	float period_s, freq_Hz, capacitance_nF;
 	// char rx_buff[CHARS_PER_LINE];
 
 	TIMER0_Init(); // Initialize Timer 0
     Serial_Init(); // Initialize Serial Communication
 	LCD_4BIT();	// Configure the LCD
-
-	LCDprint("LCD 4-Bit Test", 1, 1);
-	LCDprint("Hello, World!", 2, 1);
 
 	printf(
         "\rEFM8 Period measurement at pin P0.1 using Timer 0.\n"
@@ -318,31 +313,24 @@ void main(void) {
         }
 
 		TR0 = 0; // Stop Timer 0. The 24-bit number [overflow_count-TH0-TL0] has the period!
-		period_s = calculate_period(overflow_count, TH0, TL0);
-		capacitance_pF = calculate_capacitance(period_s);
-
-		/* Print Period and Capacitance to Serial Port */
-
-		// waitms(500); // Wait for 500ms
-		// printf("\rT(s)=%f", period_s); // Print T(s) to Serial Port
+		period_s = calculate_period_s(overflow_count, TH0, TL0);
+		freq_Hz = calculate_freq_Hz(period_s);
+		capacitance_nF = calculate_capacitance_nF(period_s);
 
 		// display_rx(rx_buff, sizeof(rx_buff)); // Display User Input on LCD
 
-		/* Display Frequency/Capacitance on LCD */
-		// display_freq_kHz(freq_Hz * KILO_MULTIPLIER); // Display Frequency on LCD
-
 		/*
-		 * Print Capacitance to Serial Port and Display on LCD.
+		 * Print Frequency & Capacitance to Serial Port. Display on LCD.
 		 */
 
-		// waitms(500); // Wait for 500ms
+		waitms(250); // Wait for 250 ms
+		printf("\nF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
+		display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD
 
-		// Display in Microfarads
-		printf("\rC(µF)=%f", (capacitance_pF / MEGA_MULTIPLIER));
-		display_capacitance_microF(capacitance_pF / MEGA_MULTIPLIER);
+		waitms(250); // Wait for 250 ms
+		printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
+		// printf("C(µF)=%f\r\n", (capacitance_nF / MEGA_MULTIPLIER)); // Print Capacitance in Microfarads
 
-		// Display in Picofarads
-		// printf("\rC(pF)=%f", capacitance_pF);
-		// display_capacitance_picoF(capacitance_pF);
+		display_capacitance_nF(capacitance_nF);
 	}
 }

@@ -29,6 +29,7 @@ KILO_MULTIPLIER = 10**(3)
 
 RX_C = 'C(nF) = '
 RX_F = 'F(kHz) = '
+RX_R = 'R(kOhm) = '
 
 ###############
 ### Classes ###
@@ -59,7 +60,7 @@ class Serial(serial.Serial) :
         super().close()
 
 class StripChart :
-    def __init__(self, master, conn = None, xlim = 250) :
+    def __init__(self, master, conn = None, xlim = 250, ylim = 400) :
         self.master = master
         self.conn = conn
         self.fig = plt.figure()
@@ -67,17 +68,18 @@ class StripChart :
         self.ax = self.fig.add_subplot(111)
         self.ax.set_title('Frequency Strip-Chart')
 
-        self.xlim = xlim
+        self.xlim, self.ylim = xlim, ylim
         self.ax.set_xlim(0, self.xlim)
-        self.ax.set_xlabel('Samples')
+        self.ax.set_ylim(0, self.ylim)
 
+        self.ax.set_xlabel('Samples')
         self.ax.set_ylabel('Frequency (kHz)')
 
         self.ax.grid()
 
         self.frequency_line, = self.ax.plot([], [], lw = 2, label = 'Frequency (kHz)')
 
-        self.current_freq, self.current_c = 0, 0
+        self.current_freq, self.current_c, self.current_r, self.current_mode  = 0, 0, 0, 0
 
         self.t_data, self.frequency_data = [], []
         self.data_df = pd.DataFrame(columns = ['Datetime', 'Frequency (kHz)', 'Capacitance (nF)'])
@@ -102,6 +104,16 @@ class StripChart :
             return rx_val.replace(RX_C, '')
         else :
             return None
+    def read_r(self, rx_val) :
+        if (rx_val.find(RX_R) > -1) :
+            return rx_val.replace(RX_R, '')
+        else :
+            return None
+    def read_mode(self, rx_val) :
+        if (rx_val.find('Mode: ') > -1) :
+            return rx_val.replace('Mode: ', '')
+        else :
+            return None
 
     def data_gen(self):
         t = -1
@@ -113,6 +125,8 @@ class StripChart :
                 try :
                     read_freq = self.read_freq(rx_data) # Check if Frequency is Readable
                     read_c = self.read_c(rx_data) # Check if Capacitance is Readable
+                    read_r = self.read_r(rx_data) # Check if Resistance is Readable
+                    read_mode = self.read_mode(rx_data) # Check if Mode is Readable
 
                     if read_freq is not None :
                         self.current_freq = float(read_freq)
@@ -120,29 +134,45 @@ class StripChart :
                     elif read_c is not None :
                         self.current_c = float(read_c)
                         print(f"Current Capacitance: {self.current_c} nF")
+                    elif read_r is not None :
+                        self.current_r = float(read_r)
+                        print(f"Current Resistance: {self.current_r} kΩ")
+                    elif read_mode is not None :
+                        self.current_mode = float(read_mode)
+                        print(f"Current Mode: {read_mode}")
+                        if read_mode == 0 :
+                            self.ax.set_title(f'Frequency Strip-Chart : Capacitance Meter Setting')
+                        else :
+                            self.ax.set_title(f'Frequency Strip-Chart : Resistance Meter Setting')
                     else :
-                        print("Invalid Frequency/Capacitance Reading")
+                        print("Invalid Frequency/Capacitance/Resistance Reading")
                 except (TypeError, ValueError, UnicodeDecodeError) :
-                    print("Error Reading Frequency/Capacitance from Serial Port!")
+                    print("Error Reading Frequency/Capacitance/Resistance from Serial Port!")
                 finally :
-                    current_freq, current_c = self.current_freq, self.current_c
+                    current_freq, current_c, current_r = self.current_freq, self.current_c, self.current_r
                 current_time = dt.datetime.now()
-            yield t, current_time, current_freq, current_c
+            yield t, current_time, current_freq, current_c, current_r
 
     def run(self, data):
-        t, current_time, current_freq, current_c = data
+        t, current_time, current_freq, current_c, current_r = data
         if t > -1 :
             self.t_data.append(t)
             self.frequency_data.append(current_freq)
 
             if t > self.xlim :
                 self.ax.set_xlim(t - self.xlim, t)
+
+            if (current_freq > self.ylim * 10) or (current_freq < self.ylim / 10) :
+                self.ylim = current_freq * 1.5
+                self.ax.set_ylim(0, self.ylim)
+
             self.frequency_line.set_data(self.t_data, self.frequency_data)
 
             new_df = pd.DataFrame({
-                'Datetime': current_time,
-                'Frequency': current_freq,
-                'Capacitance': current_c,
+                'Datetime': [current_time],
+                'Frequency': [current_freq],
+                'Capacitance': [current_c],
+                'Resistance': [current_r]
             })
 
             if self.data_df.empty :
@@ -180,6 +210,7 @@ class StripChart :
                     'Datetime': 'Datetime',
                     'Frequency': 'Frequency (kHz)',
                     'Capacitance': 'Capacitance (nF)',
+                    'Resistance': 'Resistance (kΩ)'
                 }, inplace = True
             )
             csv_path = f'''LogBook/EFM8_{csv_df['Datetime'].iloc[0].replace(' ', '_').replace('-', '_').replace(':', '_')}.csv'''
@@ -431,7 +462,7 @@ class App :
         )
         self.root.geometry("1200x755")
         self.root.resizable(False, False)
-        self.root.title("Capacitance Strip-Chart")
+        self.root.title("Frequency Strip-Chart")
         # Bind Close Function to Window Close Event
         self.root.protocol("WM_DELETE_WINDOW", self.close)
 

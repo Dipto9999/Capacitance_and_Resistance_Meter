@@ -933,8 +933,8 @@ F5 data8(_main_success_count_1_75;0x0001;+;)
 75 data8(_InitPinADC_PARM_2;) 01
 75 82 00
 12 addr16(_InitPinADC;)  
-75 data8(_InitPinADC_PARM_2;) 02
-75 82 00
+75 data8(_InitPinADC_PARM_2;) 01
+75 82 02
 12 addr16(_InitPinADC;)  
 12 addr16(_InitADC;)  
 75 82 00

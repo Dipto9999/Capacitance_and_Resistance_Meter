@@ -46,7 +46,7 @@
 #define R_A 1.5 * KILO_MULTIPLIER
 #define R_B 1.5 * KILO_MULTIPLIER
 
-#define VDD 3.3035 // The measured value of VDD in volts
+#define VDD 4.8 // VDD in Volts
 #define V_LED 2.0348 // Voltage at the LED
 
 #define CHARS_PER_LINE 16
@@ -383,19 +383,19 @@ void main(void) {
     Serial_Init(); // Initialize Serial Communication
 	LCD_4BIT();	// Configure the LCD
 
-	// Initialize ADC
-	InitPinADC(0, 1); // Configure P0.1 as Analog Input
-	InitPinADC(2, 1); // Configure P2.1 as Analog Input
-	InitADC();
+	// // Initialize ADC
+	// InitPinADC(0, 1); // Configure P0.1 as Analog Input
+	// InitPinADC(2, 1); // Configure P2.1 as Analog Input
+	// InitADC();
 
     while(1) {
 		// Measure the Voltage at the LED and Resistor
-		v_led = Volts_at_Pin(QFP32_MUX_P0_1); // Measure the Voltage at the LED
-		v_r = Volts_at_Pin(QFP32_MUX_P0_2); // Measure the Voltage at the Resistor
+		// v_led = Volts_at_Pin(QFP32_MUX_P0_1); // Measure the Voltage at the LED
+		// v_r = Volts_at_Pin(QFP32_MUX_P0_2); // Measure the Voltage at the Resistor
 
-		// Display the Voltage at the LED and Resistor
-		printf("V_LED = %f\r\n", v_led); // Print Voltage at the LED
-		printf("V_R = %f\r\n", v_r); // Print Voltage at the Resistor
+		// // Display the Voltage at the LED and Resistor
+		// printf("V_LED = %f\r\n", v_led); // Print Voltage at the LED
+		// printf("V_R = %f\r\n", v_r); // Print Voltage at the Resistor
 
         // Reset Counter
 		TL0 = 0;

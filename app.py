@@ -27,8 +27,8 @@ MICRO_MULTIPLIER = 10**(-6)
 MILLI_MULTIPLIER = 10**(-3)
 KILO_MULTIPLIER = 10**(3)
 
-RX_C = 'C(nF)= '
-RX_F = 'F(kHz)= '
+RX_C = 'C(nF) = '
+RX_F = 'F(kHz) = '
 
 ###############
 ### Classes ###
@@ -84,7 +84,7 @@ class StripChart :
 
         self.canvas = FigureCanvasTkAgg(self.fig, master = self.master)
         self.canvas_widget = self.canvas.get_tk_widget()
-        self.canvas_widget.pack(fill = tk.BOTH, expand = True)
+        self.canvas_widget.grid(row = 0, column = 0)
 
     def read_serial(self) :
         if (self.conn is not None) :
@@ -111,14 +111,19 @@ class StripChart :
             rx_data = self.read_serial()
             if rx_data is not None :
                 try :
-                    self.current_freq = float(self.read_freq(rx_data)) # Check if Frequency is Readable
-                    print(f"Current Frequency: {self.current_freq} kHz")
-                except (TypeError, ValueError, UnicodeDecodeError) :
-                    self.current_c = float(self.read_c(rx_data)) # Check if Capacitance is Readable
-                    if self.current_c is not None :
+                    read_freq = self.read_freq(rx_data) # Check if Frequency is Readable
+                    read_c = self.read_c(rx_data) # Check if Capacitance is Readable
+
+                    if read_freq is not None :
+                        self.current_freq = float(read_freq)
+                        print(f"Current Frequency: {self.current_freq} kHz")
+                    elif read_c is not None :
+                        self.current_c = float(read_c)
                         print(f"Current Capacitance: {self.current_c} nF")
                     else :
-                        print("Error Reading Frequency/Capacitance from Serial Port!")
+                        print("Invalid Frequency/Capacitance Reading")
+                except (TypeError, ValueError, UnicodeDecodeError) :
+                    print("Error Reading Frequency/Capacitance from Serial Port!")
                 finally :
                     current_freq, current_c = self.current_freq, self.current_c
                 current_time = dt.datetime.now()
@@ -190,7 +195,7 @@ class App :
         # Create Serial Frame Widgets
         self.port_label = tk.Label(self.serial_frame, text = "Serial Line : ", bg = 'lightgrey')
         self.port_entry = tk.Entry(self.serial_frame, bg = 'lightblue')
-        self.port_entry.insert(0, 'COM9')
+        self.port_entry.insert(0, 'COM11')
 
         self.baudrate_label = tk.Label(self.serial_frame, text = "Speed : ", bg = 'lightgrey')
         self.baudrate_entry = tk.Entry(self.serial_frame, bg = 'lightblue')

@@ -195,7 +195,7 @@ float Volts_at_Pin(unsigned char pin)
 
 void main (void)
 {
-	float v[4];
+	float v[2];
 
     waitms(500); // Give PuTTy a chance to start before sending
 	printf("\x1b[2J"); // Clear screen using ANSI escape sequence.
@@ -205,20 +205,16 @@ void main (void)
 	        "Compiled: %s, %s\n\n",
 	        __FILE__, __DATE__, __TIME__);
 
-	InitPinADC(2, 2); // Configure P2.2 as analog input
-	InitPinADC(2, 3); // Configure P2.3 as analog input
-	InitPinADC(2, 4); // Configure P2.4 as analog input
-	InitPinADC(2, 5); // Configure P2.5 as analog input
+	InitPinADC(0, 1); // Configure P2.2 as analog input
+	InitPinADC(2, 1); // Configure P2.3 as analog input
     InitADC();
 
 	while(1)
 	{
 	    // Read 14-bit value from the pins configured as analog inputs
-		v[0] = Volts_at_Pin(QFP32_MUX_P2_2);
-		v[1] = Volts_at_Pin(QFP32_MUX_P2_3);
-		v[2] = Volts_at_Pin(QFP32_MUX_P2_4);
-		v[3] = Volts_at_Pin(QFP32_MUX_P2_5);
-		printf ("V@P2.2=%7.5fV, V@P2.3=%7.5fV, V@P2.4=%7.5fV, V@P2.5=%7.5fV\r", v[0], v[1], v[2], v[3]);
+		v[0] = Volts_at_Pin(QFP32_MUX_P0_1);
+		v[1] = Volts_at_Pin(QFP32_MUX_P2_1);
+		printf ("V@P0.1=%7.5fV, V@P2.1=%7.5fV\r", v[0], v[1]);
 		waitms(500);
 	 }
 }

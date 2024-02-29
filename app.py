@@ -63,7 +63,9 @@ class StripChart :
     def __init__(self, master, conn = None, xlim = 250, ylim = 400) :
         self.master = master
         self.conn = conn
-        self.fig = plt.figure()
+        self.fig = plt.figure(
+            figsize = (900 / 100, 755 / 100)
+        )
 
         self.ax = self.fig.add_subplot(111)
         self.ax.set_title('Frequency Strip-Chart')
@@ -136,7 +138,7 @@ class StripChart :
                         print(f"Current Capacitance: {self.current_c} nF")
                     elif read_r is not None :
                         self.current_r = float(read_r)
-                        print(f"Current Resistance: {self.current_r} kΩ")
+                        print(f"Current Resistance: {self.current_r} kOhm")
                     elif read_mode is not None :
                         self.current_mode = float(read_mode)
                         print(f"Current Mode: {read_mode}")
@@ -210,7 +212,7 @@ class StripChart :
                     'Datetime': 'Datetime',
                     'Frequency': 'Frequency (kHz)',
                     'Capacitance': 'Capacitance (nF)',
-                    'Resistance': 'Resistance (kΩ)'
+                    'Resistance': 'Resistance (kOhm)'
                 }, inplace = True
             )
             csv_path = f'''LogBook/EFM8_{csv_df['Datetime'].iloc[0].replace(' ', '_').replace('-', '_').replace(':', '_')}.csv'''

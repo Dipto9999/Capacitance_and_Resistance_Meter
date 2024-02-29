@@ -27,6 +27,9 @@ MICRO_MULTIPLIER = 10**(-6)
 MILLI_MULTIPLIER = 10**(-3)
 KILO_MULTIPLIER = 10**(3)
 
+RX_C = 'C(nF) = '
+RX_F = 'F(kHz) = '
+
 ###############
 ### Classes ###
 ###############
@@ -56,50 +59,49 @@ class Serial(serial.Serial) :
         super().close()
 
 class StripChart :
-    def __init__(self, master, conn = None, xlim = 1500) :
+    def __init__(self, master, conn = None, xlim = 250) :
         self.master = master
         self.conn = conn
         self.fig = plt.figure()
 
         self.ax = self.fig.add_subplot(111)
-        self.ax.set_title('Capacitance Strip-Chart')
+        self.ax.set_title('Frequency Strip-Chart')
 
         self.xlim = xlim
         self.ax.set_xlim(0, self.xlim)
         self.ax.set_xlabel('Samples')
 
-        # self.ax.set_ylim(0, 1000)
-        self.ax.set_ylabel('Capacitance (pF)')
+        self.ax.set_ylabel('Frequency (kHz)')
 
         self.ax.grid()
 
-        self.capacitance_line, = self.ax.plot([], [], lw = 2, label = 'Capacitance (pF)')
         self.frequency_line, = self.ax.plot([], [], lw = 2, label = 'Frequency (kHz)')
 
-        self.ax.legend(loc = 'upper right')
+        self.current_freq, self.current_c = 0, 0
 
-        self.current_val, self.current_type = 0, 'C'
-
-        self.t_data, self.capacitance_data, self.frequency_data = [], [], []
-        self.data_df = pd.DataFrame(columns = ['Datetime', 'Capacitance (pF)'])
+        self.t_data, self.frequency_data = [], []
+        self.data_df = pd.DataFrame(columns = ['Datetime', 'Frequency (kHz)', 'Capacitance (nF)'])
 
         self.canvas = FigureCanvasTkAgg(self.fig, master = self.master)
         self.canvas_widget = self.canvas.get_tk_widget()
-        # self.canvas_widget.grid(row = 0, column = 0, sticky = 'nsew')
-        self.canvas_widget.pack(fill = tk.BOTH, expand = True)
+        self.canvas_widget.grid(row = 0, column = 0)
 
     def read_serial(self) :
-        capacitance_indicator = 'C(pF)= '
-        frequency_indicator = 'F(kHz)= '
         if (self.conn is not None) :
-            rx_val = self.conn.readline().decode('utf-8').strip('\r\n')
+            return self.conn.readline().decode('utf-8').strip('\r').strip('\n')
+        else :
+            return None
 
-            if (rx_val.find(capacitance_indicator) > -1) :
-                return 'C', rx_val.replace(capacitance_indicator, '')
-            elif (rx_val.find(frequency_indicator) > -1) :
-                return 'F', rx_val.replace(frequency_indicator, '')
-
-        return None, -1
+    def read_freq(self, rx_val) :
+        if (rx_val.find(RX_F) > -1) :
+            return rx_val.replace(RX_F, '')
+        else :
+            return None
+    def read_c(self, rx_val) :
+        if (rx_val.find(RX_C) > -1) :
+            return rx_val.replace(RX_C, '')
+        else :
+            return None
 
     def data_gen(self):
         t = -1
@@ -107,44 +109,48 @@ class StripChart :
             t += 1
 
             rx_data = self.read_serial()
-            if rx_data[0] is not None :
+            if rx_data is not None :
                 try :
-                    self.current_val, self.current_type = float(rx_data[1]), rx_data[0]
+                    read_freq = self.read_freq(rx_data) # Check if Frequency is Readable
+                    read_c = self.read_c(rx_data) # Check if Capacitance is Readable
+
+                    if read_freq is not None :
+                        self.current_freq = float(read_freq)
+                        print(f"Current Frequency: {self.current_freq} kHz")
+                    elif read_c is not None :
+                        self.current_c = float(read_c)
+                        print(f"Current Capacitance: {self.current_c} nF")
+                    else :
+                        print("Invalid Frequency/Capacitance Reading")
                 except (TypeError, ValueError, UnicodeDecodeError) :
-                    print("Error Reading Capacitance/Frequency From Serial Port!")
+                    print("Error Reading Frequency/Capacitance from Serial Port!")
                 finally :
-                    current_val, current_type = self.current_val, self.current_type
+                    current_freq, current_c = self.current_freq, self.current_c
                 current_time = dt.datetime.now()
-            yield t, current_type, current_val, current_time
+            yield t, current_time, current_freq, current_c
 
     def run(self, data):
-        # t, y, current_time = data
-        t, current_type, current_val, current_time = data
+        t, current_time, current_freq, current_c = data
         if t > -1 :
-            if current_type == 'C' :
-                self.t_data.append(t)
-                self.capacitance_data.append(current_val)
-            elif current_type == 'F' :
-                self.t_data.append(t)
-                self.frequency_data.append(current_val)
+            self.t_data.append(t)
+            self.frequency_data.append(current_freq)
 
             if t > self.xlim :
                 self.ax.set_xlim(t - self.xlim, t)
-            self.capacitance_line.set_data(self.t_data, self.capacitance_data)
             self.frequency_line.set_data(self.t_data, self.frequency_data)
 
             new_df = pd.DataFrame({
                 'Datetime': current_time,
-                'Capacitance': current_val if (current_type == 'C') else np.nan,
-                'Frequency': current_val if (current_type == 'F') else np.nan
+                'Frequency': current_freq,
+                'Capacitance': current_c,
             })
 
             if self.data_df.empty :
                 self.data_df = new_df
             else:
                 self.data_df = pd.concat([self.data_df, new_df], ignore_index = True, axis = 0).ffill()
-            self.current_val, self.current_type = current_val, current_type
-        return self.line
+            self.current_freq = current_freq
+        return self.frequency_line
 
     def start_animation(self, conn):
         self.conn = conn
@@ -172,8 +178,8 @@ class StripChart :
             csv_df.rename(
                 columns = {
                     'Datetime': 'Datetime',
-                    'Capacitance': 'Capacitance (pF)',
-                    'Frequency': 'Frequency (kHz)'
+                    'Frequency': 'Frequency (kHz)',
+                    'Capacitance': 'Capacitance (nF)',
                 }, inplace = True
             )
             csv_path = f'''LogBook/EFM8_{csv_df['Datetime'].iloc[0].replace(' ', '_').replace('-', '_').replace(':', '_')}.csv'''
@@ -189,7 +195,7 @@ class App :
         # Create Serial Frame Widgets
         self.port_label = tk.Label(self.serial_frame, text = "Serial Line : ", bg = 'lightgrey')
         self.port_entry = tk.Entry(self.serial_frame, bg = 'lightblue')
-        self.port_entry.insert(0, 'COM9')
+        self.port_entry.insert(0, 'COM11')
 
         self.baudrate_label = tk.Label(self.serial_frame, text = "Speed : ", bg = 'lightgrey')
         self.baudrate_entry = tk.Entry(self.serial_frame, bg = 'lightblue')
@@ -231,7 +237,7 @@ class App :
         # self.send_button = tk.Button(
         #     self.serial_frame,
         #     text = "Send N76E003(C)", command = lambda : self.send_serial(
-        #         f'{int(self.test_chart.current_val*(10**4))}'
+        #         f'{int(self.frequency_chart.current_freq*(10**4))}'
         #     ),
         #     bg = 'lightblue'
         # )
@@ -392,13 +398,13 @@ class App :
         window.add(self.reference_frame)
 
     def _config_stripchart_frame(self, window) :
-        self.test_chart_frame = tk.Frame(self.right_window, bg = 'grey')
+        self.frequency_chart_frame = tk.Frame(self.right_window, bg = 'grey')
 
         # Initialize StripChart in the StripChart frame
-        self.test_chart = StripChart(self.test_chart_frame)
+        self.frequency_chart = StripChart(self.frequency_chart_frame)
         self.export_csv_button = tk.Button(
             self.root,
-            text = "Export to Spreadsheet", command = self.test_chart.export_csv,
+            text = "Export to Spreadsheet", command = self.frequency_chart.export_csv,
             bg = 'lightblue'
         )
         self.save_button = tk.Button(
@@ -415,7 +421,7 @@ class App :
             padx = 10, pady = 10, side = tk.RIGHT
         )
 
-        window.add(self.test_chart_frame)
+        window.add(self.frequency_chart_frame)
 
     def __init__(self, capacitance = 0.1 * MICRO_MULTIPLIER, R_A = 2.5 * KILO_MULTIPLIER, R_B = 2.5 * KILO_MULTIPLIER) :
         self.root = tk.Tk()
@@ -452,7 +458,8 @@ class App :
         self.root.mainloop()
 
     def close(self) :
-        self.test_chart.export_csv()
+        self.frequency_chart.export_csv()
+        self.save_fig()
         if self.conn is not None :
             self.conn.close()
         self.root.destroy()
@@ -508,14 +515,15 @@ class App :
                     parity = parity, stopbits = stopbits, bytesize = bytesize
                 )
 
-                self.test_chart.start_animation(conn = self.conn) # Start Animation
+                self.frequency_chart.start_animation(conn = self.conn) # Start Animation
             except Exception as e :
                 print(f"Error Opening Serial Port\n {e}")
 
     def save_fig(self) :
-        jpg_path = f'''Figures/EFM8_{dt.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')}.jpg'''
-        self.test_chart.fig.savefig(jpg_path, 'test_chart.jpg', format = 'jpg', dpi = 800)
-        print(f"Figure Saved As {jpg_path}")
+        if not self.frequency_chart.data_df.empty :
+            jpg_path = f'''Figures/EFM8_{dt.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')}.jpg'''
+            self.frequency_chart.fig.savefig(jpg_path, format = 'jpg', dpi = 800)
+            print(f"Figure Saved As {jpg_path}")
 
     def send_serial(self, temp_parsed) :
         if self.conn is not None :

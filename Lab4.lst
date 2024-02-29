@@ -1,7 +1,7 @@
 0000              1   ;--------------------------------------------------------
 0000              2   ; File Created by C51
 0000              3   ; Version 1.0.0 #1170 (Feb 16 2022) (MSVC)
-0000              4   ; This file was generated Wed Feb 28 18:42:31 2024
+0000              4   ; This file was generated Wed Feb 28 20:45:09 2024
 0000              5   ;--------------------------------------------------------
                   5   $name Lab4
                   6   $optc51 --model-small
@@ -603,97 +603,97 @@
 0000            603   ;Allocation info for local variables in function '_c51_external_startup'
 0000            604   ;------------------------------------------------------------
 0000            605   ;------------------------------------------------------------
-0000            606   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:67: char _c51_external_startup(void) {
+0000            606   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:66: char _c51_external_startup(void) {
 0000            607   ;        -----------------------------------------
 0000            608   ;         function _c51_external_startup
 0000            609   ;        -----------------------------------------
 0000            610   __c51_external_startup:
 0000            611            using   0
-0000            612   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:69: SFRPAGE = 0x00;
+0000            612   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:68: SFRPAGE = 0x00;
 0000 75A700     613            mov     _SFRPAGE,#0x00
-0003            614   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:70: WDTCN = 0xDE; // First Key
+0003            614   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:69: WDTCN = 0xDE; // First Key
 0003 7597DE     615            mov     _WDTCN,#0xDE
-0006            616   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:71: WDTCN = 0xAD; // Second Key
+0006            616   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:70: WDTCN = 0xAD; // Second Key
 0006 7597AD     617            mov     _WDTCN,#0xAD
-0009            618   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:73: VDM0CN |= 0x80;
+0009            618   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:72: VDM0CN |= 0x80;
 0009 43FF80     619            orl     _VDM0CN,#0x80
-000C            620   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:74: RSTSRC=0x02|0x04;  // Enable Reset on Missing Clock Detector and VDD
+000C            620   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:73: RSTSRC=0x02|0x04;  // Enable Reset on Missing Clock Detector and VDD
 000C 75EF06     621            mov     _RSTSRC,#0x06
-000F            622   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:82: SFRPAGE = 0x10;
+000F            622   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:81: SFRPAGE = 0x10;
 000F 75A710     623            mov     _SFRPAGE,#0x10
-0012            624   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:83: PFE0CN  = 0x20; // SYSCLK < 75 MHz.
+0012            624   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:82: PFE0CN  = 0x20; // SYSCLK < 75 MHz.
 0012 75C120     625            mov     _PFE0CN,#0x20
-0015            626   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:84: SFRPAGE = 0x00;
+0015            626   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:83: SFRPAGE = 0x00;
 0015 75A700     627            mov     _SFRPAGE,#0x00
-0018            628   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:106: CLKSEL = 0x00;
+0018            628   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:105: CLKSEL = 0x00;
 0018 75A900     629            mov     _CLKSEL,#0x00
-001B            630   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:107: CLKSEL = 0x00;
+001B            630   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:106: CLKSEL = 0x00;
 001B 75A900     631            mov     _CLKSEL,#0x00
-001E            632   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:108: while ((CLKSEL & 0x80) == 0);
+001E            632   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:107: while ((CLKSEL & 0x80) == 0);
 001E            633   L002001?:
 001E E5A9       634            mov     a,_CLKSEL
 0020 30E738     635            jnb     acc.7,L002001?
-0023            636   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:109: CLKSEL = 0x03;
+0023            636   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:108: CLKSEL = 0x03;
 0023 75A903     637            mov     _CLKSEL,#0x03
-0026            638   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:110: CLKSEL = 0x03;
+0026            638   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:109: CLKSEL = 0x03;
 0026 75A903     639            mov     _CLKSEL,#0x03
-0029            640   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:111: while ((CLKSEL & 0x80) == 0);
+0029            640   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:110: while ((CLKSEL & 0x80) == 0);
 0029            641   L002004?:
 0029 E5A9       642            mov     a,_CLKSEL
 002B 30E7B8     643            jnb     acc.7,L002004?
-002E            644   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:116: P0MDOUT |= 0x10; // Enable UART0 TX As Push-Pull Output
+002E            644   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:115: P0MDOUT |= 0x10; // Enable UART0 TX As Push-Pull Output
 002E 43A410     645            orl     _P0MDOUT,#0x10
-0031            646   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:117: XBR0     = 0x01; // Enable UART0 on P0.4 (TX) and P0.5 (RX)
+0031            646   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:116: XBR0     = 0x01; // Enable UART0 on P0.4 (TX) and P0.5 (RX)
 0031 75E101     647            mov     _XBR0,#0x01
-0034            648   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:118: XBR1     = 0X00; // Enable T0 on P0.0
+0034            648   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:117: XBR1     = 0X00; // Enable T0 on P0.0
 0034 75E200     649            mov     _XBR1,#0x00
-0037            650   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:119: XBR2     = 0x40; // Enable Crossbar and Weak Pull-Ups
+0037            650   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:118: XBR2     = 0x40; // Enable Crossbar and Weak Pull-Ups
 0037 75E340     651            mov     _XBR2,#0x40
-003A            652   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:126: SCON0 = 0x10;
+003A            652   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:125: SCON0 = 0x10;
 003A 759810     653            mov     _SCON0,#0x10
-003D            654   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:127: CKCON0 |= 0b_0000_0000 ; // Timer 1 Uses SYSCLK / 12
+003D            654   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:126: CKCON0 |= 0b_0000_0000 ; // Timer 1 Uses SYSCLK / 12
 003D 858E8E     655            mov     _CKCON0,_CKCON0
-0040            656   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:128: TH1 = 0x100-((SYSCLK/BAUDRATE)/(2L*12L)); // Set Timer1 Reload Value, Initial Value
+0040            656   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:127: TH1 = 0x100-((SYSCLK/BAUDRATE)/(2L*12L)); // Set Timer1 Reload Value, Initial Value
 0040 758DE6     657            mov     _TH1,#0xE6
-0043            658   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:129: TL1 = TH1;      // Init Timer1
+0043            658   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:128: TL1 = TH1;      // Init Timer1
 0043 858D8B     659            mov     _TL1,_TH1
-0046            660   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:130: TMOD &= ~0xf0;  // TMOD: Timer 1 in 8-bit auto-reload
+0046            660   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:129: TMOD &= ~0xf0;  // TMOD: Timer 1 in 8-bit auto-reload
 0046 53890F     661            anl     _TMOD,#0x0F
-0049            662   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:131: TMOD |=  0x20;
+0049            662   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:130: TMOD |=  0x20;
 0049 438920     663            orl     _TMOD,#0x20
-004C            664   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:132: TR1 = 1; // Start Timer1
+004C            664   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:131: TR1 = 1; // Start Timer1
 004C D28E       665            setb    _TR1
-004E            666   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:133: TI = 1;  // Indicate TX0 Ready
+004E            666   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:132: TI = 1;  // Indicate TX0 Ready
 004E D299       667            setb    _TI
-0050            668   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:135: return 0;
+0050            668   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:134: return 0;
 0050 758200     669            mov     dpl,#0x00
 0053 22         670            ret
 0054            671   ;------------------------------------------------------------
 0054            672   ;Allocation info for local variables in function 'InitADC'
 0054            673   ;------------------------------------------------------------
 0054            674   ;------------------------------------------------------------
-0054            675   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:138: void InitADC(void) {
+0054            675   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:137: void InitADC(void) {
 0054            676   ;        -----------------------------------------
 0054            677   ;         function InitADC
 0054            678   ;        -----------------------------------------
 0054            679   _InitADC:
-0054            680   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:139: SFRPAGE = 0x00;
+0054            680   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:138: SFRPAGE = 0x00;
 0054 75A700     681            mov     _SFRPAGE,#0x00
-0057            682   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:140: ADEN=0; // Disable ADC
+0057            682   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:139: ADEN=0; // Disable ADC
 0057 C2EF       683            clr     _ADEN
-0059            684   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:145: (0x0 << 0) ; // Accumulate n conversions: 0x0: 1, 0x1:4, 0x2:8, 0x3:16, 0x4:32
+0059            684   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:144: (0x0 << 0) ; // Accumulate n conversions: 0x0: 1, 0x1:4, 0x2:8, 0x3:16, 0x4:32
 0059 75B280     685            mov     _ADC0CN1,#0x80
-005C            686   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:149: (0x0 << 2); // 0:SYSCLK ADCCLK = SYSCLK. 1:HFOSC0 ADCCLK = HFOSC0.
+005C            686   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:148: (0x0 << 2); // 0:SYSCLK ADCCLK = SYSCLK. 1:HFOSC0 ADCCLK = HFOSC0.
 005C 75BC20     687            mov     _ADC0CF0,#0x20
-005F            688   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:153: (0x1E << 0); // Conversion Tracking Time. Tadtk = ADTK / (Fsarclk)
+005F            688   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:152: (0x1E << 0); // Conversion Tracking Time. Tadtk = ADTK / (Fsarclk)
 005F 75B91E     689            mov     _ADC0CF1,#0x1E
-0062            690   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:162: (0x0 << 0) ; // TEMPE. 0: Disable the Temperature Sensor. 1: Enable the Temperature Sensor.
+0062            690   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:161: (0x0 << 0) ; // TEMPE. 0: Disable the Temperature Sensor. 1: Enable the Temperature Sensor.
 0062 75E800     691            mov     _ADC0CN0,#0x00
-0065            692   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:167: (0x1F << 0); // ADPWR. Power Up Delay Time. Tpwrtime = ((4 * (ADPWR + 1)) + 2) / (Fadcclk)
+0065            692   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:166: (0x1F << 0); // ADPWR. Power Up Delay Time. Tpwrtime = ((4 * (ADPWR + 1)) + 2) / (Fadcclk)
 0065 75DF3F     693            mov     _ADC0CF2,#0x3F
-0068            694   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:171: (0x0 << 0) ; // ADCM. 0x0: ADBUSY, 0x1: TIMER0, 0x2: TIMER2, 0x3: TIMER3, 0x4: CNVSTR, 0x5: CEX5, 0x6: TIMER4, 0x7: TIMER5, 0x8: CLU0, 0x9: CLU1, 0xA: CLU2, 0xB: CLU3
+0068            694   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:170: (0x0 << 0) ; // ADCM. 0x0: ADBUSY, 0x1: TIMER0, 0x2: TIMER2, 0x3: TIMER3, 0x4: CNVSTR, 0x5: CEX5, 0x6: TIMER4, 0x7: TIMER5, 0x8: CLU0, 0x9: CLU1, 0xA: CLU2, 0xB: CLU3
 0068 75B300     695            mov     _ADC0CN2,#0x00
-006B            696   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:173: ADEN=1; // Enable ADC
+006B            696   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:172: ADEN=1; // Enable ADC
 006B D2EF       697            setb    _ADEN
 006D 22         698            ret
 006E            699   ;------------------------------------------------------------
@@ -703,13 +703,13 @@
 006E            703   ;portno                    Allocated to registers r2 
 006E            704   ;mask                      Allocated to registers r3 
 006E            705   ;------------------------------------------------------------
-006E            706   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:176: void InitPinADC(unsigned char portno, unsigned char pinno) {
+006E            706   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:175: void InitPinADC(unsigned char portno, unsigned char pinno) {
 006E            707   ;        -----------------------------------------
 006E            708   ;         function InitPinADC
 006E            709   ;        -----------------------------------------
 006E            710   _InitPinADC:
 006E AA82       711            mov     r2,dpl
-0070            712   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:179: mask = 1 << pinno;
+0070            712   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:178: mask = 1 << pinno;
 0070 8560F0     713            mov     b,_InitPinADC_PARM_2
 0073 05F0       714            inc     b
 0075 7401       715            mov     a,#0x01
@@ -719,54 +719,54 @@
 007B            719   L004013?:
 007B D5F0B8     720            djnz    b,L004011?
 007E FB         721            mov     r3,a
-007F            722   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:181: SFRPAGE = 0x20;
+007F            722   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:180: SFRPAGE = 0x20;
 007F 75A720     723            mov     _SFRPAGE,#0x20
-0082            724   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:182: switch(portno) {
+0082            724   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:181: switch(portno) {
 0082 BA00F8     725            cjne    r2,#0x00,L004014?
 0085 8000       726            sjmp    L004001?
 0087            727   L004014?:
 0087 BA0178     728            cjne    r2,#0x01,L004015?
 008A 8000       729            sjmp    L004002?
 008C            730   L004015?:
-008C            731   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:183: case 0:
+008C            731   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:182: case 0:
 008C BA02F8     732            cjne    r2,#0x02,L004005?
 008F 8000       733            sjmp    L004003?
 0091            734   L004001?:
-0091            735   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:184: P0MDIN &= (~mask); // Set Pin as Analog Input
+0091            735   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:183: P0MDIN &= (~mask); // Set Pin as Analog Input
 0091 EB         736            mov     a,r3
 0092 F4         737            cpl     a
 0093 FA         738            mov     r2,a
 0094 52F1       739            anl     _P0MDIN,a
-0096            740   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:185: P0SKIP |= mask; // Skip Crossbar Decoding for this Pin
+0096            740   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:184: P0SKIP |= mask; // Skip Crossbar Decoding for this Pin
 0096 EB         741            mov     a,r3
 0097 42D4       742            orl     _P0SKIP,a
-0099            743   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:186: break;
-0099            744   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:187: case 1:
+0099            743   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:185: break;
+0099            744   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:186: case 1:
 0099 8000       745            sjmp    L004005?
 009B            746   L004002?:
-009B            747   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:188: P1MDIN &= (~mask); // Set Pin as Analog Input
+009B            747   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:187: P1MDIN &= (~mask); // Set Pin as Analog Input
 009B EB         748            mov     a,r3
 009C F4         749            cpl     a
 009D FA         750            mov     r2,a
 009E 52F2       751            anl     _P1MDIN,a
-00A0            752   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:189: P1SKIP |= mask; // Skip Crossbar Decoding for this Pin
+00A0            752   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:188: P1SKIP |= mask; // Skip Crossbar Decoding for this Pin
 00A0 EB         753            mov     a,r3
 00A1 42D5       754            orl     _P1SKIP,a
-00A3            755   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:190: break;
-00A3            756   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:191: case 2:
+00A3            755   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:189: break;
+00A3            756   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:190: case 2:
 00A3 8000       757            sjmp    L004005?
 00A5            758   L004003?:
-00A5            759   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:192: P2MDIN &= (~mask); // Set Pin as Analog Input
+00A5            759   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:191: P2MDIN &= (~mask); // Set Pin as Analog Input
 00A5 EB         760            mov     a,r3
 00A6 F4         761            cpl     a
 00A7 FA         762            mov     r2,a
 00A8 52F3       763            anl     _P2MDIN,a
-00AA            764   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:193: P2SKIP |= mask; // Skip Crossbar Decoding for this Pin
+00AA            764   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:192: P2SKIP |= mask; // Skip Crossbar Decoding for this Pin
 00AA EB         765            mov     a,r3
 00AB 42CC       766            orl     _P2SKIP,a
-00AD            767   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:197: }
+00AD            767   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:196: }
 00AD            768   L004005?:
-00AD            769   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:198: SFRPAGE = 0x00;
+00AD            769   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:197: SFRPAGE = 0x00;
 00AD 75A700     770            mov     _SFRPAGE,#0x00
 00B0 22         771            ret
 00B1            772   ;------------------------------------------------------------
@@ -774,20 +774,20 @@
 00B1            774   ;------------------------------------------------------------
 00B1            775   ;pin                       Allocated to registers 
 00B1            776   ;------------------------------------------------------------
-00B1            777   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:201: unsigned int ADC_at_Pin(unsigned char pin) {
+00B1            777   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:200: unsigned int ADC_at_Pin(unsigned char pin) {
 00B1            778   ;        -----------------------------------------
 00B1            779   ;         function ADC_at_Pin
 00B1            780   ;        -----------------------------------------
 00B1            781   _ADC_at_Pin:
 00B1 8582BB     782            mov     _ADC0MX,dpl
-00B4            783   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:203: ADINT = 0;
+00B4            783   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:202: ADINT = 0;
 00B4 C2ED       784            clr     _ADINT
-00B6            785   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:204: ADBUSY = 1;     // Convert Voltage at the Pin
+00B6            785   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:203: ADBUSY = 1;     // Convert Voltage at the Pin
 00B6 D2EC       786            setb    _ADBUSY
-00B8            787   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:205: while (!ADINT); // Wait for Conversion to Complete
+00B8            787   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:204: while (!ADINT); // Wait for Conversion to Complete
 00B8            788   L005001?:
 00B8 30ED78     789            jnb     _ADINT,L005001?
-00BB            790   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:206: return (ADC0);
+00BB            790   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:205: return (ADC0);
 00BB 85BD82     791            mov     dpl,_ADC0
 00BE 85BE83     792            mov     dph,(_ADC0 >> 8)
 00C1 22         793            ret
@@ -796,12 +796,12 @@
 00C2            796   ;------------------------------------------------------------
 00C2            797   ;pin                       Allocated to registers r2 
 00C2            798   ;------------------------------------------------------------
-00C2            799   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:209: float Volts_at_Pin(unsigned char pin) {
+00C2            799   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:208: float Volts_at_Pin(unsigned char pin) {
 00C2            800   ;        -----------------------------------------
 00C2            801   ;         function Volts_at_Pin
 00C2            802   ;        -----------------------------------------
 00C2            803   _Volts_at_Pin:
-00C2            804   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:211: (ADC_at_Pin(pin)*VDD) / 0b_0011_1111_1111_1111
+00C2            804   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:210: (ADC_at_Pin(pin)*VDD) / 0b_0011_1111_1111_1111
 00C2 120000     805            lcall   _ADC_at_Pin
 00C5 120000     806            lcall   ___uint2fs
 00C8 AA82       807            mov     r2,dpl
@@ -854,40 +854,40 @@
 011D            854   ;us                        Allocated to registers r2 
 011D            855   ;i                         Allocated to registers r3 
 011D            856   ;------------------------------------------------------------
-011D            857   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:218: void Timer3us(unsigned char us) {
+011D            857   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:217: void Timer3us(unsigned char us) {
 011D            858   ;        -----------------------------------------
 011D            859   ;         function Timer3us
 011D            860   ;        -----------------------------------------
 011D            861   _Timer3us:
 011D AA82       862            mov     r2,dpl
-011F            863   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:222: CKCON0 |= 0b_0100_0000;
+011F            863   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:221: CKCON0 |= 0b_0100_0000;
 011F 438E40     864            orl     _CKCON0,#0x40
-0122            865   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:224: TMR3RL = (-(SYSCLK)/1000000L); // Set Timer3 to Overflow in 1us
+0122            865   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:223: TMR3RL = (-(SYSCLK)/1000000L); // Set Timer3 to Overflow in 1us
 0122 7592B8     866            mov     _TMR3RL,#0xB8
 0125 7593FF     867            mov     (_TMR3RL >> 8),#0xFF
-0128            868   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:225: TMR3 = TMR3RL;                 // Initialize Timer3 for First Overflow
+0128            868   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:224: TMR3 = TMR3RL;                 // Initialize Timer3 for First Overflow
 0128 859294     869            mov     _TMR3,_TMR3RL
 012B 859395     870            mov     (_TMR3 >> 8),(_TMR3RL >> 8)
-012E            871   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:227: TMR3CN0 = 0x04;                 // Start Timer3 and Clear Overflow Flag
+012E            871   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:226: TMR3CN0 = 0x04;                 // Start Timer3 and Clear Overflow Flag
 012E 759104     872            mov     _TMR3CN0,#0x04
-0131            873   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:228: for (i = 0; i < us; i++) {      // Count Overflows (#Microseconds)
+0131            873   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:227: for (i = 0; i < us; i++) {      // Count Overflows (#Microseconds)
 0131 7B00       874            mov     r3,#0x00
 0133            875   L007004?:
 0133 C3         876            clr     c
 0134 EB         877            mov     a,r3
 0135 9A         878            subb    a,r2
 0136 5000       879            jnc     L007007?
-0138            880   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:229: while (!(TMR3CN0 & 0x80));  // Wait for Overflow
+0138            880   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:228: while (!(TMR3CN0 & 0x80));  // Wait for Overflow
 0138            881   L007001?:
 0138 E591       882            mov     a,_TMR3CN0
 013A 30E780     883            jnb     acc.7,L007001?
-013D            884   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:230: TMR3CN0 &= ~(0x80);         // Clear Overflow Indicator
+013D            884   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:229: TMR3CN0 &= ~(0x80);         // Clear Overflow Indicator
 013D 53917F     885            anl     _TMR3CN0,#0x7F
-0140            886   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:228: for (i = 0; i < us; i++) {      // Count Overflows (#Microseconds)
+0140            886   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:227: for (i = 0; i < us; i++) {      // Count Overflows (#Microseconds)
 0140 0B         887            inc     r3
 0141 8000       888            sjmp    L007004?
 0143            889   L007007?:
-0143            890   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:232: TMR3CN0 = 0 ;                   // Stop Timer3 and Clear Overflow Flag
+0143            890   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:231: TMR3CN0 = 0 ;                   // Stop Timer3 and Clear Overflow Flag
 0143 759100     891            mov     _TMR3CN0,#0x00
 0146 22         892            ret
 0147            893   ;------------------------------------------------------------
@@ -897,14 +897,14 @@
 0147            897   ;j                         Allocated to registers r4 r5 
 0147            898   ;k                         Allocated to registers r6 
 0147            899   ;------------------------------------------------------------
-0147            900   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:235: void waitms(unsigned int ms) {
+0147            900   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:234: void waitms(unsigned int ms) {
 0147            901   ;        -----------------------------------------
 0147            902   ;         function waitms
 0147            903   ;        -----------------------------------------
 0147            904   _waitms:
 0147 AA82       905            mov     r2,dpl
 0149 AB83       906            mov     r3,dph
-014B            907   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:238: for (j=0; j<ms; j++)
+014B            907   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:237: for (j=0; j<ms; j++)
 014B 7C00       908            mov     r4,#0x00
 014D 7D00       909            mov     r5,#0x00
 014F            910   L008005?:
@@ -914,7 +914,7 @@
 0152 ED         914            mov     a,r5
 0153 9B         915            subb    a,r3
 0154 5000       916            jnc     L008009?
-0156            917   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:239: for (k=0; k<4; k++) Timer3us(250);
+0156            917   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:238: for (k=0; k<4; k++) Timer3us(250);
 0156 7E00       918            mov     r6,#0x00
 0158            919   L008001?:
 0158 BE0480     920            cjne    r6,#0x04,L008018?
@@ -935,7 +935,7 @@
 0177 0E         935            inc     r6
 0178 8000       936            sjmp    L008001?
 017A            937   L008007?:
-017A            938   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:238: for (j=0; j<ms; j++)
+017A            938   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:237: for (j=0; j<ms; j++)
 017A 0C         939            inc     r4
 017B BC00C0     940            cjne    r4,#0x00,L008005?
 017E 0D         941            inc     r5
@@ -946,31 +946,31 @@
 0182            946   ;Allocation info for local variables in function 'TIMER0_Init'
 0182            947   ;------------------------------------------------------------
 0182            948   ;------------------------------------------------------------
-0182            949   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:242: void TIMER0_Init(void) {
+0182            949   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:241: void TIMER0_Init(void) {
 0182            950   ;        -----------------------------------------
 0182            951   ;         function TIMER0_Init
 0182            952   ;        -----------------------------------------
 0182            953   _TIMER0_Init:
-0182            954   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:243: TMOD &= 0b_1111_0000; // Set the Bits of Timer/Counter 0 to 0
+0182            954   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:242: TMOD &= 0b_1111_0000; // Set the Bits of Timer/Counter 0 to 0
 0182 5389F0     955            anl     _TMOD,#0xF0
-0185            956   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:244: TMOD |= 0b_0000_0001; // Timer/Counter 0 Used As 16-Bit Timer
+0185            956   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:243: TMOD |= 0b_0000_0001; // Timer/Counter 0 Used As 16-Bit Timer
 0185 438901     957            orl     _TMOD,#0x01
-0188            958   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:245: TR0 = 0; // Stop Timer/Counter 0
+0188            958   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:244: TR0 = 0; // Stop Timer/Counter 0
 0188 C28C       959            clr     _TR0
 018A 22         960            ret
 018B            961   ;------------------------------------------------------------
 018B            962   ;Allocation info for local variables in function 'Serial_Init'
 018B            963   ;------------------------------------------------------------
 018B            964   ;------------------------------------------------------------
-018B            965   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:248: void Serial_Init(void) {
+018B            965   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:247: void Serial_Init(void) {
 018B            966   ;        -----------------------------------------
 018B            967   ;         function Serial_Init
 018B            968   ;        -----------------------------------------
 018B            969   _Serial_Init:
-018B            970   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:249: waitms(500); // Give Putty a chance to start.
+018B            970   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:248: waitms(500); // Give Putty a chance to start.
 018B 9001F4     971            mov     dptr,#0x01F4
 018E 120000     972            lcall   _waitms
-0191            973   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:250: printf("\x1b[2J"); // Clear screen using ANSI escape sequence.
+0191            973   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:249: printf("\x1b[2J"); // Clear screen using ANSI escape sequence.
 0191 7400       974            mov     a,#__str_0
 0193 C0E0       975            push    acc
 0195 74C2       976            mov     a,#(__str_0 >> 8)
@@ -986,17 +986,17 @@
 01A7            986   ;Allocation info for local variables in function 'LCD_pulse'
 01A7            987   ;------------------------------------------------------------
 01A7            988   ;------------------------------------------------------------
-01A7            989   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:253: void LCD_pulse(void) {
+01A7            989   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:252: void LCD_pulse(void) {
 01A7            990   ;        -----------------------------------------
 01A7            991   ;         function LCD_pulse
 01A7            992   ;        -----------------------------------------
 01A7            993   _LCD_pulse:
-01A7            994   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:254: LCD_E = 1; // Pulse the Enable Pin
+01A7            994   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:253: LCD_E = 1; // Pulse the Enable Pin
 01A7 D2A0       995            setb    _P2_0
-01A9            996   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:255: Timer3us(40); // Wait for 40us
+01A9            996   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:254: Timer3us(40); // Wait for 40us
 01A9 758228     997            mov     dpl,#0x28
 01AC 120000     998            lcall   _Timer3us
-01AF            999   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:256: LCD_E = 0; // Pulse the Enable Pin
+01AF            999   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:255: LCD_E = 0; // Pulse the Enable Pin
 01AF C2A0      1000            clr     _P2_0
 01B1 22        1001            ret
 01B2           1002   ;------------------------------------------------------------
@@ -1004,66 +1004,66 @@
 01B2           1004   ;------------------------------------------------------------
 01B2           1005   ;x                         Allocated to registers r2 
 01B2           1006   ;------------------------------------------------------------
-01B2           1007   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:259: void LCD_byte(unsigned char x) {
+01B2           1007   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:258: void LCD_byte(unsigned char x) {
 01B2           1008   ;        -----------------------------------------
 01B2           1009   ;         function LCD_byte
 01B2           1010   ;        -----------------------------------------
 01B2           1011   _LCD_byte:
 01B2 AA82      1012            mov     r2,dpl
-01B4           1013   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:262: ACC = x; // Send High Nibble
+01B4           1013   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:261: ACC = x; // Send High Nibble
 01B4 8AE0      1014            mov     _ACC,r2
-01B6           1015   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:263: LCD_D7 = ACC_7;
+01B6           1015   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:262: LCD_D7 = ACC_7;
 01B6 A2E7      1016            mov     c,_ACC_7
 01B8 9290      1017            mov     _P1_0,c
-01BA           1018   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:264: LCD_D6 = ACC_6;
+01BA           1018   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:263: LCD_D6 = ACC_6;
 01BA A2E6      1019            mov     c,_ACC_6
 01BC 9291      1020            mov     _P1_1,c
-01BE           1021   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:265: LCD_D5 = ACC_5;
+01BE           1021   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:264: LCD_D5 = ACC_5;
 01BE A2E5      1022            mov     c,_ACC_5
 01C0 9292      1023            mov     _P1_2,c
-01C2           1024   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:266: LCD_D4 = ACC_4;
+01C2           1024   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:265: LCD_D4 = ACC_4;
 01C2 A2E4      1025            mov     c,_ACC_4
 01C4 9293      1026            mov     _P1_3,c
-01C6           1027   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:267: LCD_pulse();
+01C6           1027   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:266: LCD_pulse();
 01C6 C002      1028            push    ar2
 01C8 120000    1029            lcall   _LCD_pulse
-01CB           1030   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:269: Timer3us(40); // Wait for 40us
+01CB           1030   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:268: Timer3us(40); // Wait for 40us
 01CB 758228    1031            mov     dpl,#0x28
 01CE 120000    1032            lcall   _Timer3us
 01D1 D002      1033            pop     ar2
-01D3           1034   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:271: ACC = x; // Send Low Nibble
+01D3           1034   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:270: ACC = x; // Send Low Nibble
 01D3 8AE0      1035            mov     _ACC,r2
-01D5           1036   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:272: LCD_D7 = ACC_3;
+01D5           1036   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:271: LCD_D7 = ACC_3;
 01D5 A2E3      1037            mov     c,_ACC_3
 01D7 9290      1038            mov     _P1_0,c
-01D9           1039   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:273: LCD_D6 = ACC_2;
+01D9           1039   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:272: LCD_D6 = ACC_2;
 01D9 A2E2      1040            mov     c,_ACC_2
 01DB 9291      1041            mov     _P1_1,c
-01DD           1042   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:274: LCD_D5 = ACC_1;
+01DD           1042   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:273: LCD_D5 = ACC_1;
 01DD A2E1      1043            mov     c,_ACC_1
 01DF 9292      1044            mov     _P1_2,c
-01E1           1045   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:275: LCD_D4 = ACC_0;
+01E1           1045   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:274: LCD_D4 = ACC_0;
 01E1 A2E0      1046            mov     c,_ACC_0
 01E3 9293      1047            mov     _P1_3,c
-01E5           1048   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:276: LCD_pulse();
+01E5           1048   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:275: LCD_pulse();
 01E5 020000    1049            ljmp    _LCD_pulse
 01E8           1050   ;------------------------------------------------------------
 01E8           1051   ;Allocation info for local variables in function 'WriteData'
 01E8           1052   ;------------------------------------------------------------
 01E8           1053   ;x                         Allocated to registers r2 
 01E8           1054   ;------------------------------------------------------------
-01E8           1055   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:279: void WriteData(unsigned char x) {
+01E8           1055   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:278: void WriteData(unsigned char x) {
 01E8           1056   ;        -----------------------------------------
 01E8           1057   ;         function WriteData
 01E8           1058   ;        -----------------------------------------
 01E8           1059   _WriteData:
 01E8 AA82      1060            mov     r2,dpl
-01EA           1061   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:280: LCD_RS = 1; // Set LCD to Data Mode
+01EA           1061   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:279: LCD_RS = 1; // Set LCD to Data Mode
 01EA D297      1062            setb    _P1_7
-01EC           1063   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:281: LCD_byte(x); // Write the Data
+01EC           1063   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:280: LCD_byte(x); // Write the Data
 01EC 8A82      1064            mov     dpl,r2
 01EE 120000    1065            lcall   _LCD_byte
-01F1           1066   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:282: waitms(2); // Wait for 2ms
+01F1           1066   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:281: waitms(2); // Wait for 2ms
 01F1 900002    1067            mov     dptr,#0x0002
 01F4 020000    1068            ljmp    _waitms
 01F7           1069   ;------------------------------------------------------------
@@ -1071,53 +1071,53 @@
 01F7           1071   ;------------------------------------------------------------
 01F7           1072   ;x                         Allocated to registers r2 
 01F7           1073   ;------------------------------------------------------------
-01F7           1074   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:285: void WriteCommand(unsigned char x) {
+01F7           1074   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:284: void WriteCommand(unsigned char x) {
 01F7           1075   ;        -----------------------------------------
 01F7           1076   ;         function WriteCommand
 01F7           1077   ;        -----------------------------------------
 01F7           1078   _WriteCommand:
 01F7 AA82      1079            mov     r2,dpl
-01F9           1080   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:286: LCD_RS = 0; // Set LCD to Command Mode
+01F9           1080   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:285: LCD_RS = 0; // Set LCD to Command Mode
 01F9 C297      1081            clr     _P1_7
-01FB           1082   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:287: LCD_byte(x); // Write the Command
+01FB           1082   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:286: LCD_byte(x); // Write the Command
 01FB 8A82      1083            mov     dpl,r2
 01FD 120000    1084            lcall   _LCD_byte
-0200           1085   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:288: waitms(5); // Wait for 5ms
+0200           1085   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:287: waitms(5); // Wait for 5ms
 0200 900005    1086            mov     dptr,#0x0005
 0203 020000    1087            ljmp    _waitms
 0206           1088   ;------------------------------------------------------------
 0206           1089   ;Allocation info for local variables in function 'LCD_4BIT'
 0206           1090   ;------------------------------------------------------------
 0206           1091   ;------------------------------------------------------------
-0206           1092   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:291: void LCD_4BIT(void) {
+0206           1092   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:290: void LCD_4BIT(void) {
 0206           1093   ;        -----------------------------------------
 0206           1094   ;         function LCD_4BIT
 0206           1095   ;        -----------------------------------------
 0206           1096   _LCD_4BIT:
-0206           1097   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:292: LCD_E = 0; // Resting State of LCD Enable Pin is 0.
+0206           1097   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:291: LCD_E = 0; // Resting State of LCD Enable Pin is 0.
 0206 C2A0      1098            clr     _P2_0
-0208           1099   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:293: waitms(20); // Wait for 20ms
+0208           1099   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:292: waitms(20); // Wait for 20ms
 0208 900014    1100            mov     dptr,#0x0014
 020B 120000    1101            lcall   _waitms
-020E           1102   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:296: WriteCommand(0x33); // Change to 8-bit Mode
+020E           1102   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:295: WriteCommand(0x33); // Change to 8-bit Mode
 020E 758233    1103            mov     dpl,#0x33
 0211 120000    1104            lcall   _WriteCommand
-0214           1105   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:297: WriteCommand(0x33); // Change to 8-bit Mode
+0214           1105   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:296: WriteCommand(0x33); // Change to 8-bit Mode
 0214 758233    1106            mov     dpl,#0x33
 0217 120000    1107            lcall   _WriteCommand
-021A           1108   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:298: WriteCommand(0x32); // Change to 4-bit Mode
+021A           1108   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:297: WriteCommand(0x32); // Change to 4-bit Mode
 021A 758232    1109            mov     dpl,#0x32
 021D 120000    1110            lcall   _WriteCommand
-0220           1111   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:301: WriteCommand(0x28); // 4-bit, 2 Line, 5x7 Dots
+0220           1111   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:300: WriteCommand(0x28); // 4-bit, 2 Line, 5x7 Dots
 0220 758228    1112            mov     dpl,#0x28
 0223 120000    1113            lcall   _WriteCommand
-0226           1114   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:302: WriteCommand(0x0c); // Display On, No Cursor, No Blink
+0226           1114   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:301: WriteCommand(0x0c); // Display On, No Cursor, No Blink
 0226 75820C    1115            mov     dpl,#0x0C
 0229 120000    1116            lcall   _WriteCommand
-022C           1117   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:303: WriteCommand(0x01); // Clear Screen Command (Takes Some Time)
+022C           1117   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:302: WriteCommand(0x01); // Clear Screen Command (Takes Some Time)
 022C 758201    1118            mov     dpl,#0x01
 022F 120000    1119            lcall   _WriteCommand
-0232           1120   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:304: waitms(20); // Wait 20ms for Clear Screen Command to Finish
+0232           1120   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:303: waitms(20); // Wait 20ms for Clear Screen Command to Finish
 0232 900014    1121            mov     dptr,#0x0014
 0235 020000    1122            ljmp    _waitms
 0238           1123   ;------------------------------------------------------------
@@ -1127,7 +1127,7 @@
 0238           1127   ;string                    Allocated to registers r2 r3 r4 
 0238           1128   ;j                         Allocated to registers r5 r6 
 0238           1129   ;------------------------------------------------------------
-0238           1130   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:307: void LCDprint(char * string, unsigned char line, bit clear) {
+0238           1130   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:306: void LCDprint(char * string, unsigned char line, bit clear) {
 0238           1131   ;        -----------------------------------------
 0238           1132   ;         function LCDprint
 0238           1133   ;        -----------------------------------------
@@ -1135,7 +1135,7 @@
 0238 AA82      1135            mov     r2,dpl
 023A AB83      1136            mov     r3,dph
 023C ACF0      1137            mov     r4,b
-023E           1138   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:310: WriteCommand(line == 2 ? 0xc0 : 0x80); // Set Cursor
+023E           1138   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:309: WriteCommand(line == 2 ? 0xc0 : 0x80); // Set Cursor
 023E 7402      1139            mov     a,#0x02
 0240 B51880    1140            cjne    a,_LCDprint_PARM_2,L016013?
 0243 7DC0      1141            mov     r5,#0xC0
@@ -1148,13 +1148,13 @@
 024D C003      1148            push    ar3
 024F C004      1149            push    ar4
 0251 120000    1150            lcall   _WriteCommand
-0254           1151   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:311: waitms(5); // Wait for 5ms
+0254           1151   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:310: waitms(5); // Wait for 5ms
 0254 900005    1152            mov     dptr,#0x0005
 0257 120000    1153            lcall   _waitms
 025A D004      1154            pop     ar4
 025C D003      1155            pop     ar3
 025E D002      1156            pop     ar2
-0260           1157   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:312: for (j = 0; string[j] != 0; j++) WriteData(string[j]); // Write Message
+0260           1157   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:311: for (j = 0; string[j] != 0; j++) WriteData(string[j]); // Write Message
 0260 7D00      1158            mov     r5,#0x00
 0262 7E00      1159            mov     r6,#0x00
 0264           1160   L016003?:
@@ -1188,7 +1188,7 @@
 0295 0E        1188            inc     r6
 0296 8000      1189            sjmp    L016003?
 0298           1190   L016006?:
-0298           1191   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:313: if (clear) for (; j < CHARS_PER_LINE; j++) WriteData(' '); // Clear Rest of Line
+0298           1191   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:312: if (clear) for (; j < CHARS_PER_LINE; j++) WriteData(' '); // Clear Rest of Line
 0298 3000C0    1192            jnb     _LCDprint_PARM_3,L016011?
 029B 8D02      1193            mov     ar2,r5
 029D 8E03      1194            mov     ar3,r6
@@ -1221,7 +1221,7 @@
 02C0           1221   ;c                         Allocated to registers r3 
 02C0           1222   ;sloc0                     Allocated with name '_write_rx_sloc0_1_0'
 02C0           1223   ;------------------------------------------------------------
-02C0           1224   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:316: int write_rx(char* buff, int len) {
+02C0           1224   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:315: int write_rx(char* buff, int len) {
 02C0           1225   ;        -----------------------------------------
 02C0           1226   ;         function write_rx
 02C0           1227   ;        -----------------------------------------
@@ -1229,7 +1229,7 @@
 02C0 8582A8    1229            mov     _write_rx_buff_1_55,dpl
 02C3 8583A9    1230            mov     (_write_rx_buff_1_55 + 1),dph
 02C6 85F0AA    1231            mov     (_write_rx_buff_1_55 + 2),b
-02C9           1232   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:320: for (j = 0; j < (len-1); j++) {
+02C9           1232   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:319: for (j = 0; j < (len-1); j++) {
 02C9 E4        1233            clr     a
 02CA F5F8      1234            mov     _write_rx_sloc0_1_0,a
 02CC F5F9      1235            mov     (_write_rx_sloc0_1_0 + 1),a
@@ -1251,7 +1251,7 @@
 02E4 63F080    1251            xrl     b,#0x80
 02E7 95F0      1252            subb    a,b
 02E9 5000      1253            jnc     L017008?
-02EB           1254   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:321: c = getchar();
+02EB           1254   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:320: c = getchar();
 02EB C002      1255            push    ar2
 02ED C007      1256            push    ar7
 02EF C000      1257            push    ar0
@@ -1262,13 +1262,13 @@
 02FA D000      1262            pop     ar0
 02FC D007      1263            pop     ar7
 02FE D002      1264            pop     ar2
-0300           1265   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:322: if ( (c == '\n') || (c == '\r') ) {
+0300           1265   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:321: if ( (c == '\n') || (c == '\r') ) {
 0300 BB0A00    1266            cjne    r3,#0x0A,L017015?
 0303 8000      1267            sjmp    L017001?
 0305           1268   L017015?:
 0305 BB0D80    1269            cjne    r3,#0x0D,L017002?
 0308           1270   L017001?:
-0308           1271   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:323: buff[j] = 0;
+0308           1271   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:322: buff[j] = 0;
 0308 E5F8      1272            mov     a,_write_rx_sloc0_1_0
 030A 25A8      1273            add     a,_write_rx_buff_1_55
 030C FC        1274            mov     r4,a
@@ -1281,12 +1281,12 @@
 0318 8EF0      1281            mov     b,r6
 031A E4        1282            clr     a
 031B 120000    1283            lcall   __gptrput
-031E           1284   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:324: return j;
+031E           1284   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:323: return j;
 031E 85F882    1285            mov     dpl,_write_rx_sloc0_1_0
 0321 85F983    1286            mov     dph,(_write_rx_sloc0_1_0 + 1)
 0324 22        1287            ret
 0325           1288   L017002?:
-0325           1289   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:326: buff[j] = c;
+0325           1289   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:325: buff[j] = c;
 0325 E9        1290            mov     a,r1
 0326 25A8      1291            add     a,_write_rx_buff_1_55
 0328 FC        1292            mov     r4,a
@@ -1299,7 +1299,7 @@
 0333 8EF0      1299            mov     b,r6
 0335 EB        1300            mov     a,r3
 0336 120000    1301            lcall   __gptrput
-0339           1302   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:320: for (j = 0; j < (len-1); j++) {
+0339           1302   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:319: for (j = 0; j < (len-1); j++) {
 0339 09        1303            inc     r1
 033A B90000    1304            cjne    r1,#0x00,L017018?
 033D 0A        1305            inc     r2
@@ -1308,7 +1308,7 @@
 0340 8AF9      1308            mov     (_write_rx_sloc0_1_0 + 1),r2
 0342 8000      1309            sjmp    L017005?
 0344           1310   L017008?:
-0344           1311   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:329: buff[j] = 0;
+0344           1311   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:328: buff[j] = 0;
 0344 E5F8      1312            mov     a,_write_rx_sloc0_1_0
 0346 25A8      1313            add     a,_write_rx_buff_1_55
 0348 FA        1314            mov     r2,a
@@ -1321,7 +1321,7 @@
 0354 8CF0      1321            mov     b,r4
 0356 E4        1322            clr     a
 0357 120000    1323            lcall   __gptrput
-035A           1324   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:330: return len;
+035A           1324   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:329: return len;
 035A 85C882    1325            mov     dpl,_write_rx_PARM_2
 035D 85C983    1326            mov     dph,(_write_rx_PARM_2 + 1)
 0360 22        1327            ret
@@ -1331,7 +1331,7 @@
 0361           1331   ;len                       Allocated with name '_display_rx_PARM_2'
 0361           1332   ;buff                      Allocated to registers r2 r3 r4 
 0361           1333   ;------------------------------------------------------------
-0361           1334   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:333: void display_rx(char* buff, int len) {
+0361           1334   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:332: void display_rx(char* buff, int len) {
 0361           1335   ;        -----------------------------------------
 0361           1336   ;         function display_rx
 0361           1337   ;        -----------------------------------------
@@ -1339,7 +1339,7 @@
 0361 AA82      1339            mov     r2,dpl
 0363 AB83      1340            mov     r3,dph
 0365 ACF0      1341            mov     r4,b
-0367           1342   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:334: printf("Type Intended Display in Line 2 (16 Char Max): ");
+0367           1342   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:333: printf("Type Intended Display in Line 2 (16 Char Max): ");
 0367 C002      1343            push    ar2
 0369 C003      1344            push    ar3
 036B C004      1345            push    ar4
@@ -1356,7 +1356,7 @@
 0382 D004      1356            pop     ar4
 0384 D003      1357            pop     ar3
 0386 D002      1358            pop     ar2
-0388           1359   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:335: write_rx(buff, len);
+0388           1359   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:334: write_rx(buff, len);
 0388 8578C8    1360            mov     _write_rx_PARM_2,_display_rx_PARM_2
 038B 8579C9    1361            mov     (_write_rx_PARM_2 + 1),(_display_rx_PARM_2 + 1)
 038E 8A82      1362            mov     dpl,r2
@@ -1366,7 +1366,7 @@
 0396 C003      1366            push    ar3
 0398 C004      1367            push    ar4
 039A 120000    1368            lcall   _write_rx
-039D           1369   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:336: printf("\n");
+039D           1369   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:335: printf("\n");
 039D 7480      1370            mov     a,#__str_2
 039F C0E0      1371            push    acc
 03A1 74C6      1372            mov     a,#(__str_2 >> 8)
@@ -1380,7 +1380,7 @@
 03B2 D004      1380            pop     ar4
 03B4 D003      1381            pop     ar3
 03B6 D002      1382            pop     ar2
-03B8           1383   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:337: LCDprint(buff, 1, 1);
+03B8           1383   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:336: LCDprint(buff, 1, 1);
 03B8 751801    1384            mov     _LCDprint_PARM_2,#0x01
 03BB D200      1385            setb    _LCDprint_PARM_3
 03BD 8A82      1386            mov     dpl,r2
@@ -1392,7 +1392,7 @@
 03C6           1392   ;------------------------------------------------------------
 03C6           1393   ;period                    Allocated to registers r2 r3 r4 r5 
 03C6           1394   ;------------------------------------------------------------
-03C6           1395   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:340: void display_period(float period) {
+03C6           1395   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:339: void display_period(float period) {
 03C6           1396   ;        -----------------------------------------
 03C6           1397   ;         function display_period
 03C6           1398   ;        -----------------------------------------
@@ -1401,7 +1401,7 @@
 03C8 AB83      1401            mov     r3,dph
 03CA ACF0      1402            mov     r4,b
 03CC FD        1403            mov     r5,a
-03CD           1404   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:341: sprintf(LCD_BUFF, "T: %.3f s", period); // Format the Period Value
+03CD           1404   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:340: sprintf(LCD_BUFF, "T: %.3f s", period); // Format the Period Value
 03CD C002      1405            push    ar2
 03CF C003      1406            push    ar3
 03D1 C004      1407            push    ar4
@@ -1422,7 +1422,7 @@
 03F0 E581      1422            mov     a,sp
 03F2 24F6      1423            add     a,#0xf6
 03F4 F581      1424            mov     sp,a
-03F6           1425   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:342: LCDprint(LCD_BUFF, 2, 1); // Write to LCD
+03F6           1425   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:341: LCDprint(LCD_BUFF, 2, 1); // Write to LCD
 03F6 751802    1426            mov     _LCDprint_PARM_2,#0x02
 03F9 D200      1427            setb    _LCDprint_PARM_3
 03FB 904B58    1428            mov     dptr,#_LCD_BUFF
@@ -1433,7 +1433,7 @@
 0404           1433   ;------------------------------------------------------------
 0404           1434   ;freq_kHz                  Allocated to registers r2 r3 r4 r5 
 0404           1435   ;------------------------------------------------------------
-0404           1436   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:345: void display_freq_kHz(float freq_kHz) {
+0404           1436   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:344: void display_freq_kHz(float freq_kHz) {
 0404           1437   ;        -----------------------------------------
 0404           1438   ;         function display_freq_kHz
 0404           1439   ;        -----------------------------------------
@@ -1442,7 +1442,7 @@
 0406 AB83      1442            mov     r3,dph
 0408 ACF0      1443            mov     r4,b
 040A FD        1444            mov     r5,a
-040B           1445   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:346: sprintf(LCD_BUFF, "F: %.3f kHz", freq_kHz); // Format the Frequency Value
+040B           1445   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:345: sprintf(LCD_BUFF, "F: %.3f kHz", freq_kHz); // Format the Frequency Value
 040B C002      1446            push    ar2
 040D C003      1447            push    ar3
 040F C004      1448            push    ar4
@@ -1463,7 +1463,7 @@
 042E E581      1463            mov     a,sp
 0430 24F6      1464            add     a,#0xf6
 0432 F581      1465            mov     sp,a
-0434           1466   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:347: LCDprint(LCD_BUFF, 1, 1); // Write to LCD
+0434           1466   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:346: LCDprint(LCD_BUFF, 1, 1); // Write to LCD
 0434 751801    1467            mov     _LCDprint_PARM_2,#0x01
 0437 D200      1468            setb    _LCDprint_PARM_3
 0439 904B58    1469            mov     dptr,#_LCD_BUFF
@@ -1474,7 +1474,7 @@
 0442           1474   ;------------------------------------------------------------
 0442           1475   ;capacitance_nF            Allocated to registers r2 r3 r4 r5 
 0442           1476   ;------------------------------------------------------------
-0442           1477   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:350: void display_capacitance_nF(float capacitance_nF) {
+0442           1477   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:349: void display_capacitance_nF(float capacitance_nF) {
 0442           1478   ;        -----------------------------------------
 0442           1479   ;         function display_capacitance_nF
 0442           1480   ;        -----------------------------------------
@@ -1483,7 +1483,7 @@
 0444 AB83      1483            mov     r3,dph
 0446 ACF0      1484            mov     r4,b
 0448 FD        1485            mov     r5,a
-0449           1486   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:351: sprintf(LCD_BUFF, "C: %.3f nF", capacitance_nF); // Format the Capacitance Value
+0449           1486   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:350: sprintf(LCD_BUFF, "C: %.3f nF", capacitance_nF); // Format the Capacitance Value
 0449 C002      1487            push    ar2
 044B C003      1488            push    ar3
 044D C004      1489            push    ar4
@@ -1504,7 +1504,7 @@
 046C E581      1504            mov     a,sp
 046E 24F6      1505            add     a,#0xf6
 0470 F581      1506            mov     sp,a
-0472           1507   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:352: LCDprint(LCD_BUFF, 2, 1); // Write to LCD
+0472           1507   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:351: LCDprint(LCD_BUFF, 2, 1); // Write to LCD
 0472 751802    1508            mov     _LCDprint_PARM_2,#0x02
 0475 D200      1509            setb    _LCDprint_PARM_3
 0477 904B58    1510            mov     dptr,#_LCD_BUFF
@@ -1515,7 +1515,7 @@
 0480           1515   ;------------------------------------------------------------
 0480           1516   ;resistance_kOhms          Allocated to registers r2 r3 r4 r5 
 0480           1517   ;------------------------------------------------------------
-0480           1518   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:355: void display_resistance_kOhms(float resistance_kOhms) {
+0480           1518   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:354: void display_resistance_kOhms(float resistance_kOhms) {
 0480           1519   ;        -----------------------------------------
 0480           1520   ;         function display_resistance_kOhms
 0480           1521   ;        -----------------------------------------
@@ -1524,7 +1524,7 @@
 0482 AB83      1524            mov     r3,dph
 0484 ACF0      1525            mov     r4,b
 0486 FD        1526            mov     r5,a
-0487           1527   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:356: sprintf(LCD_BUFF, "R: %.3f kOhms", resistance_kOhms); // Format the Resistance Value
+0487           1527   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:355: sprintf(LCD_BUFF, "R: %.3f kOhms", resistance_kOhms); // Format the Resistance Value
 0487 C002      1528            push    ar2
 0489 C003      1529            push    ar3
 048B C004      1530            push    ar4
@@ -1545,13 +1545,13 @@
 04AA E581      1545            mov     a,sp
 04AC 24F6      1546            add     a,#0xf6
 04AE F581      1547            mov     sp,a
-04B0           1548   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:357: LCDprint(LCD_BUFF, 1, 1); // Write to LCD
+04B0           1548   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:356: LCDprint(LCD_BUFF, 1, 1); // Write to LCD
 04B0 751801    1549            mov     _LCDprint_PARM_2,#0x01
 04B3 D200      1550            setb    _LCDprint_PARM_3
 04B5 904B58    1551            mov     dptr,#_LCD_BUFF
 04B8 75F040    1552            mov     b,#0x40
 04BB 120000    1553            lcall   _LCDprint
-04BE           1554   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:358: LCDprint("                ", 2, 1); // Clear Second Line
+04BE           1554   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:357: LCDprint("                ", 2, 1); // Clear Second Line
 04BE 751802    1555            mov     _LCDprint_PARM_2,#0x02
 04C1 D200      1556            setb    _LCDprint_PARM_3
 04C3 90C800    1557            mov     dptr,#__str_7
@@ -1564,12 +1564,12 @@
 04CC           1564   ;TL0                       Allocated with name '_calculate_period_s_PARM_3'
 04CC           1565   ;overflow_count            Allocated to registers r2 r3 
 04CC           1566   ;------------------------------------------------------------
-04CC           1567   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:361: float calculate_period_s(int overflow_count, int TH0, int TL0) {
+04CC           1567   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:360: float calculate_period_s(int overflow_count, int TH0, int TL0) {
 04CC           1568   ;        -----------------------------------------
 04CC           1569   ;         function calculate_period_s
 04CC           1570   ;        -----------------------------------------
 04CC           1571   _calculate_period_s:
-04CC           1572   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:362: return ((overflow_count * MAX_16_BIT)  + (TH0 * MAX_8_BIT) + TL0) * (12.0 / SYSCLK);
+04CC           1572   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:361: return ((overflow_count * MAX_16_BIT)  + (TH0 * MAX_8_BIT) + TL0) * (12.0 / SYSCLK);
 04CC 120000    1573            lcall   ___sint2fs
 04CF AA82      1574            mov     r2,dpl
 04D1 AB83      1575            mov     r3,dph
@@ -1692,7 +1692,7 @@
 05BC           1692   ;------------------------------------------------------------
 05BC           1693   ;period_s                  Allocated to registers r2 r3 r4 r5 
 05BC           1694   ;------------------------------------------------------------
-05BC           1695   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:365: float calculate_freq_Hz(float period_s) {
+05BC           1695   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:364: float calculate_freq_Hz(float period_s) {
 05BC           1696   ;        -----------------------------------------
 05BC           1697   ;         function calculate_freq_Hz
 05BC           1698   ;        -----------------------------------------
@@ -1701,7 +1701,7 @@
 05BE AB83      1701            mov     r3,dph
 05C0 ACF0      1702            mov     r4,b
 05C2 FD        1703            mov     r5,a
-05C3           1704   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:366: return (1.0 / period_s);
+05C3           1704   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:365: return (1.0 / period_s);
 05C3 C002      1705            push    ar2
 05C5 C003      1706            push    ar3
 05C7 C004      1707            push    ar4
@@ -1727,7 +1727,7 @@
 05EB           1727   ;------------------------------------------------------------
 05EB           1728   ;period_s                  Allocated to registers r2 r3 r4 r5 
 05EB           1729   ;------------------------------------------------------------
-05EB           1730   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:369: float calculate_capacitance_nF(float period_s) {
+05EB           1730   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:368: float calculate_capacitance_nF(float period_s) {
 05EB           1731   ;        -----------------------------------------
 05EB           1732   ;         function calculate_capacitance_nF
 05EB           1733   ;        -----------------------------------------
@@ -1736,7 +1736,7 @@
 05ED AB83      1736            mov     r3,dph
 05EF ACF0      1737            mov     r4,b
 05F1 FD        1738            mov     r5,a
-05F2           1739   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:370: return (1.44 * period_s / (R_A + 2 * R_B)) * GIGA_MULTIPLIER; // Convert to Nanofarads
+05F2           1739   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:369: return (1.44 * period_s / (R_A + 2 * R_B)) * GIGA_MULTIPLIER; // Convert to Nanofarads
 05F2 C002      1740            push    ar2
 05F4 C003      1741            push    ar3
 05F6 C004      1742            push    ar4
@@ -1798,7 +1798,7 @@
 0660           1798   ;voltage_across_resistor   Allocated to registers r2 r3 r4 r5 
 0660           1799   ;current                   Allocated to registers r6 r7 r0 r1 
 0660           1800   ;------------------------------------------------------------
-0660           1801   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:373: float calculate_resistance_k0hms(float voltage_across_resistor) {
+0660           1801   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:372: float calculate_resistance_k0hms(float voltage_across_resistor) {
 0660           1802   ;        -----------------------------------------
 0660           1803   ;         function calculate_resistance_k0hms
 0660           1804   ;        -----------------------------------------
@@ -1807,7 +1807,7 @@
 0662 AB83      1807            mov     r3,dph
 0664 ACF0      1808            mov     r4,b
 0666 FD        1809            mov     r5,a
-0667           1810   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:374: float current = ((VSS - voltage_across_resistor) / R_REF) / MEGA_MULTIPLIER; // Calculate Current (Amps)
+0667           1810   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:373: float current = ((VSS - voltage_across_resistor) / R_REF) / MEGA_MULTIPLIER; // Calculate Current (Amps)
 0667 C002      1811            push    ar2
 0669 C003      1812            push    ar3
 066B C004      1813            push    ar4
@@ -1827,725 +1827,750 @@
 0689 E581      1827            mov     a,sp
 068B 24FC      1828            add     a,#0xfc
 068D F581      1829            mov     sp,a
-068F E4        1830            clr     a
-0690 C0E0      1831            push    acc
-0692 C0E0      1832            push    acc
-0694 74C8      1833            mov     a,#0xC8
-0696 C0E0      1834            push    acc
-0698 7442      1835            mov     a,#0x42
-069A C0E0      1836            push    acc
-069C 8E82      1837            mov     dpl,r6
-069E 8F83      1838            mov     dph,r7
-06A0 88F0      1839            mov     b,r0
-06A2 E9        1840            mov     a,r1
-06A3 120000    1841            lcall   ___fsdiv
-06A6 AE82      1842            mov     r6,dpl
-06A8 AF83      1843            mov     r7,dph
-06AA A8F0      1844            mov     r0,b
-06AC F9        1845            mov     r1,a
-06AD E581      1846            mov     a,sp
-06AF 24FC      1847            add     a,#0xfc
-06B1 F581      1848            mov     sp,a
-06B3 C006      1849            push    ar6
-06B5 C007      1850            push    ar7
-06B7 C000      1851            push    ar0
-06B9 C001      1852            push    ar1
-06BB 900000    1853            mov     dptr,#0x0000
-06BE 75F07A    1854            mov     b,#0x7A
-06C1 7444      1855            mov     a,#0x44
-06C3 120000    1856            lcall   ___fsmul
-06C6 AE82      1857            mov     r6,dpl
-06C8 AF83      1858            mov     r7,dph
-06CA A8F0      1859            mov     r0,b
-06CC F9        1860            mov     r1,a
-06CD E581      1861            mov     a,sp
-06CF 24FC      1862            add     a,#0xfc
-06D1 F581      1863            mov     sp,a
-06D3 E4        1864            clr     a
-06D4 C0E0      1865            push    acc
-06D6 7424      1866            mov     a,#0x24
-06D8 C0E0      1867            push    acc
-06DA 7474      1868            mov     a,#0x74
-06DC C0E0      1869            push    acc
-06DE 7449      1870            mov     a,#0x49
-06E0 C0E0      1871            push    acc
-06E2 8E82      1872            mov     dpl,r6
-06E4 8F83      1873            mov     dph,r7
-06E6 88F0      1874            mov     b,r0
-06E8 E9        1875            mov     a,r1
-06E9 120000    1876            lcall   ___fsdiv
-06EC AE82      1877            mov     r6,dpl
-06EE AF83      1878            mov     r7,dph
-06F0 A8F0      1879            mov     r0,b
-06F2 F9        1880            mov     r1,a
-06F3 E581      1881            mov     a,sp
-06F5 24FC      1882            add     a,#0xfc
-06F7 F581      1883            mov     sp,a
-06F9 D005      1884            pop     ar5
-06FB D004      1885            pop     ar4
-06FD D003      1886            pop     ar3
-06FF D002      1887            pop     ar2
-0701           1888   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:379: return (voltage_across_resistor / current) / KILO_MULTIPLIER; // Calculate Resistance (Kilohms)
-0701 C006      1889            push    ar6
-0703 C007      1890            push    ar7
-0705 C000      1891            push    ar0
-0707 C001      1892            push    ar1
-0709 8A82      1893            mov     dpl,r2
-070B 8B83      1894            mov     dph,r3
-070D 8CF0      1895            mov     b,r4
-070F ED        1896            mov     a,r5
-0710 120000    1897            lcall   ___fsdiv
-0713 AA82      1898            mov     r2,dpl
-0715 AB83      1899            mov     r3,dph
-0717 ACF0      1900            mov     r4,b
-0719 FD        1901            mov     r5,a
-071A E581      1902            mov     a,sp
-071C 24FC      1903            add     a,#0xfc
-071E F581      1904            mov     sp,a
-0720 E4        1905            clr     a
-0721 C0E0      1906            push    acc
-0723 C0E0      1907            push    acc
-0725 747A      1908            mov     a,#0x7A
-0727 C0E0      1909            push    acc
-0729 7444      1910            mov     a,#0x44
-072B C0E0      1911            push    acc
-072D 8A82      1912            mov     dpl,r2
-072F 8B83      1913            mov     dph,r3
-0731 8CF0      1914            mov     b,r4
-0733 ED        1915            mov     a,r5
-0734 120000    1916            lcall   ___fsdiv
-0737 AA82      1917            mov     r2,dpl
-0739 AB83      1918            mov     r3,dph
-073B ACF0      1919            mov     r4,b
-073D FD        1920            mov     r5,a
-073E E581      1921            mov     a,sp
-0740 24FC      1922            add     a,#0xfc
-0742 F581      1923            mov     sp,a
-0744 8A82      1924            mov     dpl,r2
-0746 8B83      1925            mov     dph,r3
-0748 8CF0      1926            mov     b,r4
-074A ED        1927            mov     a,r5
-074B 22        1928            ret
-074C           1929   ;------------------------------------------------------------
-074C           1930   ;Allocation info for local variables in function 'Check_Mode_Button'
-074C           1931   ;------------------------------------------------------------
-074C           1932   ;mode                      Allocated to registers r2 r3 
-074C           1933   ;current_mode              Allocated to registers 
-074C           1934   ;------------------------------------------------------------
-074C           1935   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:395: int Check_Mode_Button(int mode) {
-074C           1936   ;        -----------------------------------------
-074C           1937   ;         function Check_Mode_Button
-074C           1938   ;        -----------------------------------------
-074C           1939   _Check_Mode_Button:
-074C AA82      1940            mov     r2,dpl
-074E AB83      1941            mov     r3,dph
-0750           1942   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:397: if (MODE_PIN == 0) waitms(50); // De-bounce
-0750 20B100    1943            jb      _P3_1,L027002?
-0753 900032    1944            mov     dptr,#0x0032
-0756 C002      1945            push    ar2
-0758 C003      1946            push    ar3
-075A 120000    1947            lcall   _waitms
-075D D003      1948            pop     ar3
-075F D002      1949            pop     ar2
-0761 8000      1950            sjmp    L027003?
-0763           1951   L027002?:
-0763           1952   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:398: else return current_mode;
-0763 8A82      1953            mov     dpl,r2
-0765 8B83      1954            mov     dph,r3
-0767 22        1955            ret
-0768           1956   L027003?:
-0768           1957   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:400: if(MODE_PIN == 0) {
-0768 20B180    1958            jb      _P3_1,L027011?
-076B           1959   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:401: while(MODE_PIN==0);
-076B           1960   L027004?:
-076B 30B1C0    1961            jnb     _P3_1,L027004?
-076E           1962   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:403: if (mode == MODE_CAPACITANCE) {
-076E EA        1963            mov     a,r2
-076F 4B        1964            orl     a,r3
-0770 7000      1965            jnz     L027008?
-0772           1966   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:404: return MODE_RESISTANCE;
-0772 900001    1967            mov     dptr,#0x0001
-0775 22        1968            ret
-0776           1969   L027008?:
-0776           1970   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:406: return MODE_CAPACITANCE;
-0776 900000    1971            mov     dptr,#0x0000
-0779 22        1972            ret
-077A           1973   L027011?:
-077A           1974   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:409: return current_mode;
-077A 8A82      1975            mov     dpl,r2
-077C 8B83      1976            mov     dph,r3
-077E 22        1977            ret
-077F           1978   ;------------------------------------------------------------
-077F           1979   ;Allocation info for local variables in function 'main'
-077F           1980   ;------------------------------------------------------------
-077F           1981   ;mode                      Allocated with name '_main_mode_1_85'
-077F           1982   ;V_LED                     Allocated to registers 
-077F           1983   ;V_R                       Allocated with name '_main_V_R_1_85'
-077F           1984   ;R_kOhms                   Allocated with name '_main_R_kOhms_1_85'
-077F           1985   ;period_s                  Allocated with name '_main_period_s_1_85'
-077F           1986   ;freq_Hz                   Allocated to registers r6 r7 r4 r5 
-077F           1987   ;capacitance_nF            Allocated with name '_main_capacitance_nF_1_85'
-077F           1988   ;success_count             Allocated with name '_main_success_count_1_85'
-077F           1989   ;------------------------------------------------------------
-077F           1990   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:413: void main(void) {
-077F           1991   ;        -----------------------------------------
-077F           1992   ;         function main
-077F           1993   ;        -----------------------------------------
-077F           1994   _main:
-077F           1995   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:414: int mode = MODE_CAPACITANCE;
-077F           1996   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:417: int success_count = 0;
-077F E4        1997            clr     a
-0780 F538      1998            mov     _main_mode_1_85,a
-0782 F539      1999            mov     (_main_mode_1_85 + 1),a
-0784 F5B8      2000            mov     _main_success_count_1_85,a
-0786 F5B9      2001            mov     (_main_success_count_1_85 + 1),a
-0788           2002   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:420: TIMER0_Init(); // Initialize Timer 0
-0788 120000    2003            lcall   _TIMER0_Init
-078B           2004   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:421: Serial_Init(); // Initialize Serial Communication
-078B 120000    2005            lcall   _Serial_Init
-078E           2006   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:422: LCD_4BIT();     // Configure the LCD
-078E 120000    2007            lcall   _LCD_4BIT
-0791           2008   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:425: InitPinADC(0, 1); // Configure P0.1 as Analog Input
-0791 756001    2009            mov     _InitPinADC_PARM_2,#0x01
-0794 758200    2010            mov     dpl,#0x00
-0797 120000    2011            lcall   _InitPinADC
-079A           2012   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:426: InitPinADC(2, 1); // Configure P2.1 as Analog Input
-079A 756001    2013            mov     _InitPinADC_PARM_2,#0x01
-079D 758202    2014            mov     dpl,#0x02
-07A0 120000    2015            lcall   _InitPinADC
-07A3           2016   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:427: InitADC();
-07A3 120000    2017            lcall   _InitADC
-07A6           2018   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:429: while(1) {
-07A6           2019   L028041?:
-07A6           2020   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:430: mode = Check_Mode_Button(mode);
-07A6 853882    2021            mov     dpl,_main_mode_1_85
-07A9 853983    2022            mov     dph,(_main_mode_1_85 + 1)
-07AC 120000    2023            lcall   _Check_Mode_Button
-07AF 858238    2024            mov     _main_mode_1_85,dpl
-07B2 858339    2025            mov     (_main_mode_1_85 + 1),dph
-07B5           2026   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:432: V_LED = Volts_at_Pin(QFP32_MUX_P0_1); // Measure the Voltage at the LED
-07B5 758200    2027            mov     dpl,#0x00
-07B8 120000    2028            lcall   _Volts_at_Pin
-07BB           2029   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:433: V_R = Volts_at_Pin(QFP32_MUX_P2_1); // Measure the Voltage at the Resistor
-07BB 75820E    2030            mov     dpl,#0x0E
-07BE 120000    2031            lcall   _Volts_at_Pin
-07C1           2032   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:434: R_kOhms = calculate_resistance_k0hms(V_R);
-07C1 858278    2033            mov     _main_V_R_1_85,dpl
-07C4 858379    2034            mov     (_main_V_R_1_85 + 1),dph
-07C7 85F07A    2035            mov     (_main_V_R_1_85 + 2),b
-07CA F57B      2036            mov     (_main_V_R_1_85 + 3),a
-07CC 120000    2037            lcall   _calculate_resistance_k0hms
-07CF 8582C8    2038            mov     _main_R_kOhms_1_85,dpl
-07D2 8583C9    2039            mov     (_main_R_kOhms_1_85 + 1),dph
-07D5 85F0CA    2040            mov     (_main_R_kOhms_1_85 + 2),b
-07D8 F5CB      2041            mov     (_main_R_kOhms_1_85 + 3),a
-07DA           2042   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:441: TL0 = 0;
-07DA 758A00    2043            mov     _TL0,#0x00
-07DD           2044   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:442: TH0 = 0;
-07DD 758C00    2045            mov     _TH0,#0x00
-07E0           2046   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:443: TF0 = 0;
-07E0 C28D      2047            clr     _TF0
-07E2           2048   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:444: overflow_count = 0;
-07E2 759800    2049            mov     _overflow_count,#0x00
-07E5           2050   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:446: while (EFM8_SIGNAL != 0); // Wait for Signal == 0
-07E5           2051   L028001?:
-07E5 20B380    2052            jb      _P3_3,L028001?
-07E8           2053   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:447: while (EFM8_SIGNAL != 1); // Wait for Signal == 1
-07E8           2054   L028004?:
-07E8 30B3C0    2055            jnb     _P3_3,L028004?
-07EB           2056   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:449: TR0 = 1; // Start Timer
-07EB D28C      2057            setb    _TR0
-07ED           2058   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:451: while (EFM8_SIGNAL != 0) { // Wait for Signal == 0
-07ED           2059   L028009?:
-07ED 30B340    2060            jnb     _P3_3,L028014?
-07F0           2061   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:452: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
-07F0           2062   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:453: TF0 = 0;
-07F0 108D80    2063            jbc     _TF0,L028069?
-07F3 8000      2064            sjmp    L028009?
-07F5           2065   L028069?:
-07F5           2066   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:454: overflow_count++;
-07F5 0598      2067            inc     _overflow_count
-07F7           2068   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:457: while (EFM8_SIGNAL != 1) { // Wait for Signal == 1
-07F7 8000      2069            sjmp    L028009?
-07F9           2070   L028014?:
-07F9 20B3C0    2071            jb      _P3_3,L028016?
-07FC           2072   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:458: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
-07FC           2073   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:459: TF0 = 0;
-07FC 108D00    2074            jbc     _TF0,L028071?
-07FF 8000      2075            sjmp    L028014?
-0801           2076   L028071?:
-0801           2077   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:460: overflow_count++;
-0801 0598      2078            inc     _overflow_count
-0803 8000      2079            sjmp    L028014?
-0805           2080   L028016?:
-0805           2081   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:464: TR0 = 0; // Stop Timer 0. The 24-bit number [overflow_count-TH0-TL0] has the period!
-0805 C28C      2082            clr     _TR0
-0807           2083   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:465: period_s = calculate_period_s(overflow_count, TH0, TL0);
-0807 A898      2084            mov     r0,_overflow_count
-0809 7900      2085            mov     r1,#0x00
-080B 858C28    2086            mov     _calculate_period_s_PARM_2,_TH0
-080E 752900    2087            mov     (_calculate_period_s_PARM_2 + 1),#0x00
-0811 858AD8    2088            mov     _calculate_period_s_PARM_3,_TL0
-0814 75D900    2089            mov     (_calculate_period_s_PARM_3 + 1),#0x00
-0817 8882      2090            mov     dpl,r0
-0819 8983      2091            mov     dph,r1
-081B 120000    2092            lcall   _calculate_period_s
-081E           2093   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:466: freq_Hz = calculate_freq_Hz(period_s);
-081E 858218    2094            mov     _main_period_s_1_85,dpl
-0821 858319    2095            mov     (_main_period_s_1_85 + 1),dph
-0824 85F01A    2096            mov     (_main_period_s_1_85 + 2),b
-0827 F51B      2097            mov     (_main_period_s_1_85 + 3),a
-0829 120000    2098            lcall   _calculate_freq_Hz
-082C AE82      2099            mov     r6,dpl
-082E AF83      2100            mov     r7,dph
-0830 ACF0      2101            mov     r4,b
-0832 FD        2102            mov     r5,a
-0833           2103   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:467: capacitance_nF = calculate_capacitance_nF(period_s);
-0833 851882    2104            mov     dpl,_main_period_s_1_85
-0836 851983    2105            mov     dph,(_main_period_s_1_85 + 1)
-0839 851AF0    2106            mov     b,(_main_period_s_1_85 + 2)
-083C E51B      2107            mov     a,(_main_period_s_1_85 + 3)
-083E C004      2108            push    ar4
-0840 C005      2109            push    ar5
-0842 C006      2110            push    ar6
-0844 C007      2111            push    ar7
-0846 120000    2112            lcall   _calculate_capacitance_nF
-0849 858268    2113            mov     _main_capacitance_nF_1_85,dpl
-084C 858369    2114            mov     (_main_capacitance_nF_1_85 + 1),dph
-084F 85F06A    2115            mov     (_main_capacitance_nF_1_85 + 2),b
-0852 F56B      2116            mov     (_main_capacitance_nF_1_85 + 3),a
-0854 D007      2117            pop     ar7
-0856 D006      2118            pop     ar6
-0858 D005      2119            pop     ar5
-085A D004      2120            pop     ar4
-085C           2121   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:469: if ((mode == MODE_RESISTANCE) && (V_R < VDD)) display_resistance_kOhms(R_kOhms);
-085C 7401      2122            mov     a,#0x01
-085E B53840    2123            cjne    a,_main_mode_1_85,L028072?
-0861 E4        2124            clr     a
-0862 B53940    2125            cjne    a,(_main_mode_1_85 + 1),L028072?
-0865 7401      2126            mov     a,#0x01
-0867 8000      2127            sjmp    L028073?
-0869           2128   L028072?:
-0869 E4        2129            clr     a
-086A           2130   L028073?:
-086A F8        2131            mov     r0,a
-086B 6000      2132            jz      L028018?
-086D C004      2133            push    ar4
-086F C005      2134            push    ar5
-0871 C006      2135            push    ar6
-0873 C007      2136            push    ar7
-0875 C000      2137            push    ar0
-0877 748B      2138            mov     a,#0x8B
-0879 C0E0      2139            push    acc
-087B 746C      2140            mov     a,#0x6C
-087D C0E0      2141            push    acc
-087F 7453      2142            mov     a,#0x53
-0881 C0E0      2143            push    acc
-0883 7440      2144            mov     a,#0x40
-0885 C0E0      2145            push    acc
-0887 857882    2146            mov     dpl,_main_V_R_1_85
-088A 857983    2147            mov     dph,(_main_V_R_1_85 + 1)
-088D 857AF0    2148            mov     b,(_main_V_R_1_85 + 2)
-0890 E57B      2149            mov     a,(_main_V_R_1_85 + 3)
-0892 120000    2150            lcall   ___fslt
-0895 A982      2151            mov     r1,dpl
-0897 E581      2152            mov     a,sp
-0899 24FC      2153            add     a,#0xfc
-089B F581      2154            mov     sp,a
-089D D000      2155            pop     ar0
-089F D007      2156            pop     ar7
-08A1 D006      2157            pop     ar6
-08A3 D005      2158            pop     ar5
-08A5 D004      2159            pop     ar4
-08A7 E9        2160            mov     a,r1
-08A8 6000      2161            jz      L028018?
-08AA 85C882    2162            mov     dpl,_main_R_kOhms_1_85
-08AD 85C983    2163            mov     dph,(_main_R_kOhms_1_85 + 1)
-08B0 85CAF0    2164            mov     b,(_main_R_kOhms_1_85 + 2)
-08B3 E5CB      2165            mov     a,(_main_R_kOhms_1_85 + 3)
-08B5 C004      2166            push    ar4
-08B7 C005      2167            push    ar5
-08B9 C006      2168            push    ar6
-08BB C007      2169            push    ar7
-08BD C000      2170            push    ar0
-08BF 120000    2171            lcall   _display_resistance_kOhms
-08C2 D000      2172            pop     ar0
-08C4 D007      2173            pop     ar7
-08C6 D006      2174            pop     ar6
-08C8 D005      2175            pop     ar5
-08CA D004      2176            pop     ar4
-08CC           2177   L028018?:
-08CC           2178   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:477: if ((mode == MODE_CAPACITANCE) && (freq_Hz <= MIN_FREQ_HZ || freq_Hz >= MAX_FREQ_HZ)) {
-08CC E538      2179            mov     a,_main_mode_1_85
-08CE 4539      2180            orl     a,(_main_mode_1_85 + 1)
-08D0 6000      2181            jz      L028076?
-08D2 020000    2182            ljmp    L028030?
-08D5           2183   L028076?:
-08D5 C004      2184            push    ar4
-08D7 C005      2185            push    ar5
-08D9 C006      2186            push    ar6
-08DB C007      2187            push    ar7
-08DD C000      2188            push    ar0
-08DF E4        2189            clr     a
-08E0 C0E0      2190            push    acc
-08E2 C0E0      2191            push    acc
-08E4 7448      2192            mov     a,#0x48
-08E6 C0E0      2193            push    acc
-08E8 7443      2194            mov     a,#0x43
-08EA C0E0      2195            push    acc
-08EC 8E82      2196            mov     dpl,r6
-08EE 8F83      2197            mov     dph,r7
-08F0 8CF0      2198            mov     b,r4
-08F2 ED        2199            mov     a,r5
-08F3 120000    2200            lcall   ___fsgt
-08F6 A982      2201            mov     r1,dpl
-08F8 E581      2202            mov     a,sp
-08FA 24FC      2203            add     a,#0xfc
-08FC F581      2204            mov     sp,a
-08FE D000      2205            pop     ar0
-0900 D007      2206            pop     ar7
-0902 D006      2207            pop     ar6
-0904 D005      2208            pop     ar5
-0906 D004      2209            pop     ar4
-0908 E9        2210            mov     a,r1
-0909 6000      2211            jz      L028029?
-090B C004      2212            push    ar4
-090D C005      2213            push    ar5
-090F C006      2214            push    ar6
-0911 C007      2215            push    ar7
-0913 C000      2216            push    ar0
-0915 C001      2217            push    ar1
-0917 E4        2218            clr     a
-0918 C0E0      2219            push    acc
-091A 7450      2220            mov     a,#0x50
-091C C0E0      2221            push    acc
-091E 74C3      2222            mov     a,#0xC3
-0920 C0E0      2223            push    acc
-0922 7448      2224            mov     a,#0x48
-0924 C0E0      2225            push    acc
-0926 8E82      2226            mov     dpl,r6
-0928 8F83      2227            mov     dph,r7
-092A 8CF0      2228            mov     b,r4
-092C ED        2229            mov     a,r5
-092D 120000    2230            lcall   ___fslt
-0930 AA82      2231            mov     r2,dpl
-0932 E581      2232            mov     a,sp
-0934 24FC      2233            add     a,#0xfc
-0936 F581      2234            mov     sp,a
-0938 D001      2235            pop     ar1
-093A D000      2236            pop     ar0
-093C D007      2237            pop     ar7
-093E D006      2238            pop     ar6
-0940 D005      2239            pop     ar5
-0942 D004      2240            pop     ar4
-0944 EA        2241            mov     a,r2
-0945 6000      2242            jz      L028078?
-0947 020000    2243            ljmp    L028030?
-094A           2244   L028078?:
-094A           2245   L028029?:
-094A           2246   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:478: success_count = 0;
-094A E4        2247            clr     a
-094B F5B8      2248            mov     _main_success_count_1_85,a
-094D F5B9      2249            mov     (_main_success_count_1_85 + 1),a
-094F           2250   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:479: if (freq_Hz >= MAX_FREQ_HZ) LCDprint("ERROR : LOW C", 1, 1);
-094F C004      2251            push    ar4
-0951 C005      2252            push    ar5
-0953 C006      2253            push    ar6
-0955 C007      2254            push    ar7
-0957 C000      2255            push    ar0
-0959 C001      2256            push    ar1
-095B E4        2257            clr     a
-095C C0E0      2258            push    acc
-095E 7450      2259            mov     a,#0x50
-0960 C0E0      2260            push    acc
-0962 74C3      2261            mov     a,#0xC3
-0964 C0E0      2262            push    acc
-0966 7448      2263            mov     a,#0x48
-0968 C0E0      2264            push    acc
-096A 8E82      2265            mov     dpl,r6
-096C 8F83      2266            mov     dph,r7
-096E 8CF0      2267            mov     b,r4
-0970 ED        2268            mov     a,r5
-0971 120000    2269            lcall   ___fslt
-0974 AA82      2270            mov     r2,dpl
-0976 E581      2271            mov     a,sp
-0978 24FC      2272            add     a,#0xfc
-097A F581      2273            mov     sp,a
-097C D001      2274            pop     ar1
-097E D000      2275            pop     ar0
-0980 D007      2276            pop     ar7
-0982 D006      2277            pop     ar6
-0984 D005      2278            pop     ar5
-0986 D004      2279            pop     ar4
-0988 EA        2280            mov     a,r2
-0989 7000      2281            jnz     L028023?
-098B 751801    2282            mov     _LCDprint_PARM_2,#0x01
-098E D200      2283            setb    _LCDprint_PARM_3
-0990 90CEC0    2284            mov     dptr,#__str_8
-0993 75F080    2285            mov     b,#0x80
-0996 C004      2286            push    ar4
-0998 C005      2287            push    ar5
-099A C006      2288            push    ar6
-099C C007      2289            push    ar7
-099E C000      2290            push    ar0
-09A0 120000    2291            lcall   _LCDprint
-09A3 D000      2292            pop     ar0
-09A5 D007      2293            pop     ar7
-09A7 D006      2294            pop     ar6
-09A9 D005      2295            pop     ar5
-09AB D004      2296            pop     ar4
-09AD 8000      2297            sjmp    L028024?
-09AF           2298   L028023?:
-09AF           2299   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:480: else if (freq_Hz <= MIN_FREQ_HZ) LCDprint("ERROR : HIGH C", 1, 1);
-09AF E9        2300            mov     a,r1
-09B0 7000      2301            jnz     L028024?
-09B2 751801    2302            mov     _LCDprint_PARM_2,#0x01
-09B5 D200      2303            setb    _LCDprint_PARM_3
-09B7 90CF40    2304            mov     dptr,#__str_9
-09BA 75F080    2305            mov     b,#0x80
-09BD C004      2306            push    ar4
-09BF C005      2307            push    ar5
-09C1 C006      2308            push    ar6
-09C3 C007      2309            push    ar7
-09C5 C000      2310            push    ar0
-09C7 120000    2311            lcall   _LCDprint
-09CA D000      2312            pop     ar0
-09CC D007      2313            pop     ar7
-09CE D006      2314            pop     ar6
-09D0 D005      2315            pop     ar5
-09D2 D004      2316            pop     ar4
-09D4           2317   L028024?:
-09D4           2318   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:482: LCDprint("                ", 2, 1);
-09D4 751802    2319            mov     _LCDprint_PARM_2,#0x02
-09D7 D200      2320            setb    _LCDprint_PARM_3
-09D9 90C800    2321            mov     dptr,#__str_7
-09DC 75F080    2322            mov     b,#0x80
-09DF C004      2323            push    ar4
-09E1 C005      2324            push    ar5
-09E3 C006      2325            push    ar6
-09E5 C007      2326            push    ar7
-09E7 C000      2327            push    ar0
-09E9 120000    2328            lcall   _LCDprint
-09EC           2329   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:483: waitms(500); // Wait for 500 ms
-09EC 9001F4    2330            mov     dptr,#0x01F4
-09EF 120000    2331            lcall   _waitms
-09F2 D000      2332            pop     ar0
-09F4 D007      2333            pop     ar7
-09F6 D006      2334            pop     ar6
-09F8 D005      2335            pop     ar5
-09FA D004      2336            pop     ar4
-09FC 020000    2337            ljmp    L028031?
-09FF           2338   L028030?:
-09FF           2339   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:484: } else if ((mode == MODE_RESISTANCE) && (V_R >= VDD)) {
-09FF E8        2340            mov     a,r0
-0A00 6000      2341            jz      L028026?
-0A02 C004      2342            push    ar4
-0A04 C005      2343            push    ar5
-0A06 C006      2344            push    ar6
-0A08 C007      2345            push    ar7
-0A0A C000      2346            push    ar0
-0A0C 748B      2347            mov     a,#0x8B
-0A0E C0E0      2348            push    acc
-0A10 746C      2349            mov     a,#0x6C
-0A12 C0E0      2350            push    acc
-0A14 7453      2351            mov     a,#0x53
-0A16 C0E0      2352            push    acc
-0A18 7440      2353            mov     a,#0x40
-0A1A C0E0      2354            push    acc
-0A1C 857882    2355            mov     dpl,_main_V_R_1_85
-0A1F 857983    2356            mov     dph,(_main_V_R_1_85 + 1)
-0A22 857AF0    2357            mov     b,(_main_V_R_1_85 + 2)
-0A25 E57B      2358            mov     a,(_main_V_R_1_85 + 3)
-0A27 120000    2359            lcall   ___fslt
-0A2A AA82      2360            mov     r2,dpl
-0A2C E581      2361            mov     a,sp
-0A2E 24FC      2362            add     a,#0xfc
-0A30 F581      2363            mov     sp,a
-0A32 D000      2364            pop     ar0
-0A34 D007      2365            pop     ar7
-0A36 D006      2366            pop     ar6
-0A38 D005      2367            pop     ar5
-0A3A D004      2368            pop     ar4
-0A3C EA        2369            mov     a,r2
-0A3D           2370   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:485: success_count = 0;
-0A3D 7000      2371            jnz     L028026?
-0A3F F5B8      2372            mov     _main_success_count_1_85,a
-0A41 F5B9      2373            mov     (_main_success_count_1_85 + 1),a
-0A43           2374   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:486: LCDprint("ERROR : HIGH R", 1, 1);
-0A43 751801    2375            mov     _LCDprint_PARM_2,#0x01
-0A46 D200      2376            setb    _LCDprint_PARM_3
-0A48 90D000    2377            mov     dptr,#__str_10
-0A4B 75F080    2378            mov     b,#0x80
-0A4E C004      2379            push    ar4
-0A50 C005      2380            push    ar5
-0A52 C006      2381            push    ar6
-0A54 C007      2382            push    ar7
-0A56 C000      2383            push    ar0
-0A58 120000    2384            lcall   _LCDprint
-0A5B           2385   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:488: LCDprint("                ", 2, 1);
-0A5B 751802    2386            mov     _LCDprint_PARM_2,#0x02
-0A5E D200      2387            setb    _LCDprint_PARM_3
-0A60 90C800    2388            mov     dptr,#__str_7
-0A63 75F080    2389            mov     b,#0x80
-0A66 120000    2390            lcall   _LCDprint
-0A69           2391   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:489: waitms(500); // Wait for 500 ms
-0A69 9001F4    2392            mov     dptr,#0x01F4
-0A6C 120000    2393            lcall   _waitms
-0A6F D000      2394            pop     ar0
-0A71 D007      2395            pop     ar7
-0A73 D006      2396            pop     ar6
-0A75 D005      2397            pop     ar5
-0A77 D004      2398            pop     ar4
-0A79 8000      2399            sjmp    L028031?
-0A7B           2400   L028026?:
-0A7B           2401   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:491: success_count += 1;
-0A7B 05B8      2402            inc     _main_success_count_1_85
-0A7D E4        2403            clr     a
-0A7E B5B840    2404            cjne    a,_main_success_count_1_85,L028083?
-0A81 05B9      2405            inc     (_main_success_count_1_85 + 1)
-0A83           2406   L028083?:
-0A83           2407   L028031?:
-0A83           2408   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:494: if (success_count >= SUCCESS_THRESHOLD) {
-0A83 C3        2409            clr     c
-0A84 E5B8      2410            mov     a,_main_success_count_1_85
-0A86 9403      2411            subb    a,#0x03
-0A88 E5B9      2412            mov     a,(_main_success_count_1_85 + 1)
-0A8A 6480      2413            xrl     a,#0x80
-0A8C 9480      2414            subb    a,#0x80
-0A8E 5000      2415            jnc     L028084?
-0A90 020000    2416            ljmp    L028041?
-0A93           2417   L028084?:
-0A93           2418   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:495: if (mode == MODE_RESISTANCE) {
-0A93 E8        2419            mov     a,r0
-0A94 6000      2420            jz      L028035?
-0A96           2421   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:496: waitms(166); // Wait for 166 ms
-0A96 9000A6    2422            mov     dptr,#0x00A6
-0A99 C004      2423            push    ar4
-0A9B C005      2424            push    ar5
-0A9D C006      2425            push    ar6
-0A9F C007      2426            push    ar7
-0AA1 120000    2427            lcall   _waitms
-0AA4           2428   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:497: printf("\rR(kOhms) = %f\r\n", R_kOhms); // Print Resistance in Kilohms
-0AA4 C0C8      2429            push    _main_R_kOhms_1_85
-0AA6 C0C9      2430            push    (_main_R_kOhms_1_85 + 1)
-0AA8 C0CA      2431            push    (_main_R_kOhms_1_85 + 2)
-0AAA C0CB      2432            push    (_main_R_kOhms_1_85 + 3)
-0AAC 7400      2433            mov     a,#__str_11
-0AAE C0E0      2434            push    acc
-0AB0 74D1      2435            mov     a,#(__str_11 >> 8)
-0AB2 C0E0      2436            push    acc
-0AB4 7480      2437            mov     a,#0x80
-0AB6 C0E0      2438            push    acc
-0AB8 120000    2439            lcall   _printf
-0ABB E581      2440            mov     a,sp
-0ABD 24F9      2441            add     a,#0xf9
-0ABF F581      2442            mov     sp,a
-0AC1 D007      2443            pop     ar7
-0AC3 D006      2444            pop     ar6
-0AC5 D005      2445            pop     ar5
-0AC7 D004      2446            pop     ar4
-0AC9           2447   L028035?:
-0AC9           2448   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:500: waitms(166); // Wait for 166 ms
-0AC9 9000A6    2449            mov     dptr,#0x00A6
-0ACC C004      2450            push    ar4
-0ACE C005      2451            push    ar5
-0AD0 C006      2452            push    ar6
-0AD2 C007      2453            push    ar7
-0AD4 120000    2454            lcall   _waitms
-0AD7 D007      2455            pop     ar7
-0AD9 D006      2456            pop     ar6
-0ADB D005      2457            pop     ar5
-0ADD D004      2458            pop     ar4
-0ADF           2459   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:501: printf("\rF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
-0ADF E4        2460            clr     a
-0AE0 C0E0      2461            push    acc
-0AE2 C0E0      2462            push    acc
-0AE4 747A      2463            mov     a,#0x7A
-0AE6 C0E0      2464            push    acc
-0AE8 7444      2465            mov     a,#0x44
-0AEA C0E0      2466            push    acc
-0AEC 8E82      2467            mov     dpl,r6
-0AEE 8F83      2468            mov     dph,r7
-0AF0 8CF0      2469            mov     b,r4
-0AF2 ED        2470            mov     a,r5
-0AF3 120000    2471            lcall   ___fsdiv
-0AF6 AA82      2472            mov     r2,dpl
-0AF8 AB83      2473            mov     r3,dph
-0AFA ACF0      2474            mov     r4,b
-0AFC FD        2475            mov     r5,a
-0AFD E581      2476            mov     a,sp
-0AFF 24FC      2477            add     a,#0xfc
-0B01 F581      2478            mov     sp,a
-0B03 C002      2479            push    ar2
-0B05 C003      2480            push    ar3
-0B07 C004      2481            push    ar4
-0B09 C005      2482            push    ar5
-0B0B C002      2483            push    ar2
-0B0D C003      2484            push    ar3
-0B0F C004      2485            push    ar4
-0B11 C005      2486            push    ar5
-0B13 7440      2487            mov     a,#__str_12
-0B15 C0E0      2488            push    acc
-0B17 74D1      2489            mov     a,#(__str_12 >> 8)
-0B19 C0E0      2490            push    acc
-0B1B 7480      2491            mov     a,#0x80
-0B1D C0E0      2492            push    acc
-0B1F 120000    2493            lcall   _printf
-0B22 E581      2494            mov     a,sp
-0B24 24F9      2495            add     a,#0xf9
-0B26 F581      2496            mov     sp,a
-0B28           2497   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:503: waitms(166); // Wait for 166 ms
-0B28 9000A6    2498            mov     dptr,#0x00A6
-0B2B 120000    2499            lcall   _waitms
-0B2E           2500   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:504: printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
-0B2E C068      2501            push    _main_capacitance_nF_1_85
-0B30 C069      2502            push    (_main_capacitance_nF_1_85 + 1)
-0B32 C06A      2503            push    (_main_capacitance_nF_1_85 + 2)
-0B34 C06B      2504            push    (_main_capacitance_nF_1_85 + 3)
-0B36 7480      2505            mov     a,#__str_13
-0B38 C0E0      2506            push    acc
-0B3A 74D1      2507            mov     a,#(__str_13 >> 8)
-0B3C C0E0      2508            push    acc
-0B3E 7480      2509            mov     a,#0x80
-0B40 C0E0      2510            push    acc
-0B42 120000    2511            lcall   _printf
-0B45 E581      2512            mov     a,sp
-0B47 24F9      2513            add     a,#0xf9
-0B49 F581      2514            mov     sp,a
-0B4B D005      2515            pop     ar5
-0B4D D004      2516            pop     ar4
-0B4F D003      2517            pop     ar3
-0B51 D002      2518            pop     ar2
-0B53           2519   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:506: if (mode == MODE_CAPACITANCE) {
-0B53 E538      2520            mov     a,_main_mode_1_85
-0B55 4539      2521            orl     a,(_main_mode_1_85 + 1)
-0B57 6000      2522            jz      L028086?
-0B59 020000    2523            ljmp    L028041?
-0B5C           2524   L028086?:
-0B5C           2525   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:507: display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD
-0B5C 8A82      2526            mov     dpl,r2
-0B5E 8B83      2527            mov     dph,r3
-0B60 8CF0      2528            mov     b,r4
-0B62 ED        2529            mov     a,r5
-0B63 120000    2530            lcall   _display_freq_kHz
-0B66           2531   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:508: display_capacitance_nF(capacitance_nF);
-0B66 856882    2532            mov     dpl,_main_capacitance_nF_1_85
-0B69 856983    2533            mov     dph,(_main_capacitance_nF_1_85 + 1)
-0B6C 856AF0    2534            mov     b,(_main_capacitance_nF_1_85 + 2)
-0B6F E56B      2535            mov     a,(_main_capacitance_nF_1_85 + 3)
-0B71 120000    2536            lcall   _display_capacitance_nF
-0B74 020000    2537            ljmp    L028041?
-0B77           2538            rseg R_CSEG
-0B77           2539   
-0000           2540            rseg R_XINIT
-0000           2541   
-0000           2542            rseg R_CONST
-0000           2543   __str_0:
-0000 1B        2544            db 0x1B
-0001 5B324A    2545            db '[2J'
-0004 00        2546            db 0x00
-0005           2547   __str_1:
-0005 54797065  2548            db 'Type Intended Display in Line 2 (16 Char Max): '
+068F 7471      1830            mov     a,#0x71
+0691 C0E0      1831            push    acc
+0693 743D      1832            mov     a,#0x3D
+0695 C0E0      1833            push    acc
+0697 74C5      1834            mov     a,#0xC5
+0699 C0E0      1835            push    acc
+069B 7442      1836            mov     a,#0x42
+069D C0E0      1837            push    acc
+069F 8E82      1838            mov     dpl,r6
+06A1 8F83      1839            mov     dph,r7
+06A3 88F0      1840            mov     b,r0
+06A5 E9        1841            mov     a,r1
+06A6 120000    1842            lcall   ___fsdiv
+06A9 AE82      1843            mov     r6,dpl
+06AB AF83      1844            mov     r7,dph
+06AD A8F0      1845            mov     r0,b
+06AF F9        1846            mov     r1,a
+06B0 E581      1847            mov     a,sp
+06B2 24FC      1848            add     a,#0xfc
+06B4 F581      1849            mov     sp,a
+06B6 C006      1850            push    ar6
+06B8 C007      1851            push    ar7
+06BA C000      1852            push    ar0
+06BC C001      1853            push    ar1
+06BE 900000    1854            mov     dptr,#0x0000
+06C1 75F07A    1855            mov     b,#0x7A
+06C4 7444      1856            mov     a,#0x44
+06C6 120000    1857            lcall   ___fsmul
+06C9 AE82      1858            mov     r6,dpl
+06CB AF83      1859            mov     r7,dph
+06CD A8F0      1860            mov     r0,b
+06CF F9        1861            mov     r1,a
+06D0 E581      1862            mov     a,sp
+06D2 24FC      1863            add     a,#0xfc
+06D4 F581      1864            mov     sp,a
+06D6 E4        1865            clr     a
+06D7 C0E0      1866            push    acc
+06D9 7424      1867            mov     a,#0x24
+06DB C0E0      1868            push    acc
+06DD 7474      1869            mov     a,#0x74
+06DF C0E0      1870            push    acc
+06E1 7449      1871            mov     a,#0x49
+06E3 C0E0      1872            push    acc
+06E5 8E82      1873            mov     dpl,r6
+06E7 8F83      1874            mov     dph,r7
+06E9 88F0      1875            mov     b,r0
+06EB E9        1876            mov     a,r1
+06EC 120000    1877            lcall   ___fsdiv
+06EF AE82      1878            mov     r6,dpl
+06F1 AF83      1879            mov     r7,dph
+06F3 A8F0      1880            mov     r0,b
+06F5 F9        1881            mov     r1,a
+06F6 E581      1882            mov     a,sp
+06F8 24FC      1883            add     a,#0xfc
+06FA F581      1884            mov     sp,a
+06FC D005      1885            pop     ar5
+06FE D004      1886            pop     ar4
+0700 D003      1887            pop     ar3
+0702 D002      1888            pop     ar2
+0704           1889   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:378: return (voltage_across_resistor / current) / KILO_MULTIPLIER; // Calculate Resistance (Kilohms)
+0704 C006      1890            push    ar6
+0706 C007      1891            push    ar7
+0708 C000      1892            push    ar0
+070A C001      1893            push    ar1
+070C 8A82      1894            mov     dpl,r2
+070E 8B83      1895            mov     dph,r3
+0710 8CF0      1896            mov     b,r4
+0712 ED        1897            mov     a,r5
+0713 120000    1898            lcall   ___fsdiv
+0716 AA82      1899            mov     r2,dpl
+0718 AB83      1900            mov     r3,dph
+071A ACF0      1901            mov     r4,b
+071C FD        1902            mov     r5,a
+071D E581      1903            mov     a,sp
+071F 24FC      1904            add     a,#0xfc
+0721 F581      1905            mov     sp,a
+0723 E4        1906            clr     a
+0724 C0E0      1907            push    acc
+0726 C0E0      1908            push    acc
+0728 747A      1909            mov     a,#0x7A
+072A C0E0      1910            push    acc
+072C 7444      1911            mov     a,#0x44
+072E C0E0      1912            push    acc
+0730 8A82      1913            mov     dpl,r2
+0732 8B83      1914            mov     dph,r3
+0734 8CF0      1915            mov     b,r4
+0736 ED        1916            mov     a,r5
+0737 120000    1917            lcall   ___fsdiv
+073A AA82      1918            mov     r2,dpl
+073C AB83      1919            mov     r3,dph
+073E ACF0      1920            mov     r4,b
+0740 FD        1921            mov     r5,a
+0741 E581      1922            mov     a,sp
+0743 24FC      1923            add     a,#0xfc
+0745 F581      1924            mov     sp,a
+0747 8A82      1925            mov     dpl,r2
+0749 8B83      1926            mov     dph,r3
+074B 8CF0      1927            mov     b,r4
+074D ED        1928            mov     a,r5
+074E 22        1929            ret
+074F           1930   ;------------------------------------------------------------
+074F           1931   ;Allocation info for local variables in function 'Check_Mode_Button'
+074F           1932   ;------------------------------------------------------------
+074F           1933   ;mode                      Allocated to registers r2 r3 
+074F           1934   ;current_mode              Allocated to registers r4 r5 
+074F           1935   ;------------------------------------------------------------
+074F           1936   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:394: int Check_Mode_Button(int mode) {
+074F           1937   ;        -----------------------------------------
+074F           1938   ;         function Check_Mode_Button
+074F           1939   ;        -----------------------------------------
+074F           1940   _Check_Mode_Button:
+074F AA82      1941            mov     r2,dpl
+0751 AB83      1942            mov     r3,dph
+0753           1943   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:395: int current_mode = mode;
+0753 8A04      1944            mov     ar4,r2
+0755 8B05      1945            mov     ar5,r3
+0757           1946   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:396: if (MODE_PIN == 0) waitms(50); // De-bounce
+0757 20B100    1947            jb      _P3_1,L027002?
+075A 900032    1948            mov     dptr,#0x0032
+075D C002      1949            push    ar2
+075F C003      1950            push    ar3
+0761 C004      1951            push    ar4
+0763 C005      1952            push    ar5
+0765 120000    1953            lcall   _waitms
+0768 D005      1954            pop     ar5
+076A D004      1955            pop     ar4
+076C D003      1956            pop     ar3
+076E D002      1957            pop     ar2
+0770 8000      1958            sjmp    L027003?
+0772           1959   L027002?:
+0772           1960   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:397: else return current_mode;
+0772 8A82      1961            mov     dpl,r2
+0774 8B83      1962            mov     dph,r3
+0776 22        1963            ret
+0777           1964   L027003?:
+0777           1965   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:399: if(MODE_PIN == 0) {
+0777 20B180    1966            jb      _P3_1,L027011?
+077A           1967   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:400: while(MODE_PIN==0);
+077A           1968   L027004?:
+077A 30B1C0    1969            jnb     _P3_1,L027004?
+077D           1970   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:402: printf("\rMode: %d\r\n", !current_mode);
+077D EC        1971            mov     a,r4
+077E 4D        1972            orl     a,r5
+077F B40100    1973            cjne    a,#0x01,L027022?
+0782           1974   L027022?:
+0782 E4        1975            clr     a
+0783 33        1976            rlc     a
+0784 FC        1977            mov     r4,a
+0785 7D00      1978            mov     r5,#0x00
+0787 C002      1979            push    ar2
+0789 C003      1980            push    ar3
+078B C004      1981            push    ar4
+078D C005      1982            push    ar5
+078F 7440      1983            mov     a,#__str_8
+0791 C0E0      1984            push    acc
+0793 74CA      1985            mov     a,#(__str_8 >> 8)
+0795 C0E0      1986            push    acc
+0797 7480      1987            mov     a,#0x80
+0799 C0E0      1988            push    acc
+079B 120000    1989            lcall   _printf
+079E E581      1990            mov     a,sp
+07A0 24FB      1991            add     a,#0xfb
+07A2 F581      1992            mov     sp,a
+07A4 D003      1993            pop     ar3
+07A6 D002      1994            pop     ar2
+07A8           1995   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:403: if (mode == MODE_CAPACITANCE) {
+07A8 EA        1996            mov     a,r2
+07A9 4B        1997            orl     a,r3
+07AA 7000      1998            jnz     L027008?
+07AC           1999   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:404: return MODE_RESISTANCE;
+07AC 900001    2000            mov     dptr,#0x0001
+07AF 22        2001            ret
+07B0           2002   L027008?:
+07B0           2003   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:406: return MODE_CAPACITANCE;
+07B0 900000    2004            mov     dptr,#0x0000
+07B3 22        2005            ret
+07B4           2006   L027011?:
+07B4           2007   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:409: return current_mode;
+07B4 8A82      2008            mov     dpl,r2
+07B6 8B83      2009            mov     dph,r3
+07B8 22        2010            ret
+07B9           2011   ;------------------------------------------------------------
+07B9           2012   ;Allocation info for local variables in function 'main'
+07B9           2013   ;------------------------------------------------------------
+07B9           2014   ;mode                      Allocated with name '_main_mode_1_85'
+07B9           2015   ;V_LED                     Allocated to registers 
+07B9           2016   ;V_R                       Allocated with name '_main_V_R_1_85'
+07B9           2017   ;R_kOhms                   Allocated with name '_main_R_kOhms_1_85'
+07B9           2018   ;period_s                  Allocated with name '_main_period_s_1_85'
+07B9           2019   ;freq_Hz                   Allocated to registers r6 r7 r4 r5 
+07B9           2020   ;capacitance_nF            Allocated with name '_main_capacitance_nF_1_85'
+07B9           2021   ;success_count             Allocated with name '_main_success_count_1_85'
+07B9           2022   ;------------------------------------------------------------
+07B9           2023   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:413: void main(void) {
+07B9           2024   ;        -----------------------------------------
+07B9           2025   ;         function main
+07B9           2026   ;        -----------------------------------------
+07B9           2027   _main:
+07B9           2028   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:414: int mode = MODE_CAPACITANCE;
+07B9           2029   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:417: int success_count = 0;
+07B9 E4        2030            clr     a
+07BA F538      2031            mov     _main_mode_1_85,a
+07BC F539      2032            mov     (_main_mode_1_85 + 1),a
+07BE F5B8      2033            mov     _main_success_count_1_85,a
+07C0 F5B9      2034            mov     (_main_success_count_1_85 + 1),a
+07C2           2035   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:420: TIMER0_Init(); // Initialize Timer 0
+07C2 120000    2036            lcall   _TIMER0_Init
+07C5           2037   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:421: Serial_Init(); // Initialize Serial Communication
+07C5 120000    2038            lcall   _Serial_Init
+07C8           2039   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:422: LCD_4BIT();     // Configure the LCD
+07C8 120000    2040            lcall   _LCD_4BIT
+07CB           2041   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:425: InitPinADC(2, 1); // Configure P2.1 as Analog Input
+07CB 756001    2042            mov     _InitPinADC_PARM_2,#0x01
+07CE 758202    2043            mov     dpl,#0x02
+07D1 120000    2044            lcall   _InitPinADC
+07D4           2045   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:426: InitADC();
+07D4 120000    2046            lcall   _InitADC
+07D7           2047   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:428: while(1) {
+07D7           2048   L028041?:
+07D7           2049   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:429: mode = Check_Mode_Button(mode);
+07D7 853882    2050            mov     dpl,_main_mode_1_85
+07DA 853983    2051            mov     dph,(_main_mode_1_85 + 1)
+07DD 120000    2052            lcall   _Check_Mode_Button
+07E0 858238    2053            mov     _main_mode_1_85,dpl
+07E3 858339    2054            mov     (_main_mode_1_85 + 1),dph
+07E6           2055   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:431: V_LED = Volts_at_Pin(QFP32_MUX_P0_1); // Measure the Voltage at the LED
+07E6 758200    2056            mov     dpl,#0x00
+07E9 120000    2057            lcall   _Volts_at_Pin
+07EC           2058   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:432: V_R = Volts_at_Pin(QFP32_MUX_P2_1); // Measure the Voltage at the Resistor
+07EC 75820E    2059            mov     dpl,#0x0E
+07EF 120000    2060            lcall   _Volts_at_Pin
+07F2           2061   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:433: R_kOhms = calculate_resistance_k0hms(V_R);
+07F2 858278    2062            mov     _main_V_R_1_85,dpl
+07F5 858379    2063            mov     (_main_V_R_1_85 + 1),dph
+07F8 85F07A    2064            mov     (_main_V_R_1_85 + 2),b
+07FB F57B      2065            mov     (_main_V_R_1_85 + 3),a
+07FD 120000    2066            lcall   _calculate_resistance_k0hms
+0800 8582C8    2067            mov     _main_R_kOhms_1_85,dpl
+0803 8583C9    2068            mov     (_main_R_kOhms_1_85 + 1),dph
+0806 85F0CA    2069            mov     (_main_R_kOhms_1_85 + 2),b
+0809 F5CB      2070            mov     (_main_R_kOhms_1_85 + 3),a
+080B           2071   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:440: TL0 = 0;
+080B 758A00    2072            mov     _TL0,#0x00
+080E           2073   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:441: TH0 = 0;
+080E 758C00    2074            mov     _TH0,#0x00
+0811           2075   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:442: TF0 = 0;
+0811 C28D      2076            clr     _TF0
+0813           2077   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:443: overflow_count = 0;
+0813 759800    2078            mov     _overflow_count,#0x00
+0816           2079   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:445: while (EFM8_SIGNAL != 0); // Wait for Signal == 0
+0816           2080   L028001?:
+0816 208100    2081            jb      _P0_1,L028001?
+0819           2082   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:446: while (EFM8_SIGNAL != 1); // Wait for Signal == 1
+0819           2083   L028004?:
+0819 308140    2084            jnb     _P0_1,L028004?
+081C           2085   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:448: TR0 = 1; // Start Timer
+081C D28C      2086            setb    _TR0
+081E           2087   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:450: while (EFM8_SIGNAL != 0) { // Wait for Signal == 0
+081E           2088   L028009?:
+081E 3081C0    2089            jnb     _P0_1,L028014?
+0821           2090   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:451: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
+0821           2091   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:452: TF0 = 0;
+0821 108D00    2092            jbc     _TF0,L028069?
+0824 8000      2093            sjmp    L028009?
+0826           2094   L028069?:
+0826           2095   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:453: overflow_count++;
+0826 0598      2096            inc     _overflow_count
+0828           2097   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:456: while (EFM8_SIGNAL != 1) { // Wait for Signal == 1
+0828 8000      2098            sjmp    L028009?
+082A           2099   L028014?:
+082A 208140    2100            jb      _P0_1,L028016?
+082D           2101   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:457: if (TF0 == 1) { // Did 16-Bit Timer Overflow?
+082D           2102   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:458: TF0 = 0;
+082D 108D80    2103            jbc     _TF0,L028071?
+0830 8000      2104            sjmp    L028014?
+0832           2105   L028071?:
+0832           2106   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:459: overflow_count++;
+0832 0598      2107            inc     _overflow_count
+0834 8000      2108            sjmp    L028014?
+0836           2109   L028016?:
+0836           2110   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:463: TR0 = 0; // Stop Timer 0. The 24-bit number [overflow_count-TH0-TL0] has the period!
+0836 C28C      2111            clr     _TR0
+0838           2112   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:464: period_s = calculate_period_s(overflow_count, TH0, TL0);
+0838 A898      2113            mov     r0,_overflow_count
+083A 7900      2114            mov     r1,#0x00
+083C 858C28    2115            mov     _calculate_period_s_PARM_2,_TH0
+083F 752900    2116            mov     (_calculate_period_s_PARM_2 + 1),#0x00
+0842 858AD8    2117            mov     _calculate_period_s_PARM_3,_TL0
+0845 75D900    2118            mov     (_calculate_period_s_PARM_3 + 1),#0x00
+0848 8882      2119            mov     dpl,r0
+084A 8983      2120            mov     dph,r1
+084C 120000    2121            lcall   _calculate_period_s
+084F           2122   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:465: freq_Hz = calculate_freq_Hz(period_s);
+084F 858218    2123            mov     _main_period_s_1_85,dpl
+0852 858319    2124            mov     (_main_period_s_1_85 + 1),dph
+0855 85F01A    2125            mov     (_main_period_s_1_85 + 2),b
+0858 F51B      2126            mov     (_main_period_s_1_85 + 3),a
+085A 120000    2127            lcall   _calculate_freq_Hz
+085D AE82      2128            mov     r6,dpl
+085F AF83      2129            mov     r7,dph
+0861 ACF0      2130            mov     r4,b
+0863 FD        2131            mov     r5,a
+0864           2132   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:466: capacitance_nF = calculate_capacitance_nF(period_s);
+0864 851882    2133            mov     dpl,_main_period_s_1_85
+0867 851983    2134            mov     dph,(_main_period_s_1_85 + 1)
+086A 851AF0    2135            mov     b,(_main_period_s_1_85 + 2)
+086D E51B      2136            mov     a,(_main_period_s_1_85 + 3)
+086F C004      2137            push    ar4
+0871 C005      2138            push    ar5
+0873 C006      2139            push    ar6
+0875 C007      2140            push    ar7
+0877 120000    2141            lcall   _calculate_capacitance_nF
+087A 858268    2142            mov     _main_capacitance_nF_1_85,dpl
+087D 858369    2143            mov     (_main_capacitance_nF_1_85 + 1),dph
+0880 85F06A    2144            mov     (_main_capacitance_nF_1_85 + 2),b
+0883 F56B      2145            mov     (_main_capacitance_nF_1_85 + 3),a
+0885 D007      2146            pop     ar7
+0887 D006      2147            pop     ar6
+0889 D005      2148            pop     ar5
+088B D004      2149            pop     ar4
+088D           2150   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:468: if ((mode == MODE_RESISTANCE) && (V_R < VDD)) display_resistance_kOhms(R_kOhms);
+088D 7401      2151            mov     a,#0x01
+088F B538C0    2152            cjne    a,_main_mode_1_85,L028072?
+0892 E4        2153            clr     a
+0893 B539C0    2154            cjne    a,(_main_mode_1_85 + 1),L028072?
+0896 7401      2155            mov     a,#0x01
+0898 8000      2156            sjmp    L028073?
+089A           2157   L028072?:
+089A E4        2158            clr     a
+089B           2159   L028073?:
+089B F8        2160            mov     r0,a
+089C 6000      2161            jz      L028018?
+089E C004      2162            push    ar4
+08A0 C005      2163            push    ar5
+08A2 C006      2164            push    ar6
+08A4 C007      2165            push    ar7
+08A6 C000      2166            push    ar0
+08A8 748B      2167            mov     a,#0x8B
+08AA C0E0      2168            push    acc
+08AC 746C      2169            mov     a,#0x6C
+08AE C0E0      2170            push    acc
+08B0 7453      2171            mov     a,#0x53
+08B2 C0E0      2172            push    acc
+08B4 7440      2173            mov     a,#0x40
+08B6 C0E0      2174            push    acc
+08B8 857882    2175            mov     dpl,_main_V_R_1_85
+08BB 857983    2176            mov     dph,(_main_V_R_1_85 + 1)
+08BE 857AF0    2177            mov     b,(_main_V_R_1_85 + 2)
+08C1 E57B      2178            mov     a,(_main_V_R_1_85 + 3)
+08C3 120000    2179            lcall   ___fslt
+08C6 A982      2180            mov     r1,dpl
+08C8 E581      2181            mov     a,sp
+08CA 24FC      2182            add     a,#0xfc
+08CC F581      2183            mov     sp,a
+08CE D000      2184            pop     ar0
+08D0 D007      2185            pop     ar7
+08D2 D006      2186            pop     ar6
+08D4 D005      2187            pop     ar5
+08D6 D004      2188            pop     ar4
+08D8 E9        2189            mov     a,r1
+08D9 6000      2190            jz      L028018?
+08DB 85C882    2191            mov     dpl,_main_R_kOhms_1_85
+08DE 85C983    2192            mov     dph,(_main_R_kOhms_1_85 + 1)
+08E1 85CAF0    2193            mov     b,(_main_R_kOhms_1_85 + 2)
+08E4 E5CB      2194            mov     a,(_main_R_kOhms_1_85 + 3)
+08E6 C004      2195            push    ar4
+08E8 C005      2196            push    ar5
+08EA C006      2197            push    ar6
+08EC C007      2198            push    ar7
+08EE C000      2199            push    ar0
+08F0 120000    2200            lcall   _display_resistance_kOhms
+08F3 D000      2201            pop     ar0
+08F5 D007      2202            pop     ar7
+08F7 D006      2203            pop     ar6
+08F9 D005      2204            pop     ar5
+08FB D004      2205            pop     ar4
+08FD           2206   L028018?:
+08FD           2207   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:476: if ((mode == MODE_CAPACITANCE) && (freq_Hz <= MIN_FREQ_HZ || freq_Hz >= MAX_FREQ_HZ)) {
+08FD E538      2208            mov     a,_main_mode_1_85
+08FF 4539      2209            orl     a,(_main_mode_1_85 + 1)
+0901 6000      2210            jz      L028076?
+0903 020000    2211            ljmp    L028030?
+0906           2212   L028076?:
+0906 C004      2213            push    ar4
+0908 C005      2214            push    ar5
+090A C006      2215            push    ar6
+090C C007      2216            push    ar7
+090E C000      2217            push    ar0
+0910 E4        2218            clr     a
+0911 C0E0      2219            push    acc
+0913 C0E0      2220            push    acc
+0915 7448      2221            mov     a,#0x48
+0917 C0E0      2222            push    acc
+0919 7443      2223            mov     a,#0x43
+091B C0E0      2224            push    acc
+091D 8E82      2225            mov     dpl,r6
+091F 8F83      2226            mov     dph,r7
+0921 8CF0      2227            mov     b,r4
+0923 ED        2228            mov     a,r5
+0924 120000    2229            lcall   ___fsgt
+0927 A982      2230            mov     r1,dpl
+0929 E581      2231            mov     a,sp
+092B 24FC      2232            add     a,#0xfc
+092D F581      2233            mov     sp,a
+092F D000      2234            pop     ar0
+0931 D007      2235            pop     ar7
+0933 D006      2236            pop     ar6
+0935 D005      2237            pop     ar5
+0937 D004      2238            pop     ar4
+0939 E9        2239            mov     a,r1
+093A 6000      2240            jz      L028029?
+093C C004      2241            push    ar4
+093E C005      2242            push    ar5
+0940 C006      2243            push    ar6
+0942 C007      2244            push    ar7
+0944 C000      2245            push    ar0
+0946 C001      2246            push    ar1
+0948 E4        2247            clr     a
+0949 C0E0      2248            push    acc
+094B 7450      2249            mov     a,#0x50
+094D C0E0      2250            push    acc
+094F 74C3      2251            mov     a,#0xC3
+0951 C0E0      2252            push    acc
+0953 7448      2253            mov     a,#0x48
+0955 C0E0      2254            push    acc
+0957 8E82      2255            mov     dpl,r6
+0959 8F83      2256            mov     dph,r7
+095B 8CF0      2257            mov     b,r4
+095D ED        2258            mov     a,r5
+095E 120000    2259            lcall   ___fslt
+0961 AA82      2260            mov     r2,dpl
+0963 E581      2261            mov     a,sp
+0965 24FC      2262            add     a,#0xfc
+0967 F581      2263            mov     sp,a
+0969 D001      2264            pop     ar1
+096B D000      2265            pop     ar0
+096D D007      2266            pop     ar7
+096F D006      2267            pop     ar6
+0971 D005      2268            pop     ar5
+0973 D004      2269            pop     ar4
+0975 EA        2270            mov     a,r2
+0976 6000      2271            jz      L028078?
+0978 020000    2272            ljmp    L028030?
+097B           2273   L028078?:
+097B           2274   L028029?:
+097B           2275   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:477: success_count = 0;
+097B E4        2276            clr     a
+097C F5B8      2277            mov     _main_success_count_1_85,a
+097E F5B9      2278            mov     (_main_success_count_1_85 + 1),a
+0980           2279   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:478: if (freq_Hz >= MAX_FREQ_HZ) LCDprint("ERROR : SMALL C", 1, 1);
+0980 C004      2280            push    ar4
+0982 C005      2281            push    ar5
+0984 C006      2282            push    ar6
+0986 C007      2283            push    ar7
+0988 C000      2284            push    ar0
+098A C001      2285            push    ar1
+098C E4        2286            clr     a
+098D C0E0      2287            push    acc
+098F 7450      2288            mov     a,#0x50
+0991 C0E0      2289            push    acc
+0993 74C3      2290            mov     a,#0xC3
+0995 C0E0      2291            push    acc
+0997 7448      2292            mov     a,#0x48
+0999 C0E0      2293            push    acc
+099B 8E82      2294            mov     dpl,r6
+099D 8F83      2295            mov     dph,r7
+099F 8CF0      2296            mov     b,r4
+09A1 ED        2297            mov     a,r5
+09A2 120000    2298            lcall   ___fslt
+09A5 AA82      2299            mov     r2,dpl
+09A7 E581      2300            mov     a,sp
+09A9 24FC      2301            add     a,#0xfc
+09AB F581      2302            mov     sp,a
+09AD D001      2303            pop     ar1
+09AF D000      2304            pop     ar0
+09B1 D007      2305            pop     ar7
+09B3 D006      2306            pop     ar6
+09B5 D005      2307            pop     ar5
+09B7 D004      2308            pop     ar4
+09B9 EA        2309            mov     a,r2
+09BA 7000      2310            jnz     L028023?
+09BC 751801    2311            mov     _LCDprint_PARM_2,#0x01
+09BF D200      2312            setb    _LCDprint_PARM_3
+09C1 90CF40    2313            mov     dptr,#__str_9
+09C4 75F080    2314            mov     b,#0x80
+09C7 C004      2315            push    ar4
+09C9 C005      2316            push    ar5
+09CB C006      2317            push    ar6
+09CD C007      2318            push    ar7
+09CF C000      2319            push    ar0
+09D1 120000    2320            lcall   _LCDprint
+09D4 D000      2321            pop     ar0
+09D6 D007      2322            pop     ar7
+09D8 D006      2323            pop     ar6
+09DA D005      2324            pop     ar5
+09DC D004      2325            pop     ar4
+09DE 8000      2326            sjmp    L028024?
+09E0           2327   L028023?:
+09E0           2328   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:479: else if (freq_Hz <= MIN_FREQ_HZ) LCDprint("ERROR : LARGE C", 1, 1);
+09E0 E9        2329            mov     a,r1
+09E1 7000      2330            jnz     L028024?
+09E3 751801    2331            mov     _LCDprint_PARM_2,#0x01
+09E6 D200      2332            setb    _LCDprint_PARM_3
+09E8 90CFC0    2333            mov     dptr,#__str_10
+09EB 75F080    2334            mov     b,#0x80
+09EE C004      2335            push    ar4
+09F0 C005      2336            push    ar5
+09F2 C006      2337            push    ar6
+09F4 C007      2338            push    ar7
+09F6 C000      2339            push    ar0
+09F8 120000    2340            lcall   _LCDprint
+09FB D000      2341            pop     ar0
+09FD D007      2342            pop     ar7
+09FF D006      2343            pop     ar6
+0A01 D005      2344            pop     ar5
+0A03 D004      2345            pop     ar4
+0A05           2346   L028024?:
+0A05           2347   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:481: LCDprint("                ", 2, 1);
+0A05 751802    2348            mov     _LCDprint_PARM_2,#0x02
+0A08 D200      2349            setb    _LCDprint_PARM_3
+0A0A 90C800    2350            mov     dptr,#__str_7
+0A0D 75F080    2351            mov     b,#0x80
+0A10 C004      2352            push    ar4
+0A12 C005      2353            push    ar5
+0A14 C006      2354            push    ar6
+0A16 C007      2355            push    ar7
+0A18 C000      2356            push    ar0
+0A1A 120000    2357            lcall   _LCDprint
+0A1D           2358   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:482: waitms(125); // Wait for 500 ms
+0A1D 90007D    2359            mov     dptr,#0x007D
+0A20 120000    2360            lcall   _waitms
+0A23 D000      2361            pop     ar0
+0A25 D007      2362            pop     ar7
+0A27 D006      2363            pop     ar6
+0A29 D005      2364            pop     ar5
+0A2B D004      2365            pop     ar4
+0A2D 020000    2366            ljmp    L028031?
+0A30           2367   L028030?:
+0A30           2368   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:483: } else if ((mode == MODE_RESISTANCE) && (V_R >= VDD)) {
+0A30 E8        2369            mov     a,r0
+0A31 6000      2370            jz      L028026?
+0A33 C004      2371            push    ar4
+0A35 C005      2372            push    ar5
+0A37 C006      2373            push    ar6
+0A39 C007      2374            push    ar7
+0A3B C000      2375            push    ar0
+0A3D 748B      2376            mov     a,#0x8B
+0A3F C0E0      2377            push    acc
+0A41 746C      2378            mov     a,#0x6C
+0A43 C0E0      2379            push    acc
+0A45 7453      2380            mov     a,#0x53
+0A47 C0E0      2381            push    acc
+0A49 7440      2382            mov     a,#0x40
+0A4B C0E0      2383            push    acc
+0A4D 857882    2384            mov     dpl,_main_V_R_1_85
+0A50 857983    2385            mov     dph,(_main_V_R_1_85 + 1)
+0A53 857AF0    2386            mov     b,(_main_V_R_1_85 + 2)
+0A56 E57B      2387            mov     a,(_main_V_R_1_85 + 3)
+0A58 120000    2388            lcall   ___fslt
+0A5B AA82      2389            mov     r2,dpl
+0A5D E581      2390            mov     a,sp
+0A5F 24FC      2391            add     a,#0xfc
+0A61 F581      2392            mov     sp,a
+0A63 D000      2393            pop     ar0
+0A65 D007      2394            pop     ar7
+0A67 D006      2395            pop     ar6
+0A69 D005      2396            pop     ar5
+0A6B D004      2397            pop     ar4
+0A6D EA        2398            mov     a,r2
+0A6E           2399   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:484: success_count = 0;
+0A6E 7000      2400            jnz     L028026?
+0A70 F5B8      2401            mov     _main_success_count_1_85,a
+0A72 F5B9      2402            mov     (_main_success_count_1_85 + 1),a
+0A74           2403   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:485: LCDprint("ERROR : LARGE R", 1, 1);
+0A74 751801    2404            mov     _LCDprint_PARM_2,#0x01
+0A77 D200      2405            setb    _LCDprint_PARM_3
+0A79 90D080    2406            mov     dptr,#__str_11
+0A7C 75F080    2407            mov     b,#0x80
+0A7F C004      2408            push    ar4
+0A81 C005      2409            push    ar5
+0A83 C006      2410            push    ar6
+0A85 C007      2411            push    ar7
+0A87 C000      2412            push    ar0
+0A89 120000    2413            lcall   _LCDprint
+0A8C           2414   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:487: LCDprint("                ", 2, 1);
+0A8C 751802    2415            mov     _LCDprint_PARM_2,#0x02
+0A8F D200      2416            setb    _LCDprint_PARM_3
+0A91 90C800    2417            mov     dptr,#__str_7
+0A94 75F080    2418            mov     b,#0x80
+0A97 120000    2419            lcall   _LCDprint
+0A9A           2420   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:488: waitms(250); // Wait for 250 ms
+0A9A 9000FA    2421            mov     dptr,#0x00FA
+0A9D 120000    2422            lcall   _waitms
+0AA0 D000      2423            pop     ar0
+0AA2 D007      2424            pop     ar7
+0AA4 D006      2425            pop     ar6
+0AA6 D005      2426            pop     ar5
+0AA8 D004      2427            pop     ar4
+0AAA 8000      2428            sjmp    L028031?
+0AAC           2429   L028026?:
+0AAC           2430   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:490: success_count += 1;
+0AAC 05B8      2431            inc     _main_success_count_1_85
+0AAE E4        2432            clr     a
+0AAF B5B8C0    2433            cjne    a,_main_success_count_1_85,L028083?
+0AB2 05B9      2434            inc     (_main_success_count_1_85 + 1)
+0AB4           2435   L028083?:
+0AB4           2436   L028031?:
+0AB4           2437   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:493: if (success_count >= SUCCESS_THRESHOLD) {
+0AB4 C3        2438            clr     c
+0AB5 E5B8      2439            mov     a,_main_success_count_1_85
+0AB7 940A      2440            subb    a,#0x0A
+0AB9 E5B9      2441            mov     a,(_main_success_count_1_85 + 1)
+0ABB 6480      2442            xrl     a,#0x80
+0ABD 9480      2443            subb    a,#0x80
+0ABF 5000      2444            jnc     L028084?
+0AC1 020000    2445            ljmp    L028041?
+0AC4           2446   L028084?:
+0AC4           2447   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:494: waitms(200); // Wait for 200 ms
+0AC4 9000C8    2448            mov     dptr,#0x00C8
+0AC7 C004      2449            push    ar4
+0AC9 C005      2450            push    ar5
+0ACB C006      2451            push    ar6
+0ACD C007      2452            push    ar7
+0ACF C000      2453            push    ar0
+0AD1 120000    2454            lcall   _waitms
+0AD4 D000      2455            pop     ar0
+0AD6 D007      2456            pop     ar7
+0AD8 D006      2457            pop     ar6
+0ADA D005      2458            pop     ar5
+0ADC D004      2459            pop     ar4
+0ADE           2460   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:495: if (mode == MODE_RESISTANCE) {
+0ADE E8        2461            mov     a,r0
+0ADF 6000      2462            jz      L028035?
+0AE1           2463   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:496: printf("\rR(kOhm) = %f\r\n", R_kOhms); // Print Resistance in Kilohms
+0AE1 C004      2464            push    ar4
+0AE3 C005      2465            push    ar5
+0AE5 C006      2466            push    ar6
+0AE7 C007      2467            push    ar7
+0AE9 C0C8      2468            push    _main_R_kOhms_1_85
+0AEB C0C9      2469            push    (_main_R_kOhms_1_85 + 1)
+0AED C0CA      2470            push    (_main_R_kOhms_1_85 + 2)
+0AEF C0CB      2471            push    (_main_R_kOhms_1_85 + 3)
+0AF1 7480      2472            mov     a,#__str_12
+0AF3 C0E0      2473            push    acc
+0AF5 74D1      2474            mov     a,#(__str_12 >> 8)
+0AF7 C0E0      2475            push    acc
+0AF9 7480      2476            mov     a,#0x80
+0AFB C0E0      2477            push    acc
+0AFD 120000    2478            lcall   _printf
+0B00 E581      2479            mov     a,sp
+0B02 24F9      2480            add     a,#0xf9
+0B04 F581      2481            mov     sp,a
+0B06 D007      2482            pop     ar7
+0B08 D006      2483            pop     ar6
+0B0A D005      2484            pop     ar5
+0B0C D004      2485            pop     ar4
+0B0E           2486   L028035?:
+0B0E           2487   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:498: printf("\rF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
+0B0E E4        2488            clr     a
+0B0F C0E0      2489            push    acc
+0B11 C0E0      2490            push    acc
+0B13 747A      2491            mov     a,#0x7A
+0B15 C0E0      2492            push    acc
+0B17 7444      2493            mov     a,#0x44
+0B19 C0E0      2494            push    acc
+0B1B 8E82      2495            mov     dpl,r6
+0B1D 8F83      2496            mov     dph,r7
+0B1F 8CF0      2497            mov     b,r4
+0B21 ED        2498            mov     a,r5
+0B22 120000    2499            lcall   ___fsdiv
+0B25 AA82      2500            mov     r2,dpl
+0B27 AB83      2501            mov     r3,dph
+0B29 ACF0      2502            mov     r4,b
+0B2B FD        2503            mov     r5,a
+0B2C E581      2504            mov     a,sp
+0B2E 24FC      2505            add     a,#0xfc
+0B30 F581      2506            mov     sp,a
+0B32 C002      2507            push    ar2
+0B34 C003      2508            push    ar3
+0B36 C004      2509            push    ar4
+0B38 C005      2510            push    ar5
+0B3A C002      2511            push    ar2
+0B3C C003      2512            push    ar3
+0B3E C004      2513            push    ar4
+0B40 C005      2514            push    ar5
+0B42 74C0      2515            mov     a,#__str_13
+0B44 C0E0      2516            push    acc
+0B46 74D1      2517            mov     a,#(__str_13 >> 8)
+0B48 C0E0      2518            push    acc
+0B4A 7480      2519            mov     a,#0x80
+0B4C C0E0      2520            push    acc
+0B4E 120000    2521            lcall   _printf
+0B51 E581      2522            mov     a,sp
+0B53 24F9      2523            add     a,#0xf9
+0B55 F581      2524            mov     sp,a
+0B57           2525   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:499: printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
+0B57 C068      2526            push    _main_capacitance_nF_1_85
+0B59 C069      2527            push    (_main_capacitance_nF_1_85 + 1)
+0B5B C06A      2528            push    (_main_capacitance_nF_1_85 + 2)
+0B5D C06B      2529            push    (_main_capacitance_nF_1_85 + 3)
+0B5F 7400      2530            mov     a,#__str_14
+0B61 C0E0      2531            push    acc
+0B63 74D2      2532            mov     a,#(__str_14 >> 8)
+0B65 C0E0      2533            push    acc
+0B67 7480      2534            mov     a,#0x80
+0B69 C0E0      2535            push    acc
+0B6B 120000    2536            lcall   _printf
+0B6E E581      2537            mov     a,sp
+0B70 24F9      2538            add     a,#0xf9
+0B72 F581      2539            mov     sp,a
+0B74 D005      2540            pop     ar5
+0B76 D004      2541            pop     ar4
+0B78 D003      2542            pop     ar3
+0B7A D002      2543            pop     ar2
+0B7C           2544   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:501: if (mode == MODE_CAPACITANCE) {
+0B7C E538      2545            mov     a,_main_mode_1_85
+0B7E 4539      2546            orl     a,(_main_mode_1_85 + 1)
+0B80 6000      2547            jz      L028086?
+0B82 020000    2548            ljmp    L028041?
+0B85           2549   L028086?:
+0B85           2550   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:502: display_freq_kHz(freq_Hz / KILO_MULTIPLIER); // Display Frequency on LCD
+0B85 8A82      2551            mov     dpl,r2
+0B87 8B83      2552            mov     dph,r3
+0B89 8CF0      2553            mov     b,r4
+0B8B ED        2554            mov     a,r5
+0B8C 120000    2555            lcall   _display_freq_kHz
+0B8F           2556   ;        C:\Muntakim_Files\School\School_Work\Engineering_Bachelors\2023\ELEC_291\Lab_4\ELEC291_Lab4\Lab4.c:503: display_capacitance_nF(capacitance_nF);
+0B8F 856882    2557            mov     dpl,_main_capacitance_nF_1_85
+0B92 856983    2558            mov     dph,(_main_capacitance_nF_1_85 + 1)
+0B95 856AF0    2559            mov     b,(_main_capacitance_nF_1_85 + 2)
+0B98 E56B      2560            mov     a,(_main_capacitance_nF_1_85 + 3)
+0B9A 120000    2561            lcall   _display_capacitance_nF
+0B9D 020000    2562            ljmp    L028041?
+0BA0           2563            rseg R_CSEG
+0BA0           2564   
+0000           2565            rseg R_XINIT
+0000           2566   
+0000           2567            rseg R_CONST
+0000           2568   __str_0:
+0000 1B        2569            db 0x1B
+0001 5B324A    2570            db '[2J'
+0004 00        2571            db 0x00
+0005           2572   __str_1:
+0005 54797065  2573            db 'Type Intended Display in Line 2 (16 Char Max): '
      20496E74
      656E6465
      64204469
@@ -2557,81 +2582,87 @@
      43686172
      204D6178
      293A20
-0034 00        2549            db 0x00
-0035           2550   __str_2:
-0035 0A        2551            db 0x0A
-0036 00        2552            db 0x00
-0037           2553   __str_3:
-0037 543A2025  2554            db 'T: %.3f s'
+0034 00        2574            db 0x00
+0035           2575   __str_2:
+0035 0A        2576            db 0x0A
+0036 00        2577            db 0x00
+0037           2578   __str_3:
+0037 543A2025  2579            db 'T: %.3f s'
      2E336620
      73
-0040 00        2555            db 0x00
-0041           2556   __str_4:
-0041 463A2025  2557            db 'F: %.3f kHz'
+0040 00        2580            db 0x00
+0041           2581   __str_4:
+0041 463A2025  2582            db 'F: %.3f kHz'
      2E336620
      6B487A
-004C 00        2558            db 0x00
-004D           2559   __str_5:
-004D 433A2025  2560            db 'C: %.3f nF'
+004C 00        2583            db 0x00
+004D           2584   __str_5:
+004D 433A2025  2585            db 'C: %.3f nF'
      2E336620
      6E46
-0057 00        2561            db 0x00
-0058           2562   __str_6:
-0058 523A2025  2563            db 'R: %.3f kOhms'
+0057 00        2586            db 0x00
+0058           2587   __str_6:
+0058 523A2025  2588            db 'R: %.3f kOhms'
      2E336620
      6B4F686D
      73
-0065 00        2564            db 0x00
-0066           2565   __str_7:
-0066 20202020  2566            db '                '
+0065 00        2589            db 0x00
+0066           2590   __str_7:
+0066 20202020  2591            db '                '
      20202020
      20202020
      20202020
-0076 00        2567            db 0x00
-0077           2568   __str_8:
-0077 4552524F  2569            db 'ERROR : LOW C'
+0076 00        2592            db 0x00
+0077           2593   __str_8:
+0077 0D        2594            db 0x0D
+0078 4D6F6465  2595            db 'Mode: %d'
+     3A202564
+0080 0D        2596            db 0x0D
+0081 0A        2597            db 0x0A
+0082 00        2598            db 0x00
+0083           2599   __str_9:
+0083 4552524F  2600            db 'ERROR : SMALL C'
      52203A20
-     4C4F5720
-     43
-0084 00        2570            db 0x00
-0085           2571   __str_9:
-0085 4552524F  2572            db 'ERROR : HIGH C'
+     534D414C
+     4C2043
+0092 00        2601            db 0x00
+0093           2602   __str_10:
+0093 4552524F  2603            db 'ERROR : LARGE C'
      52203A20
-     48494748
-     2043
-0093 00        2573            db 0x00
-0094           2574   __str_10:
-0094 4552524F  2575            db 'ERROR : HIGH R'
+     4C415247
+     452043
+00A2 00        2604            db 0x00
+00A3           2605   __str_11:
+00A3 4552524F  2606            db 'ERROR : LARGE R'
      52203A20
-     48494748
-     2052
-00A2 00        2576            db 0x00
-00A3           2577   __str_11:
-00A3 0D        2578            db 0x0D
-00A4 52286B4F  2579            db 'R(kOhms) = %f'
-     686D7329
-     203D2025
-     66
-00B1 0D        2580            db 0x0D
-00B2 0A        2581            db 0x0A
-00B3 00        2582            db 0x00
-00B4           2583   __str_12:
-00B4 0D        2584            db 0x0D
-00B5 46286B48  2585            db 'F(kHz) = %f'
+     4C415247
+     452052
+00B2 00        2607            db 0x00
+00B3           2608   __str_12:
+00B3 0D        2609            db 0x0D
+00B4 52286B4F  2610            db 'R(kOhm) = %f'
+     686D2920
+     3D202566
+00C0 0D        2611            db 0x0D
+00C1 0A        2612            db 0x0A
+00C2 00        2613            db 0x00
+00C3           2614   __str_13:
+00C3 0D        2615            db 0x0D
+00C4 46286B48  2616            db 'F(kHz) = %f'
      7A29203D
      202566
-00C0 0D        2586            db 0x0D
-00C1 0A        2587            db 0x0A
-00C2 00        2588            db 0x00
-00C3           2589   __str_13:
-00C3 0D        2590            db 0x0D
-00C4 43286E46  2591            db 'C(nF) = %f'
+00CF 0D        2617            db 0x0D
+00D0 0A        2618            db 0x0A
+00D1 00        2619            db 0x00
+00D2           2620   __str_14:
+00D2 0D        2621            db 0x0D
+00D3 43286E46  2622            db 'C(nF) = %f'
      29203D20
      2566
-00CE 0D        2592            db 0x0D
-00CF 0A        2593            db 0x0A
-00D0 00        2594            db 0x00
-00D1           2595   
-0003           2596            CSEG
-0003           2597   
-0003           2598   end
+00DD 0D        2623            db 0x0D
+00DE 0A        2624            db 0x0A
+00DF 00        2625            db 0x00
+00E0           2626   
+0003           2627            CSEG
+0003           2628   
+0003           2629   end

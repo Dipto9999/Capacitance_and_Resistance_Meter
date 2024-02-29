@@ -19,7 +19,7 @@
 #define MIN_CAPACITANCE_NF 1.0 // Minimum Capacitance in Nanofarads
 #define MAX_CAPACITANCE_NF 1000.0 // Maximum Capacitance in Nanofarads
 
-#define SUCCESS_THRESHOLD 3 // Success Threshold
+#define SUCCESS_THRESHOLD 10 // Success Threshold
 
 /* Define Multipliers */
 #define KILO_MULTIPLIER 1000.0 // Kilo Multiplier
@@ -35,8 +35,7 @@
 /* Define Pins */
 #define MODE_PIN P3_1 // Mode Button
 
-#define EFM8_SIGNAL P3_3 // Signal to Measure
-#define ADC_LED P0_1 // Reference LED
+#define EFM8_SIGNAL P0_1 // Signal to Measure
 #define ADC_R P2_1 // ADC Resistor
 
 #define LCD_RS P1_7 // LCD Register Select
@@ -50,7 +49,7 @@
 /* Define Constants for Resistances */
 #define R_A 1.5 * KILO_MULTIPLIER
 #define R_B 1.5 * KILO_MULTIPLIER
-#define R_REF 100.0 * KILO_MULTIPLIER
+#define R_REF 98.62 * KILO_MULTIPLIER
 
 #define VSS 4.8 // The measured value of VSS in volts
 #define VDD 3.3035 // The measured value of VDD in volts
@@ -400,6 +399,7 @@ int Check_Mode_Button(int mode) {
     if(MODE_PIN == 0) {
     	while(MODE_PIN==0);
 
+		printf("\rMode: %d\r\n", !current_mode);
 		if (mode == MODE_CAPACITANCE) {
 			return MODE_RESISTANCE;
 		} else {
@@ -422,7 +422,6 @@ void main(void) {
 	LCD_4BIT();	// Configure the LCD
 
 	// Initialize ADC
-	InitPinADC(0, 1); // Configure P0.1 as Analog Input
 	InitPinADC(2, 1); // Configure P2.1 as Analog Input
 	InitADC();
 
@@ -476,31 +475,27 @@ void main(void) {
 
 		if ((mode == MODE_CAPACITANCE) && (freq_Hz <= MIN_FREQ_HZ || freq_Hz >= MAX_FREQ_HZ)) {
 			success_count = 0;
-			if (freq_Hz >= MAX_FREQ_HZ) LCDprint("ERROR : LOW C", 1, 1);
-			else if (freq_Hz <= MIN_FREQ_HZ) LCDprint("ERROR : HIGH C", 1, 1);
+			if (freq_Hz >= MAX_FREQ_HZ) LCDprint("ERROR : SMALL C", 1, 1);
+			else if (freq_Hz <= MIN_FREQ_HZ) LCDprint("ERROR : LARGE C", 1, 1);
 
 			LCDprint("                ", 2, 1);
-			waitms(500); // Wait for 500 ms
+			waitms(125); // Wait for 500 ms
 		} else if ((mode == MODE_RESISTANCE) && (V_R >= VDD)) {
 			success_count = 0;
-			LCDprint("ERROR : HIGH R", 1, 1);
+			LCDprint("ERROR : LARGE R", 1, 1);
 
 			LCDprint("                ", 2, 1);
-			waitms(500); // Wait for 500 ms
+			waitms(250); // Wait for 250 ms
 		} else {
 			success_count += 1;
 		}
 
 		if (success_count >= SUCCESS_THRESHOLD) {
+			waitms(200); // Wait for 200 ms
 			if (mode == MODE_RESISTANCE) {
-				waitms(166); // Wait for 166 ms
-				printf("\rR(kOhms) = %f\r\n", R_kOhms); // Print Resistance in Kilohms
+				printf("\rR(kOhm) = %f\r\n", R_kOhms); // Print Resistance in Kilohms
 			}
-
-			waitms(166); // Wait for 166 ms
 			printf("\rF(kHz) = %f\r\n", freq_Hz / KILO_MULTIPLIER); // Print Frequency to Serial Port
-
-			waitms(166); // Wait for 166 ms
 			printf("\rC(nF) = %f\r\n", capacitance_nF); // Print Capacitance in Nanofarads
 
 			if (mode == MODE_CAPACITANCE) {

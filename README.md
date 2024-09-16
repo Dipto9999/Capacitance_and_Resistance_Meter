@@ -47,7 +47,7 @@ $$  R = \frac{V_{Pin}}{I},\text{ where }I = \frac{V_{SS} - V_{Pin}}{R_{REF}} $$
 
 **V1** was built using the **EFM8LB81** microcontroller, whereas **V2** of this meter was built using the **STM32** microcontroller. In this improved version, we have the ability to switch between capacitances with hardware pushbuttons.
 
-The firmware source code was adapted for the **ARM Cortex M0** family. The timers, **ADC**, **LCD** initialization and functions were modified for this in [`main.c`](STM32/Firmware/main.c)
+The firmware source code was adapted for the **ARM Cortex M0** family. The timers, **ADC**, **LCD** initialization and functions were modified for this in [`main.c`](STM32/Firmware/main.c).
 
 ## Tkinter App
 

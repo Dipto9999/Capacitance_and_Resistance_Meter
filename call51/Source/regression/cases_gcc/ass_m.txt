@@ -1,4 +1,0 @@
-
----------- REG_M.TXT
---- FAIL: "Assertion failed" on 0 at gcc-torture-execute-950426-1.c:43
---- FAIL: "Assertion failed" on 0 at gcc-torture-execute-bitfld-1.c:50

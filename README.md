@@ -33,15 +33,15 @@ We are using the **555 Timer** circuit in its astable mode to generate a square 
     <img align = "center" src="Figures/Measure_Period.png" width = 500 height = 200 title = "Measure Period"/>
 </div></br>
 
-We use the formula with the designed $R_A = R_B = 1.5 \, \text{k} \Omega$ resistances to calculate the capacitance seen by the meter.
+We use the formula with the designed $R_A = R_B = 1.5\text{ k}\Omega$ resistances to calculate the capacitance seen by the meter.
 
 $$ f = \frac{1}{T} = \frac{1.44}{(R_A + 2R_B)C} $$
 
 ### Resistance Meter
 
-We are using a voltage divider comprised of a known $R_{REF} = 98.62 \, \text{k} \Omega$ and an unknown resistance. We measure the input pin voltage with an **ADC** to determine the current and resistance.
+We are using a voltage divider comprised of a known $R_{REF} = 98.62\text{ k} \Omega$ and an unknown resistance. We measure the input pin voltage with an **ADC** to determine the current and resistance.
 
-$$  R = \frac{V_{Pin}}{I}, \,\,\text{where}\,\, I = \frac{V_{SS} - V_{Pin}}{R_{REF}} $$
+$$  R = \frac{V_{Pin}}{I},\text{ where }I = \frac{V_{SS} - V_{Pin}}{R_{REF}} $$
 
 ## Versions
 

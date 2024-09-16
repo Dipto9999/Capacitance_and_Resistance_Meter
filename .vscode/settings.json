@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "efm8lb1.h": "c",
-        "stdio.h": "c",
-        "stdlib.h": "c",
-        "*.pc": "c"
-    }
-}

@@ -54,7 +54,7 @@ The firmware source code was adapted for the **ARM Cortex M0** family. The timer
 We developed a **Python** application with a **Tkinter** user interface to display the incoming data stream of the **555 Timer** frequency (*Note that* $f = \frac{1}{T}$.)
 
 <div align = "center">
-    <img align = "center" src="Figures/App_Demo.png" width = 250 height = 200 title = "App"/>
+    <img align = "center" src="Figures/App_Demo.png" width = 500 height = 350 title = "App UI"/>
 </div></br>
 
 This app also has an embedded calculator with the actual capacitance and resistances used in the Capacitance Meter. We used this to display the expected values and validate it with the incoming data. Test data was saved to `.csv` files in the [`Logbook`](App/Logbook) directory.

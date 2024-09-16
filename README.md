@@ -63,6 +63,8 @@ This app also has an embedded calculator with the actual capacitance and resista
 
 We have uploaded our Final Demo on <a href="https://youtu.be/13Ug4NJ9nF0?si=DzX3gzpOJep0oHjI" target="_blank">Youtube</a> and have embedded a low resolution compressed version below.
 
+https://github.com/user-attachments/assets/779de1f8-2a8d-4f80-b612-0fa82f83c34b
+
 ## Credit
 
 This was completed as part of the <b>ELEC 291 - Design Studio</b> project course in the <b>The University of British Columbia Electrical and Computer Engineering</b> undergraduate program. We received tremendous support and guidance from Dr. Jesus Calvino-Fraga.
